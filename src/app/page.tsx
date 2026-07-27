@@ -13,10 +13,8 @@ export default function HomePage() {
   const articles = db.getArticles();
   const topics = db.getTopics();
 
-  // Top featured articles for interactive Hero Carousel
-  const featuredArticles = articles.filter(a => a.isFeatured).length > 0
-    ? articles.filter(a => a.isFeatured)
-    : articles.slice(0, 5);
+  // Top 3 latest news stories for interactive Hero Carousel
+  const featuredArticles = articles.slice(0, 3);
 
   // Secondary breaking headlines (stories right after carousel)
   const topHeadlines = articles.slice(5, 9);

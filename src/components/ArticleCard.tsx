@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Clock } from 'lucide-react';
 import { Article } from '@/types';
+import { ShareButtons } from '@/components/ShareButtons';
 
 interface ArticleCardProps {
   article: Article;
@@ -13,7 +14,7 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({ article, featured = fa
   if (featured) {
     return (
       <div className="news-card border-b border-slate-200 pb-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center group">
-        <div className="lg:col-span-7 relative h-[320px] lg:h-[420px] w-full rounded-xl overflow-hidden bg-slate-100">
+        <div className="lg:col-span-7 relative h-[320px] lg:h-[420px] w-full rounded-2xl overflow-hidden bg-slate-100 shadow-sm">
           <Image
             src={article.featuredImage}
             alt={article.title}
@@ -56,7 +57,7 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({ article, featured = fa
               <span className="font-semibold text-slate-900">{article.author.name}</span>
             </div>
 
-            <span>{new Date(article.publishedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
+            <ShareButtons title={article.title} slug={article.slug} />
           </div>
         </div>
       </div>
@@ -64,9 +65,9 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({ article, featured = fa
   }
 
   return (
-    <div className="news-card flex flex-col justify-between group border-b border-slate-100 pb-6">
+    <div className="news-card flex flex-col justify-between group bg-white p-5 rounded-3xl border border-slate-200 hover:border-sky-300 hover:shadow-md transition-all">
       <div className="space-y-3">
-        <div className="relative h-48 w-full overflow-hidden rounded-lg bg-slate-100">
+        <div className="relative h-48 w-full overflow-hidden rounded-2xl bg-slate-100 shadow-2xs">
           <Image
             src={article.featuredImage}
             alt={article.title}
@@ -77,9 +78,8 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({ article, featured = fa
         </div>
 
         <div className="space-y-2">
-          <div className="flex items-center gap-2 text-[11px] font-bold text-sky-700 uppercase tracking-wider font-sans">
-            <span>{article.category}</span>
-            <span className="text-slate-300">•</span>
+          <div className="flex items-center justify-between text-[11px] font-bold text-sky-700 uppercase tracking-wider font-sans">
+            <span className="bg-sky-50 px-2.5 py-0.5 rounded border border-sky-200">{article.category}</span>
             <span className="text-slate-500 font-normal font-mono">{article.readTimeMinutes} min read</span>
           </div>
 
@@ -95,9 +95,9 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({ article, featured = fa
         </div>
       </div>
 
-      <div className="pt-4 mt-3 flex items-center justify-between text-[11px] text-slate-500 font-sans border-t border-slate-50">
+      <div className="pt-4 mt-4 flex items-center justify-between text-[11px] text-slate-500 font-sans border-t border-slate-100">
         <span className="font-semibold text-slate-800">{article.author.name}</span>
-        <span>{new Date(article.publishedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</span>
+        <ShareButtons title={article.title} slug={article.slug} />
       </div>
     </div>
   );

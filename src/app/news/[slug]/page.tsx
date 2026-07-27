@@ -8,6 +8,7 @@ import { VerificationBadge } from '@/components/VerificationBadge';
 import { AuthorCard } from '@/components/AuthorCard';
 import { ArticleCard } from '@/components/ArticleCard';
 import { generateNewsArticleSchema, generateBreadcrumbSchema } from '@/lib/services/seo-engine';
+import { ShareButtons } from '@/components/ShareButtons';
 import { Clock, Calendar, ArrowLeft, Share2, Tag } from 'lucide-react';
 
 export const dynamic = 'force-dynamic';
@@ -109,8 +110,8 @@ export default function ArticlePage({ params }: ArticlePageProps) {
             {article.summary}
           </p>
 
-          {/* Author info */}
-          <div className="pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-600">
+          {/* Author info & Share Actions */}
+          <div className="pt-4 border-t border-slate-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-slate-600">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full overflow-hidden relative border border-slate-200 shrink-0">
                 <Image src={article.author.avatar} alt={article.author.name} fill className="object-cover" />
@@ -121,13 +122,9 @@ export default function ArticlePage({ params }: ArticlePageProps) {
               </div>
             </div>
 
-            <button 
-              className="p-2 rounded-lg bg-slate-50 border border-slate-200 text-slate-600 hover:text-slate-900 transition-colors"
-              title="Share Story"
-            >
-              <Share2 className="w-4 h-4" />
-            </button>
+            <ShareButtons title={article.title} slug={article.slug} />
           </div>
+
         </header>
 
         {/* 1200px+ Featured Hero Image */}
