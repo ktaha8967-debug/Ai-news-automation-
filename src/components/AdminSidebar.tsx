@@ -2,11 +2,12 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { LayoutDashboard, Zap, FileText, ShieldCheck, ListOrdered, Settings, ArrowLeft, Activity } from 'lucide-react';
+import { usePathname, useRouter } from 'next/navigation';
+import { LayoutDashboard, Zap, FileText, ShieldCheck, ListOrdered, ArrowLeft, Activity, LogOut } from 'lucide-react';
 
 export const AdminSidebar = () => {
   const pathname = usePathname();
+  const router = useRouter();
 
   const links = [
     { name: 'Dashboard Overview', href: '/admin', icon: LayoutDashboard },
@@ -16,16 +17,22 @@ export const AdminSidebar = () => {
     { name: 'System Logs & Retries', href: '/admin/logs', icon: ListOrdered },
   ];
 
+  const handleLogout = async () => {
+    await fetch('/api/admin/logout', { method: 'POST' });
+    router.push('/admin/login');
+    router.refresh();
+  };
+
   return (
-    <aside className="w-64 bg-slate-900 border-r border-slate-800 p-4 min-h-screen flex flex-col justify-between shrink-0">
+    <aside className="w-64 bg-[#0a0e18] border-r border-slate-800/80 p-4 min-h-screen flex flex-col justify-between shrink-0 font-sans">
       <div className="space-y-6">
         <div className="flex items-center gap-2.5 px-2">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-brand-600 to-purple-600 flex items-center justify-center font-bold text-white">
+          <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-brand-600 to-purple-600 flex items-center justify-center font-bold text-white shadow-lg">
             <Activity className="w-4 h-4" />
           </div>
           <div>
             <span className="font-extrabold text-sm text-white block leading-tight font-display">SYSTEM ADMIN</span>
-            <span className="text-[10px] text-brand-400 font-medium uppercase tracking-wider">Automation Console</span>
+            <span className="text-[10px] text-brand-400 font-semibold uppercase tracking-wider">Authenticated Console</span>
           </div>
         </div>
 
@@ -54,7 +61,7 @@ export const AdminSidebar = () => {
       </div>
 
       <div className="pt-4 border-t border-slate-800 space-y-3">
-        <div className="bg-slate-950 p-3 rounded-xl border border-slate-800/80 text-[11px] text-slate-400 space-y-1">
+        <div className="bg-[#05070d] p-3 rounded-xl border border-slate-800/80 text-[11px] text-slate-400 space-y-1 font-mono">
           <div className="flex items-center justify-between font-semibold text-slate-300">
             <span>Groq Engine:</span>
             <span className="text-emerald-400">{process.env.GROQ_API_KEY ? 'Active' : 'Fallback'}</span>
@@ -62,13 +69,23 @@ export const AdminSidebar = () => {
           <p className="text-[10px] text-slate-500">Model: llama-3.3-70b-versatile</p>
         </div>
 
-        <Link
-          href="/"
-          className="flex items-center gap-2 text-xs text-slate-400 hover:text-white px-2 py-1 transition-colors"
-        >
-          <ArrowLeft className="w-3.5 h-3.5" />
-          <span>Return to Public Portal</span>
-        </Link>
+        <div className="flex items-center justify-between gap-2 pt-1">
+          <Link
+            href="/"
+            className="flex items-center gap-1.5 text-xs text-slate-400 hover:text-white transition-colors"
+          >
+            <ArrowLeft className="w-3.5 h-3.5" />
+            <span>Public Site</span>
+          </Link>
+
+          <button
+            onClick={handleLogout}
+            className="flex items-center gap-1.5 text-xs text-rose-400 hover:text-rose-300 transition-colors bg-rose-950/40 hover:bg-rose-950 px-2.5 py-1 rounded-md border border-rose-800/40 font-semibold"
+          >
+            <LogOut className="w-3 h-3" />
+            <span>Logout</span>
+          </button>
+        </div>
       </div>
     </aside>
   );
