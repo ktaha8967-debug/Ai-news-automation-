@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import { Navbar } from '@/components/Navbar';
-import { Footer } from '@/components/Footer';
+import { PublicShell } from '@/components/PublicShell';
 
 export const metadata: Metadata = {
   title: 'Worldwide AI News | Fact-Checked Automated AI Journalism',
@@ -22,11 +21,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="h-full bg-slate-50">
-      <body className="h-full bg-slate-50 text-slate-900 flex flex-col antialiased">
-        <Navbar />
-        <main className="flex-1 bg-slate-50">{children}</main>
-        <Footer />
+    <html lang="en" className="h-full">
+      <body className="h-full bg-[#fafafa] antialiased">
+        <PublicShell>{children}</PublicShell>
       </body>
     </html>
   );
