@@ -99,14 +99,6 @@ export default function AdminLoginPage() {
             </div>
           </div>
 
-          {/* Quick Credential Hint */}
-          <div className="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-[11px] text-slate-600 space-y-1 font-mono">
-            <div className="flex items-center justify-between text-slate-900 font-bold">
-              <span className="flex items-center gap-1"><Key className="w-3.5 h-3.5 text-purple-600" /> Default Credentials:</span>
-            </div>
-            <p>Username: <strong className="text-slate-900">admin</strong></p>
-            <p>Password: <strong className="text-slate-900">admin123</strong></p>
-          </div>
 
           <button
             type="submit"
