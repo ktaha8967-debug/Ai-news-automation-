@@ -1,132 +1,113 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:ital,wght@0,400;0,700;0,900;1,400&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-heading: 'Plus Jakarta Sans', sans-serif;
+  --font-serif: 'Merriweather', Georgia, serif;
 }
 
-/* 100% Soft Light Theme Baseline */
 html, body {
-  background-color: #f8fafc !important;
-  color: #0f172a !important;
+  background-color: #ffffff;
+  color: #0f172a;
   font-family: var(--font-sans);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4, h5, h6 {
+/* Classic Newspaper & Editorial Headlines */
+.font-headline {
+  font-family: var(--font-serif);
+}
+
+.font-heading {
   font-family: var(--font-heading);
-  color: #0f172a;
 }
 
-/* Light Card & Pill Utilities */
-.light-card {
+/* Editorial Card & Border Rules */
+.news-border-b {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.news-border-r {
+  border-right: 1px solid #e2e8f0;
+}
+
+.news-card {
   background-color: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 1rem;
-  box-shadow: 0 4px 20px -4px rgba(15, 23, 42, 0.05);
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
-.light-card:hover {
-  transform: translateY(-2px);
-  border-color: #cbd5e1;
-  box-shadow: 0 16px 32px -6px rgba(14, 165, 233, 0.12);
-}
-
-.pill-sky {
-  background-color: #f0f9ff;
-  border: 1px solid #bae6fd;
+.news-card:hover .news-title {
   color: #0284c7;
 }
 
-.pill-emerald {
-  background-color: #ecfdf5;
-  border: 1px solid #a7f3d0;
-  color: #059669;
+/* Clean Editorial Article Reader Body */
+.article-body {
+  font-family: var(--font-serif);
+  color: #1e293b;
+  font-size: 1.125rem;
+  line-height: 1.85;
 }
 
-.pill-purple {
-  background-color: #f5f3ff;
-  border: 1px solid #ddd6fe;
-  color: #7c3aed;
+.article-body p {
+  margin-bottom: 1.5rem;
 }
 
-/* Light Mode Article Typography */
-.prose-light h2 {
+.article-body h2 {
   font-family: var(--font-heading);
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 1.6rem;
+  font-weight: 800;
   color: #0f172a;
-  margin-top: 2rem;
+  margin-top: 2.25rem;
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid #e2e8f0;
 }
 
-.prose-light h3 {
+.article-body h3 {
   font-family: var(--font-heading);
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   font-weight: 700;
-  color: #0284c7;
-  margin-top: 1.5rem;
+  color: #0369a1;
+  margin-top: 1.75rem;
   margin-bottom: 0.75rem;
 }
 
-.prose-light p {
-  color: #334155;
-  line-height: 1.85;
-  margin-bottom: 1.25rem;
-  font-size: 1.05rem;
-  font-weight: 400;
-}
-
-.prose-light ul {
-  list-style-type: none;
-  padding-left: 0;
+.article-body ul {
+  font-family: var(--font-sans);
   margin-bottom: 1.5rem;
+  padding-left: 1.25rem;
 }
 
-.prose-light li {
-  position: relative;
-  padding-left: 1.5rem;
-  margin-bottom: 0.65rem;
-  color: #1e293b;
-  font-size: 1.02rem;
-  line-height: 1.7;
-}
-
-.prose-light li::before {
-  content: "•";
-  position: absolute;
-  left: 0.25rem;
-  color: #0284c7;
-  font-size: 1.3rem;
-  line-height: 1;
-}
-
-.prose-light blockquote {
-  border-left: 4px solid #0284c7;
-  background-color: #f0f9ff;
-  padding: 1.25rem 1.5rem;
-  border-radius: 0 0.75rem 0.75rem 0;
-  margin: 1.75rem 0;
-  color: #0369a1;
+.article-body li {
+  margin-bottom: 0.5rem;
   font-size: 1.05rem;
+  line-height: 1.7;
+  color: #334155;
+}
+
+.article-body blockquote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  border-left: 3px solid #0284c7;
+  padding-left: 1.25rem;
+  margin: 1.75rem 0;
+  color: #334155;
+  font-size: 1.15rem;
   line-height: 1.75;
 }
 
-/* Custom Light Scrollbar */
+/* Custom Clean Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
 }
 ::-webkit-scrollbar-track {
-  background: #f8fafc;
+  background: #ffffff;
 }
 ::-webkit-scrollbar-thumb {
   background: #cbd5e1;
