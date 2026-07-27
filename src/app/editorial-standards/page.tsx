@@ -1,71 +1,148 @@
 import React from 'react';
 import Link from 'next/link';
-import { ShieldCheck, CheckCircle2, AlertTriangle, Cpu, FileText, ArrowLeft } from 'lucide-react';
+import { ShieldCheck, CheckCircle2, AlertTriangle, Cpu, FileText, ArrowLeft, BookOpen, Award, ExternalLink, Lock } from 'lucide-react';
+
+export const metadata = {
+  title: 'Editorial Standards & Fact Verification Policy | Worldwide AI News',
+  description: 'Our journalistic code of ethics, multi-source claim verification standards, and automated fact-checking protocols.',
+};
 
 export default function EditorialStandardsPage() {
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-8">
-      <Link href="/" className="text-xs text-brand-400 hover:underline flex items-center gap-1 font-bold">
-        <ArrowLeft className="w-3.5 h-3.5" />
-        <span>Back to Home</span>
-      </Link>
+    <div className="bg-[#fafafa] min-h-screen pb-24 font-sans text-slate-900">
+      {/* Top Header Banner */}
+      <section className="bg-white border-b border-slate-200 py-12">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+          <Link href="/" className="inline-flex items-center gap-1.5 text-xs text-sky-700 font-extrabold hover:underline font-heading">
+            <ArrowLeft className="w-3.5 h-3.5" />
+            <span>Back to Main Edition</span>
+          </Link>
 
-      <div className="space-y-4">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full verified-pill text-xs font-bold">
-          <ShieldCheck className="w-4 h-4" />
-          <span>Our Fact Verification Process</span>
-        </div>
-
-        <h1 className="text-3xl sm:text-4xl font-extrabold text-white font-heading">
-          How We Check Facts & Guarantee Real News
-        </h1>
-
-        <p className="text-slate-300 text-base leading-relaxed font-sans">
-          The Worldwide AI News Network follows simple, strict rules to ensure every story published is 100% accurate, verified by official sources, and free of fake news or hallucinations.
-        </p>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="bg-[#131b2e] border border-slate-800 p-6 rounded-2xl space-y-3">
-          <div className="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold">
-            <CheckCircle2 className="w-6 h-6" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-bold font-mono">
+            <ShieldCheck className="w-4 h-4 text-emerald-600" />
+            <span>Journalistic Verification Code & Policy</span>
           </div>
-          <h3 className="text-base font-bold text-white font-heading">1. Checking Multiple Real Sources</h3>
-          <p className="text-xs text-slate-300 leading-relaxed font-sans">
-            Every story must be confirmed by at least two separate official websites or academic databases (like MIT, IEEE, ArXiv, or TechCrunch) before it is published.
+
+          <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 font-headline leading-tight">
+            Editorial Standards & Fact-Checking Protocols
+          </h1>
+
+          <p className="text-slate-600 text-base sm:text-lg leading-relaxed font-sans">
+            Worldwide AI News operates under a strict, multi-source verification protocol. Every story published across our desks is verified against peer-reviewed preprints, official lab announcements, and technical repositories before release.
           </p>
         </div>
+      </section>
 
-        <div className="bg-[#131b2e] border border-slate-800 p-6 rounded-2xl space-y-3">
-          <div className="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold">
-            <AlertTriangle className="w-6 h-6" />
+      {/* Main Content Grid */}
+      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 space-y-10">
+        {/* Core Pillars Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="bg-white border border-slate-200 p-6 rounded-2xl space-y-3 shadow-xs">
+            <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-700 border border-emerald-200 flex items-center justify-center font-bold">
+              <CheckCircle2 className="w-5 h-5" />
+            </div>
+            <h3 className="text-base font-extrabold text-slate-900 font-heading">
+              1. Multi-Source Peer Verification
+            </h3>
+            <p className="text-xs text-slate-600 leading-relaxed font-sans">
+              Every factual assertion must be confirmed by at least two independent primary sources (e.g., ArXiv preprints, MIT CSAIL, IEEE proceedings, or official corporate disclosures) prior to automated publication.
+            </p>
           </div>
-          <h3 className="text-base font-bold text-white font-heading">2. 80% Minimum Score Requirement</h3>
-          <p className="text-xs text-slate-300 leading-relaxed font-sans">
-            If a story cannot be verified with at least 80% confidence, it is automatically held in our review queue and will not be published automatically.
-          </p>
+
+          <div className="bg-white border border-slate-200 p-6 rounded-2xl space-y-3 shadow-xs">
+            <div className="w-10 h-10 rounded-xl bg-amber-50 text-amber-700 border border-amber-200 flex items-center justify-center font-bold">
+              <AlertTriangle className="w-5 h-5" />
+            </div>
+            <h3 className="text-base font-extrabold text-slate-900 font-heading">
+              2. 80% Minimum Confidence Threshold
+            </h3>
+            <p className="text-xs text-slate-600 leading-relaxed font-sans">
+              Articles scoring below an 80% confidence index during multi-agent claim evaluation are automatically diverted to our <strong className="text-slate-800">Admin Review Queue</strong> for manual editor inspection.
+            </p>
+          </div>
+
+          <div className="bg-white border border-slate-200 p-6 rounded-2xl space-y-3 shadow-xs">
+            <div className="w-10 h-10 rounded-xl bg-sky-50 text-sky-700 border border-sky-200 flex items-center justify-center font-bold">
+              <Cpu className="w-5 h-5" />
+            </div>
+            <h3 className="text-base font-extrabold text-slate-900 font-heading">
+              3. Zero Synthetic Hallucination Guarantee
+            </h3>
+            <p className="text-xs text-slate-600 leading-relaxed font-sans">
+              We employ real-time claim cross-referencing to eliminate hallucinated benchmark scores, fictitious model names, or unverified claims in published articles.
+            </p>
+          </div>
+
+          <div className="bg-white border border-slate-200 p-6 rounded-2xl space-y-3 shadow-xs">
+            <div className="w-10 h-10 rounded-xl bg-purple-50 text-purple-700 border border-purple-200 flex items-center justify-center font-bold">
+              <FileText className="w-5 h-5" />
+            </div>
+            <h3 className="text-base font-extrabold text-slate-900 font-heading">
+              4. Google News & Schema Compliance
+            </h3>
+            <p className="text-xs text-slate-600 leading-relaxed font-sans">
+              All stories are formatted with structured JSON-LD <code className="text-purple-700 bg-purple-50 px-1 py-0.5 rounded font-mono">NewsArticle</code> metadata, HD featured images (1200px+), and real author attributions.
+            </p>
+          </div>
         </div>
 
-        <div className="bg-[#131b2e] border border-slate-800 p-6 rounded-2xl space-y-3">
-          <div className="w-10 h-10 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center font-bold">
-            <Cpu className="w-6 h-6" />
+        {/* Detailed Ethics Guidelines */}
+        <div className="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 space-y-6 shadow-xs">
+          <div className="flex items-center gap-3 border-b border-slate-100 pb-4">
+            <Award className="w-6 h-6 text-sky-700" />
+            <div>
+              <h2 className="text-lg font-extrabold text-slate-900 font-heading">
+                Editorial Independence & Correction Policy
+              </h2>
+              <p className="text-xs text-slate-500">Guidelines governing corrections, retractions, and update tracking</p>
+            </div>
           </div>
-          <h3 className="text-base font-bold text-white font-heading">3. Groq AI & Zero-Cost Model</h3>
-          <p className="text-xs text-slate-300 leading-relaxed font-sans">
-            We use Groq's free AI models (Llama 3.3) for writing high quality articles. If the API is unavailable, our offline system writes original structured news with zero cost.
-          </p>
+
+          <div className="space-y-4 text-xs text-slate-700 leading-relaxed font-sans">
+            <div>
+              <h4 className="font-extrabold text-slate-900 uppercase tracking-wider text-[11px] font-heading mb-1">
+                A. Transparency & Attribution
+              </h4>
+              <p className="text-slate-600">
+                All articles clearly attribute claims to original research papers, code repositories, or press releases. Hyperlinks directly point to primary sources to allow readers to verify raw benchmarks independently.
+              </p>
+            </div>
+
+            <div>
+              <h4 className="font-extrabold text-slate-900 uppercase tracking-wider text-[11px] font-heading mb-1">
+                B. Corrections & Timestamp Auditing
+              </h4>
+              <p className="text-slate-600">
+                If a paper is revised or a lab updates benchmark metrics, our automated pipeline updates the article database record, updates the <code className="bg-slate-100 px-1 py-0.5 rounded text-slate-800 font-mono">updatedAt</code> timestamp, and logs the change in system audit files.
+              </p>
+            </div>
+
+            <div>
+              <h4 className="font-extrabold text-slate-900 uppercase tracking-wider text-[11px] font-heading mb-1">
+                C. Copyright & Asset Integrity
+              </h4>
+              <p className="text-slate-600">
+                Featured article images are sourced exclusively from licensed royalty-free photography providers (Unsplash/Pexels) or official open-access laboratory press kits.
+              </p>
+            </div>
+          </div>
         </div>
 
-        <div className="bg-[#131b2e] border border-slate-800 p-6 rounded-2xl space-y-3">
-          <div className="w-10 h-10 rounded-xl bg-brand-500/20 text-brand-400 flex items-center justify-center font-bold">
-            <FileText className="w-6 h-6" />
+        {/* Footer Navigation Box */}
+        <div className="bg-slate-900 text-white p-6 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-4 shadow-md font-sans">
+          <div className="space-y-1">
+            <h4 className="text-sm font-extrabold font-heading text-white">Have a paper or dataset to submit for verification?</h4>
+            <p className="text-xs text-slate-400">Our automated research engine continuously monitors ArXiv, MIT CSAIL, and GitHub releases.</p>
           </div>
-          <h3 className="text-base font-bold text-white font-heading">4. High-Res Images & Clear SEO</h3>
-          <p className="text-xs text-slate-300 leading-relaxed font-sans">
-            All articles feature 1200px+ high-definition images, NewsArticle Google schema markup, Google News XML sitemaps, and verified author profiles.
-          </p>
+
+          <Link
+            href="/admin"
+            className="px-5 py-2.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs font-heading shrink-0 shadow-sm transition-colors"
+          >
+            Access Admin Console
+          </Link>
         </div>
-      </div>
+      </section>
     </div>
   );
 }
