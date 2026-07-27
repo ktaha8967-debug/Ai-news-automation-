@@ -12,16 +12,16 @@ export default function AdminLayout({
   const isAuthenticated = token?.value === 'authenticated_admin_token_active';
 
   return (
-    <div className="min-h-screen bg-[#070a11] text-slate-100 font-sans">
+    <div className="min-h-screen bg-[#f8fafc] text-slate-900 font-sans">
       {isAuthenticated ? (
         <div className="min-h-screen flex">
           <AdminSidebar />
-          <main className="flex-1 p-6 lg:p-10 overflow-y-auto bg-[#070a11]">
+          <main className="flex-1 p-6 lg:p-10 overflow-y-auto bg-[#f8fafc]">
             {children}
           </main>
         </div>
       ) : (
-        <div className="w-full min-h-screen bg-[#070a11]">
+        <div className="w-full min-h-screen bg-[#f8fafc]">
           {children}
         </div>
       )}

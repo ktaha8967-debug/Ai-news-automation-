@@ -11,14 +11,14 @@ export function PublicShell({ children }: { children: React.ReactNode }) {
 
   if (isAdmin) {
     return (
-      <div className="min-h-screen bg-[#070a11] text-slate-100 font-sans">
+      <div className="min-h-screen bg-[#f8fafc] text-slate-900 font-sans antialiased">
         {children}
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-[#fafafa] text-slate-900 flex flex-col font-sans">
+    <div className="min-h-screen bg-[#fafafa] text-slate-900 flex flex-col font-sans antialiased">
       <Navbar />
       <main className="flex-1 bg-[#fafafa]">{children}</main>
       <Footer />
