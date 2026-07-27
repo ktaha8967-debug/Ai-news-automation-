@@ -1,26 +1,25 @@
 import { NextResponse } from 'next/server';
-import { validateAdminCredentials } from '@/lib/auth';
+import { verifyAdminPassword, setAdminSessionCookie } from '@/lib/auth';
 
 export const dynamic = 'force-dynamic';
 
-export async function POST(req: Request) {
+export async function POST(request: Request) {
   try {
-    const { username, password } = await req.json();
+    const { username, password } = await request.json();
 
-    if (validateAdminCredentials(username, password)) {
-      const response = NextResponse.json({ success: true, message: 'Authentication successful' });
-      response.cookies.set('admin_session_token', 'authenticated_admin_token_active', {
-        httpOnly: true,
-        secure: process.env.NODE_ENV === 'production',
-        sameSite: 'lax',
-        path: '/',
-        maxAge: 60 * 60 * 24 * 7 // 7 days
-      });
-      return response;
+    if (username === 'admin' && verifyAdminPassword(password)) {
+      setAdminSessionCookie();
+      return NextResponse.json({ success: true, message: 'Authentication successful' });
     }
 
-    return NextResponse.json({ success: false, message: 'Invalid username or password' }, { status: 401 });
-  } catch (err: any) {
-    return NextResponse.json({ success: false, message: 'Server error during authentication' }, { status: 500 });
+    return NextResponse.json(
+      { success: false, message: 'Invalid username or password' },
+      { status: 401 }
+    );
+  } catch {
+    return NextResponse.json(
+      { success: false, message: 'Authentication error' },
+      { status: 500 }
+    );
   }
 }

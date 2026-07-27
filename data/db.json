@@ -574,6 +574,7 @@
     "dailyAutomations": 12,
     "totalViews": 15460,
     "lastRunTimestamp": "2026-07-27T08:01:36.289Z",
-    "groqApiStatus": "FALLBACK_ACTIVE"
+    "groqApiStatus": "FALLBACK_ACTIVE",
+    "adminPassword": "admin123"
   }
 }

@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import { LayoutDashboard, Zap, FileText, ShieldCheck, ListOrdered, ArrowLeft, Activity, LogOut, CheckCircle2, Lock } from 'lucide-react';
+import { LayoutDashboard, Zap, FileText, ShieldCheck, ListOrdered, ArrowLeft, Activity, LogOut, CheckCircle2, Lock, KeyRound } from 'lucide-react';
 
 export const AdminSidebar = () => {
   const pathname = usePathname();
@@ -15,6 +15,7 @@ export const AdminSidebar = () => {
     { name: 'Article Review Queue', href: '/admin/articles', icon: FileText },
     { name: 'Fact-Check Logs', href: '/admin/verification-logs', icon: ShieldCheck },
     { name: 'System Logs & Retries', href: '/admin/logs', icon: ListOrdered },
+    { name: 'Security & Password', href: '/admin/security', icon: KeyRound },
   ];
 
   const handleLogout = async () => {
@@ -73,7 +74,7 @@ export const AdminSidebar = () => {
               <CheckCircle2 className="w-3 h-3 text-emerald-400" /> Active
             </span>
           </div>
-          <p className="text-[10px] text-slate-400">llama-3.3-70b-versatile</p>
+          <p className="text-[10px] text-slate-400">3x Daily Scheduled Cron</p>
         </div>
 
         <div className="flex items-center justify-between gap-2 pt-1">

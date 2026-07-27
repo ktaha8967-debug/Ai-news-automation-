@@ -4,13 +4,19 @@ import { Article, Author, TopicCluster, VerificationLog, AutomationLog, SystemSt
 
 const DB_PATH = path.join(process.cwd(), 'data', 'db.json');
 
+export interface ExtendedSystemStats extends SystemStats {
+  adminPassword?: string;
+  lastCronRunTimestamp?: string;
+  cronScheduleEnabled?: boolean;
+}
+
 interface DatabaseSchema {
   articles: Article[];
   authors: Author[];
   topics: TopicCluster[];
   verificationLogs: VerificationLog[];
   automationLogs: AutomationLog[];
-  stats: SystemStats;
+  stats: ExtendedSystemStats;
 }
 
 const DEFAULT_AUTHORS: Author[] = [
@@ -88,7 +94,6 @@ const DEFAULT_TOPICS: TopicCluster[] = [
   }
 ];
 
-// Always use fresh dates for today
 const now = new Date();
 const todayIso = now.toISOString();
 const hoursAgo = (h: number) => new Date(now.getTime() - h * 60 * 60 * 1000).toISOString();
@@ -293,10 +298,10 @@ const DEFAULT_VERIFICATION_LOGS: VerificationLog[] = [
 const DEFAULT_AUTOMATION_LOGS: AutomationLog[] = [
   {
     id: 'log-1',
-    taskName: 'Daily Trending AI News Research',
+    taskName: 'Automated Scheduled Research Pipeline (3x Daily)',
     status: 'SUCCESS',
     durationMs: 1420,
-    details: 'Scanned RSS feeds (TechCrunch, ArXiv). Identified high-demand topics.',
+    details: 'Scanned RSS feeds (TechCrunch, ArXiv). Processed newly published articles, ran fact verifier, updated sitemaps.',
     timestamp: todayIso
   }
 ];
@@ -307,7 +312,6 @@ function ensureDbExists(): DatabaseSchema {
     fs.mkdirSync(dir, { recursive: true });
   }
 
-  // Always force sync fresh seed data if missing or outdated
   if (!fs.existsSync(DB_PATH)) {
     const initialData: DatabaseSchema = {
       articles: DEFAULT_ARTICLES,
@@ -320,10 +324,13 @@ function ensureDbExists(): DatabaseSchema {
         verifiedArticles: DEFAULT_ARTICLES.filter(a => a.verificationStatus === 'VERIFIED').length,
         needsReviewArticles: 0,
         avgTrustScore: 96,
-        dailyAutomations: 12,
+        dailyAutomations: 3,
         totalViews: 15460,
         lastRunTimestamp: new Date().toISOString(),
-        groqApiStatus: process.env.GROQ_API_KEY ? 'CONNECTED' : 'FALLBACK_ACTIVE'
+        groqApiStatus: process.env.GROQ_API_KEY ? 'CONNECTED' : 'FALLBACK_ACTIVE',
+        adminPassword: 'admin123',
+        lastCronRunTimestamp: new Date().toISOString(),
+        cronScheduleEnabled: true
       }
     };
     writeDb(initialData);
@@ -361,11 +368,18 @@ function ensureDbExists(): DatabaseSchema {
         verifiedArticles: parsed.articles.filter(a => a.verificationStatus === 'VERIFIED').length,
         needsReviewArticles: 0,
         avgTrustScore: 96,
-        dailyAutomations: 12,
+        dailyAutomations: 3,
         totalViews: 15460,
         lastRunTimestamp: new Date().toISOString(),
-        groqApiStatus: process.env.GROQ_API_KEY ? 'CONNECTED' : 'FALLBACK_ACTIVE'
+        groqApiStatus: process.env.GROQ_API_KEY ? 'CONNECTED' : 'FALLBACK_ACTIVE',
+        adminPassword: 'admin123',
+        lastCronRunTimestamp: new Date().toISOString(),
+        cronScheduleEnabled: true
       };
+      modified = true;
+    }
+    if (!parsed.stats.adminPassword) {
+      parsed.stats.adminPassword = 'admin123';
       modified = true;
     }
 
@@ -385,10 +399,13 @@ function ensureDbExists(): DatabaseSchema {
         verifiedArticles: DEFAULT_ARTICLES.filter(a => a.verificationStatus === 'VERIFIED').length,
         needsReviewArticles: 0,
         avgTrustScore: 96,
-        dailyAutomations: 12,
+        dailyAutomations: 3,
         totalViews: 15460,
         lastRunTimestamp: new Date().toISOString(),
-        groqApiStatus: process.env.GROQ_API_KEY ? 'CONNECTED' : 'FALLBACK_ACTIVE'
+        groqApiStatus: process.env.GROQ_API_KEY ? 'CONNECTED' : 'FALLBACK_ACTIVE',
+        adminPassword: 'admin123',
+        lastCronRunTimestamp: new Date().toISOString(),
+        cronScheduleEnabled: true
       }
     };
     writeDb(fallback);
@@ -417,7 +434,6 @@ export const db = {
     if (topicSlug) {
       res = res.filter(a => a.topicSlug.toLowerCase() === topicSlug.toLowerCase());
     }
-    // Always sort by publishedAt descending (newest first!)
     return res.sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime());
   },
 
@@ -434,12 +450,21 @@ export const db = {
 
   saveArticle: (article: Article): void => {
     const data = ensureDbExists();
-    const existingIndex = data.articles.findIndex(a => a.id === article.id);
+    const existingIndex = data.articles.findIndex(a => a.id === article.id || a.slug === article.slug);
     if (existingIndex >= 0) {
       data.articles[existingIndex] = article;
     } else {
       data.articles.unshift(article);
     }
+    data.stats.totalArticles = data.articles.length;
+    data.stats.verifiedArticles = data.articles.filter(a => a.verificationStatus === 'VERIFIED').length;
+    data.stats.needsReviewArticles = data.articles.filter(a => a.verificationStatus === 'NEEDS_REVIEW').length;
+    writeDb(data);
+  },
+
+  deleteArticle: (id: string): void => {
+    const data = ensureDbExists();
+    data.articles = data.articles.filter(a => a.id !== id);
     data.stats.totalArticles = data.articles.length;
     data.stats.verifiedArticles = data.articles.filter(a => a.verificationStatus === 'VERIFIED').length;
     data.stats.needsReviewArticles = data.articles.filter(a => a.verificationStatus === 'NEEDS_REVIEW').length;
@@ -486,7 +511,19 @@ export const db = {
     writeDb(data);
   },
 
-  getStats: (): SystemStats => {
+  getStats: (): ExtendedSystemStats => {
     return ensureDbExists().stats;
+  },
+
+  updateAdminPassword: (newPassword: string): void => {
+    const data = ensureDbExists();
+    data.stats.adminPassword = newPassword;
+    writeDb(data);
+  },
+
+  updateCronRunTimestamp: (): void => {
+    const data = ensureDbExists();
+    data.stats.lastCronRunTimestamp = new Date().toISOString();
+    writeDb(data);
   }
 };
