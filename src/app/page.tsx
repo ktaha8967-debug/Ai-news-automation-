@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { db } from '@/lib/db';
 import { ArticleCard } from '@/components/ArticleCard';
 import { NewsTicker } from '@/components/NewsTicker';
-import { Clock, ArrowUpRight, ChevronRight, TrendingUp, Sparkles, ShieldCheck } from 'lucide-react';
+import { Clock, ArrowUpRight, ChevronRight, TrendingUp, BookOpen, ShieldCheck } from 'lucide-react';
 
 export const dynamic = 'force-dynamic';
 
@@ -16,39 +16,18 @@ export default function HomePage() {
   const secondaryStories = articles.filter(a => a.id !== leadStory?.id).slice(0, 3);
   const remainingArticles = articles.filter(a => a.id !== leadStory?.id && !secondaryStories.some(s => s.id === a.id));
 
-  // Ensure grid always displays articles
+  // Fallback if list is small so news is ALWAYS visible
   const gridArticles = remainingArticles.length > 0 ? remainingArticles : articles;
 
   return (
     <div className="bg-[#fafafa] min-h-screen pb-24 font-sans text-slate-900">
-      {/* Breaking News Ticker */}
+      {/* Single Breaking News Ticker */}
       <NewsTicker articles={articles} />
 
-      {/* STUNNING EDITORIAL FRONT PAGE HERO */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-12">
-        {/* Desk Category Ribbon */}
-        <div className="flex flex-wrap items-center justify-between gap-3 border-b border-slate-200 pb-3 mb-8 text-xs font-bold font-heading">
-          <div className="flex items-center gap-6 overflow-x-auto py-1 no-scrollbar">
-            <span className="text-sky-700 uppercase tracking-widest flex items-center gap-1.5 shrink-0">
-              <Sparkles className="w-3.5 h-3.5 text-sky-600" />
-              <span>Spotlight Desks:</span>
-            </span>
-            {topics.map((t) => (
-              <Link
-                key={t.id}
-                href={`/topics/${t.slug}`}
-                className="text-slate-600 hover:text-slate-900 transition-colors uppercase tracking-wider shrink-0"
-              >
-                {t.name}
-              </Link>
-            ))}
-          </div>
-          <span className="text-slate-400 font-mono hidden md:inline text-[11px]">Updated Today</span>
-        </div>
-
-        {/* 12-Column Front Page Grid */}
+      {/* EDITORIAL FRONT PAGE SPOTLIGHT */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-12 news-border-b">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
-          {/* Main Lead Feature (7 Cols) */}
+          {/* Main Lead Spotlight Story (7 Cols) */}
           {leadStory && (
             <div className="lg:col-span-7 lg:pr-8 lg:border-r border-slate-200 space-y-5 group">
               <div className="relative h-[320px] sm:h-[460px] w-full rounded-2xl overflow-hidden bg-slate-200 shadow-md">
@@ -66,6 +45,8 @@ export default function HomePage() {
 
               <div className="space-y-3 pt-2">
                 <div className="flex items-center gap-2 text-xs text-slate-500 font-mono">
+                  <span className="font-bold text-sky-700">LEAD STORY</span>
+                  <span>•</span>
                   <span>{new Date(leadStory.publishedAt).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
                   <span>•</span>
                   <span>{leadStory.readTimeMinutes} min read</span>
@@ -108,7 +89,7 @@ export default function HomePage() {
           <div className="lg:col-span-5 space-y-6">
             <div className="border-b-2 border-slate-900 pb-2 flex items-center justify-between">
               <h3 className="font-heading font-extrabold text-sm text-slate-900 uppercase tracking-wider">
-                Top Reporting & Analysis
+                Top Breaking Headlines
               </h3>
               <span className="text-[11px] font-bold text-sky-700 font-mono">Live Feed</span>
             </div>
@@ -147,14 +128,14 @@ export default function HomePage() {
               ))}
             </div>
 
-            {/* High-Resolution Feature Box */}
+            {/* Fact-Check Standard Box */}
             <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3">
               <div className="flex items-center gap-2 text-xs font-bold text-slate-900 uppercase tracking-wider font-heading">
                 <ShieldCheck className="w-4 h-4 text-emerald-600" />
-                <span>Fact-Checked Reporting Standards</span>
+                <span>Journalistic Verification Standard</span>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed font-sans">
-                Every story is cross-referenced against official scientific repositories and technical publications prior to release.
+                Every story published by Worldwide AI News is verified against peer-reviewed preprints, technical repositories, and official lab announcements before release.
               </p>
               <Link href="/editorial-standards" className="inline-flex items-center gap-1 text-xs text-sky-700 font-bold hover:underline">
                 <span>View Reporting Code & Guidelines</span>
@@ -165,7 +146,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* VISUAL DESKS CAROUSEL STRIP */}
+      {/* COVERAGE DESKS INDEX */}
       <section className="bg-white border-y border-slate-200 py-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5">
           <div className="flex items-center justify-between">
@@ -201,16 +182,16 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* MAIN ARTICLES FEED & SIDEBAR */}
+      {/* LATEST PUBLISHED ARTICLES FEED */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
           {/* Latest Articles Feed (8 Cols) */}
           <div className="lg:col-span-8 space-y-8">
             <div className="border-b-2 border-slate-900 pb-3 flex items-center justify-between">
               <h3 className="font-heading font-extrabold text-xl text-slate-900">
-                Latest Published Articles
+                Latest Reporting & Analysis Stream
               </h3>
-              <span className="text-xs text-slate-500 font-mono">Real-Time Feed</span>
+              <span className="text-xs text-slate-500 font-mono">Chronological Order</span>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
@@ -241,9 +222,12 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Editorial Policy Link */}
+            {/* Journalistic Code */}
             <div className="bg-slate-100 p-6 rounded-2xl border border-slate-200 space-y-2 text-xs">
-              <h5 className="font-bold text-slate-900 font-heading">Journalistic Integrity</h5>
+              <div className="flex items-center gap-2 font-bold text-slate-900 font-heading">
+                <BookOpen className="w-4 h-4 text-sky-700" />
+                <span>Journalistic Standards</span>
+              </div>
               <p className="text-slate-600 leading-relaxed">
                 Articles published on Worldwide AI News strictly adhere to multi-source verification and claim validation.
               </p>

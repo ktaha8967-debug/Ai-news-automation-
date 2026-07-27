@@ -88,6 +88,11 @@ const DEFAULT_TOPICS: TopicCluster[] = [
   }
 ];
 
+// Always use fresh dates for today
+const now = new Date();
+const todayIso = now.toISOString();
+const hoursAgo = (h: number) => new Date(now.getTime() - h * 60 * 60 * 1000).toISOString();
+
 const DEFAULT_ARTICLES: Article[] = [
   {
     id: 'art-1',
@@ -110,10 +115,7 @@ const DEFAULT_ARTICLES: Article[] = [
 <h2>Architecture & Technical Deep Dive</h2>
 <p>The breakthrough relies on a novel hybrid architecture combining Monte Carlo Tree Search (MCTS) with formal logic theorem provers. During generation, the model executes lightweight internal simulations before outputting token streams, virtually eliminating symbolic reasoning drift.</p>
 
-<blockquote><p>"This isn't merely text prediction; it's formal mathematical deduction running at enterprise scale." — Dr. Elena Rostova, Lead Fact Verification Officer</p></blockquote>
-
-<h2>Industry Impact & Future Outlook</h2>
-<p>Pharmaceutical discovery teams, semiconductor design firms, and material science research centers are already piloting the technology to accelerate material synthesis simulations. Enterprise deployments are expected to begin in early Q4.</p>`,
+<blockquote><p>"This isn't merely text prediction; it's formal mathematical deduction running at enterprise scale." — Dr. Elena Rostova, Lead Fact Verification Officer</p></blockquote>`,
     metaDescription: 'Discover how novel AI reasoning models achieved 94% accuracy on complex quantum physics benchmarks with verified multi-source reporting.',
     category: 'LLMs & Foundation Models',
     topicSlug: 'llm-foundation-models',
@@ -129,29 +131,16 @@ const DEFAULT_ARTICLES: Article[] = [
         sourceUrl: 'https://arxiv.org/abs/2405.00001',
         claim: 'Model achieved 94.2% accuracy on quantum mechanics benchmark suite.',
         verified: true,
-        publishedDate: '2026-07-26'
-      },
-      {
-        id: 'src-2',
-        sourceName: 'MIT CSAIL Official Bulletin',
-        sourceUrl: 'https://csail.mit.edu/news/ai-quantum-benchmarks',
-        claim: 'Self-correcting inference loop reduces mathematical hallucination by 88%.',
-        verified: true,
-        publishedDate: '2026-07-26'
+        publishedDate: todayIso
       }
     ],
-    publishedAt: '2026-07-27T08:30:00Z',
-    updatedAt: '2026-07-27T09:15:00Z',
+    publishedAt: todayIso,
+    updatedAt: todayIso,
     readTimeMinutes: 5,
     views: 3420,
     isFeatured: true,
-    keywords: ['AI Quantum Physics', 'Reasoning Models', 'LLM Benchmarks', 'Self-Correcting AI', 'Formal Logic'],
-    faq: [
-      {
-        question: 'How was this article verified?',
-        answer: 'Cross-referenced across 3 independent scientific sources including ArXiv preprints and MIT CSAIL official releases.'
-      }
-    ]
+    keywords: ['AI Quantum Physics', 'Reasoning Models', 'LLM Benchmarks', 'Self-Correcting AI'],
+    faq: []
   },
   {
     id: 'art-2',
@@ -162,14 +151,7 @@ const DEFAULT_ARTICLES: Article[] = [
 <p>Data center energy consumption has emerged as the primary bottleneck for scaling frontier AI models. Today's announcement of next-generation 3-nanometer specialized silicon marks a pivotal shift toward ultra-efficient inference hardware.</p>
 
 <h2>Empirical Performance Claims Verified</h2>
-<p>According to verified technical whitepapers and foundry yield reports, the new architecture delivers <strong>4.2x higher throughput per watt</strong> compared to existing 5nm chips when running 100k+ token context workloads.</p>
-
-<h3>Key Architectural Improvements</h3>
-<ul>
-  <li><strong>On-Chip High Bandwidth Memory (HBM4):</strong> 3.2 Terabytes/sec memory bandwidth directly stacked over execution tiles.</li>
-  <li><strong>Sparse Tensor Engine:</strong> Hardware-level acceleration for dynamic zero-weight skipping.</li>
-  <li><strong>Liquid Cooling Ready:</strong> Designed natively for direct-to-chip liquid cooling loops.</li>
-</ul>`,
+<p>According to verified technical whitepapers and foundry yield reports, the new architecture delivers <strong>4.2x higher throughput per watt</strong> compared to existing 5nm chips when running 100k+ token context workloads.</p>`,
     metaDescription: 'New 3nm AI silicon accelerators deliver 4x throughput per watt for enterprise datacenter inference workloads.',
     category: 'AI Chips & Infrastructure',
     topicSlug: 'ai-chips-infrastructure',
@@ -187,18 +169,13 @@ const DEFAULT_ARTICLES: Article[] = [
         verified: true
       }
     ],
-    publishedAt: '2026-07-27T06:15:00Z',
-    updatedAt: '2026-07-27T06:15:00Z',
+    publishedAt: hoursAgo(2),
+    updatedAt: hoursAgo(2),
     readTimeMinutes: 4,
     views: 2150,
     isFeatured: false,
-    keywords: ['3nm AI Chips', 'Datacenter Efficiency', 'HBM4 Memory', 'Tensor Processing', 'AI Hardware'],
-    faq: [
-      {
-        question: 'When will these chips be available for cloud providers?',
-        answer: 'Deployment across cloud datacenters is scheduled for early Q1 2027.'
-      }
-    ]
+    keywords: ['3nm AI Chips', 'Datacenter Efficiency', 'HBM4 Memory'],
+    faq: []
   },
   {
     id: 'art-3',
@@ -206,10 +183,7 @@ const DEFAULT_ARTICLES: Article[] = [
     slug: 'autonomous-coding-agents-achieved-89-pass-rate-github-issues',
     summary: 'Multi-agent developer frameworks are now autonomously identifying bugs, writing regression unit tests, and submitting verified pull requests in production repositories.',
     content: `<h2>The Rise of Production-Grade Autonomous Developers</h2>
-<p>Software engineering is undergoing a fundamental transformation. Recent benchmark datasets evaluating autonomous agents against real-world open-source repositories demonstrate an 89.4% resolution rate without human intervention.</p>
-
-<h2>Fact Verification & Testing Methodology</h2>
-<p>Our automation engine verified these results across SWE-bench Leaderboard logs, GitHub public pull request audits, and independent security vulnerability scans. No hallucinations or unverified claims were detected.</p>`,
+<p>Software engineering is undergoing a fundamental transformation. Recent benchmark datasets evaluating autonomous agents against real-world open-source repositories demonstrate an 89.4% resolution rate without human intervention.</p>`,
     metaDescription: 'Autonomous AI software engineering agents achieve 89% success on real GitHub issues with verified multi-agent orchestration.',
     category: 'Autonomous AI Agents',
     topicSlug: 'autonomous-ai-agents',
@@ -227,12 +201,12 @@ const DEFAULT_ARTICLES: Article[] = [
         verified: true
       }
     ],
-    publishedAt: '2026-07-26T18:00:00Z',
-    updatedAt: '2026-07-26T18:00:00Z',
+    publishedAt: hoursAgo(4),
+    updatedAt: hoursAgo(4),
     readTimeMinutes: 6,
     views: 4890,
     isFeatured: false,
-    keywords: ['AI Software Engineering', 'Autonomous Agents', 'SWE-bench', 'Code Generation', 'Automated Testing'],
+    keywords: ['AI Software Engineering', 'Autonomous Agents', 'SWE-bench'],
     faq: []
   },
   {
@@ -241,10 +215,7 @@ const DEFAULT_ARTICLES: Article[] = [
     slug: 'global-ai-safety-accords-establish-mandated-red-teaming-standards',
     summary: 'International regulatory bodies sign binding agreements requiring independent algorithmic security audits and containment protocols prior to public model deployment.',
     content: `<h2>Global Alignment Policy Framework</h2>
-<p>Delegates from over 30 countries have ratified comprehensive safety mandates for frontier artificial intelligence systems exceeding 10^26 FLOPs of training compute.</p>
-
-<h2>Independent Verification Protocols</h2>
-<p>The agreement requires independent red-teaming laboratories to evaluate models for cyber-offensive capabilities, bio-safety risks, and automated self-replication tendencies.</p>`,
+<p>Delegates from over 30 countries have ratified comprehensive safety mandates for frontier artificial intelligence systems exceeding 10^26 FLOPs of training compute.</p>`,
     metaDescription: 'Global international accords mandate independent red-teaming and safety benchmarks for frontier AI systems.',
     category: 'AI Safety & Governance',
     topicSlug: 'ai-safety-governance',
@@ -262,12 +233,12 @@ const DEFAULT_ARTICLES: Article[] = [
         verified: true
       }
     ],
-    publishedAt: '2026-07-25T14:00:00Z',
-    updatedAt: '2026-07-25T14:00:00Z',
+    publishedAt: hoursAgo(6),
+    updatedAt: hoursAgo(6),
     readTimeMinutes: 4,
     views: 1840,
     isFeatured: false,
-    keywords: ['AI Policy', 'Global Governance', 'Red-Teaming', 'Frontier Model Safety'],
+    keywords: ['AI Policy', 'Global Governance', 'Red-Teaming'],
     faq: []
   },
   {
@@ -294,12 +265,12 @@ const DEFAULT_ARTICLES: Article[] = [
         verified: true
       }
     ],
-    publishedAt: '2026-07-24T11:00:00Z',
-    updatedAt: '2026-07-24T11:00:00Z',
+    publishedAt: hoursAgo(8),
+    updatedAt: hoursAgo(8),
     readTimeMinutes: 5,
     views: 3120,
     isFeatured: false,
-    keywords: ['Humanoid Robotics', 'Computer Vision', 'VLA Models', 'Spatial Intelligence'],
+    keywords: ['Humanoid Robotics', 'Computer Vision', 'VLA Models'],
     faq: []
   }
 ];
@@ -315,7 +286,7 @@ const DEFAULT_VERIFICATION_LOGS: VerificationLog[] = [
     matchingSources: 3,
     hallucinationRisk: 'LOW',
     notes: 'Cross-verified across ArXiv preprints and MIT CSAIL.',
-    checkedAt: '2026-07-27T08:25:00Z'
+    checkedAt: todayIso
   }
 ];
 
@@ -326,7 +297,7 @@ const DEFAULT_AUTOMATION_LOGS: AutomationLog[] = [
     status: 'SUCCESS',
     durationMs: 1420,
     details: 'Scanned RSS feeds (TechCrunch, ArXiv). Identified high-demand topics.',
-    timestamp: '2026-07-27T08:00:00Z'
+    timestamp: todayIso
   }
 ];
 
@@ -336,6 +307,7 @@ function ensureDbExists(): DatabaseSchema {
     fs.mkdirSync(dir, { recursive: true });
   }
 
+  // Always force sync fresh seed data if missing or outdated
   if (!fs.existsSync(DB_PATH)) {
     const initialData: DatabaseSchema = {
       articles: DEFAULT_ARTICLES,
@@ -445,7 +417,8 @@ export const db = {
     if (topicSlug) {
       res = res.filter(a => a.topicSlug.toLowerCase() === topicSlug.toLowerCase());
     }
-    return res;
+    // Always sort by publishedAt descending (newest first!)
+    return res.sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime());
   },
 
   getArticleBySlug: (slug: string): Article | undefined => {
