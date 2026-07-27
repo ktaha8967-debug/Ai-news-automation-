@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ShieldCheck, Activity } from 'lucide-react';
+import { ShieldCheck } from 'lucide-react';
 
 export const Footer = () => {
   return (
@@ -8,12 +8,12 @@ export const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 space-y-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Masthead Col */}
-          <div className="space-y-3">
-            <h3 className="font-headline text-lg font-black text-white uppercase tracking-tight">
+          <div className="space-y-3 md:col-span-2">
+            <h3 className="font-headline text-xl font-black text-white uppercase tracking-tight">
               Worldwide AI News
             </h3>
-            <p className="text-slate-400 text-xs leading-relaxed">
-              An independent technical news platform providing peer-verified reporting on artificial intelligence research, silicon hardware, and global safety standards.
+            <p className="text-slate-400 text-xs leading-relaxed max-w-md">
+              An independent technical news platform providing peer-verified reporting on artificial intelligence research, foundation models, silicon hardware, and global safety standards.
             </p>
             <div className="flex items-center gap-2 text-emerald-400 text-[11px] font-mono font-semibold pt-1">
               <ShieldCheck className="w-4 h-4 text-emerald-400" />
@@ -42,24 +42,12 @@ export const Footer = () => {
               <li><Link href="/authors/marcus-vance" className="hover:text-white transition-colors">Marcus Vance (Silicon Editor)</Link></li>
             </ul>
           </div>
-
-          {/* Operations & Control */}
-          <div className="space-y-2.5">
-            <h4 className="font-heading text-xs font-bold text-white uppercase tracking-wider">Platform Operations</h4>
-            <ul className="space-y-2 text-slate-400">
-              <li><Link href="/admin" className="hover:text-white transition-colors font-semibold text-sky-400">System Admin Console</Link></li>
-              <li><span className="text-slate-500 font-mono">3x Daily Automated Scanning</span></li>
-              <li><span className="text-slate-500 font-mono">Google News Verified Feed</span></li>
-            </ul>
-          </div>
         </div>
 
         <div className="pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-500">
           <p>© {new Date().getFullYear()} Worldwide AI News Network. All rights reserved.</p>
           <div className="flex items-center gap-4">
             <Link href="/editorial-standards" className="hover:text-slate-300">Journalism Ethics</Link>
-            <span>•</span>
-            <Link href="/admin" className="hover:text-slate-300">Admin Control</Link>
           </div>
         </div>
       </div>
