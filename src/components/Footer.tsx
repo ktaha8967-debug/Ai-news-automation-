@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { ShieldCheck, Activity } from 'lucide-react';
 
 export const Footer = () => {
   return (
@@ -12,13 +13,17 @@ export const Footer = () => {
               Worldwide AI News
             </h3>
             <p className="text-slate-400 text-xs leading-relaxed">
-              An independent technical news platform providing reporting on artificial intelligence research, hardware infrastructure, and governance.
+              An independent technical news platform providing peer-verified reporting on artificial intelligence research, silicon hardware, and global safety standards.
             </p>
+            <div className="flex items-center gap-2 text-emerald-400 text-[11px] font-mono font-semibold pt-1">
+              <ShieldCheck className="w-4 h-4 text-emerald-400" />
+              <span>Multi-Source Fact Verification Active</span>
+            </div>
           </div>
 
-          {/* Navigation Sections */}
+          {/* Navigation Desks */}
           <div className="space-y-2.5">
-            <h4 className="font-heading text-xs font-bold text-white uppercase tracking-wider">Desks</h4>
+            <h4 className="font-heading text-xs font-bold text-white uppercase tracking-wider">Coverage Desks</h4>
             <ul className="space-y-2 text-slate-400">
               <li><Link href="/topics/llm-foundation-models" className="hover:text-white transition-colors">Foundation Models & LLMs</Link></li>
               <li><Link href="/topics/autonomous-ai-agents" className="hover:text-white transition-colors">Autonomous AI Tools</Link></li>
@@ -28,24 +33,23 @@ export const Footer = () => {
             </ul>
           </div>
 
-          {/* Editorial & Authors */}
+          {/* Editorial & Verification */}
           <div className="space-y-2.5">
-            <h4 className="font-heading text-xs font-bold text-white uppercase tracking-wider">Editorial & Standards</h4>
+            <h4 className="font-heading text-xs font-bold text-white uppercase tracking-wider">Editorial Standards</h4>
             <ul className="space-y-2 text-slate-400">
-              <li><Link href="/editorial-standards" className="hover:text-white transition-colors">Fact-Checking Policy</Link></li>
-              <li><Link href="/authors/elena-rostova" className="hover:text-white transition-colors">Dr. Elena Rostova</Link></li>
-              <li><Link href="/authors/marcus-vance" className="hover:text-white transition-colors">Marcus Vance</Link></li>
-              <li><a href="/google-news-sitemap.xml" target="_blank" className="hover:text-white transition-colors">Google News XML Sitemap</a></li>
+              <li><Link href="/editorial-standards" className="hover:text-white transition-colors">Fact-Checking Code & Policy</Link></li>
+              <li><Link href="/authors/elena-rostova" className="hover:text-white transition-colors">Dr. Elena Rostova (Verification Lead)</Link></li>
+              <li><Link href="/authors/marcus-vance" className="hover:text-white transition-colors">Marcus Vance (Silicon Editor)</Link></li>
             </ul>
           </div>
 
-          {/* System & Feeds */}
+          {/* Operations & Control */}
           <div className="space-y-2.5">
-            <h4 className="font-heading text-xs font-bold text-white uppercase tracking-wider">Feeds & Directives</h4>
+            <h4 className="font-heading text-xs font-bold text-white uppercase tracking-wider">Platform Operations</h4>
             <ul className="space-y-2 text-slate-400">
-              <li><a href="/sitemap.xml" target="_blank" className="hover:text-white transition-colors">XML Sitemap Index</a></li>
-              <li><a href="/robots.txt" target="_blank" className="hover:text-white transition-colors">Robots.txt Directives</a></li>
-              <li><span className="text-slate-500 font-mono">Automated Technical Reporting</span></li>
+              <li><Link href="/admin" className="hover:text-white transition-colors font-semibold text-sky-400">System Admin Console</Link></li>
+              <li><span className="text-slate-500 font-mono">3x Daily Automated Scanning</span></li>
+              <li><span className="text-slate-500 font-mono">Google News Verified Feed</span></li>
             </ul>
           </div>
         </div>
@@ -54,6 +58,8 @@ export const Footer = () => {
           <p>© {new Date().getFullYear()} Worldwide AI News Network. All rights reserved.</p>
           <div className="flex items-center gap-4">
             <Link href="/editorial-standards" className="hover:text-slate-300">Journalism Ethics</Link>
+            <span>•</span>
+            <Link href="/admin" className="hover:text-slate-300">Admin Control</Link>
           </div>
         </div>
       </div>
