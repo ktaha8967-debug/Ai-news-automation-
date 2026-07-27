@@ -20,59 +20,61 @@ export default function HomePage() {
       {/* Live Breaking News Ticker */}
       <NewsTicker articles={articles} />
 
-      {/* Hero Header Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4">
-        <div className="text-center max-w-3xl mx-auto space-y-4 mb-10">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full soft-pill text-xs font-bold">
-            <Sparkles className="w-3.5 h-3.5 text-brand-400" />
-            <span>Reliable & Automated Artificial Intelligence News</span>
+      {/* STUNNING Light Theme Hero Header Section */}
+      <section className="bg-gradient-to-b from-sky-50/70 via-indigo-50/30 to-slate-50/50 py-12 border-b border-slate-200/80">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto space-y-4 mb-10">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full pill-sky text-xs font-bold shadow-sm">
+              <Sparkles className="w-4 h-4 text-sky-600" />
+              <span>Reliable & Fact-Checked Artificial Intelligence News</span>
+            </div>
+
+            <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900 font-heading leading-tight">
+              Fact-Checked AI News <br />
+              <span className="bg-gradient-to-r from-sky-600 via-indigo-600 to-emerald-600 bg-clip-text text-transparent">
+                Simple, Honest & Automated
+              </span>
+            </h1>
+
+            <p className="text-slate-600 text-sm sm:text-base leading-relaxed font-sans">
+              We collect trending artificial intelligence news from top research labs and tech websites, verify the facts across independent sources, and publish clean, reliable articles every day.
+            </p>
+
+            {/* Quick Metrics Bar */}
+            <div className="pt-2 flex flex-wrap justify-center items-center gap-4 text-xs text-slate-600">
+              <div className="flex items-center gap-1.5 bg-white px-4 py-2 rounded-xl border border-slate-200 shadow-sm">
+                <ShieldCheck className="w-4 h-4 text-emerald-600" />
+                <span>Trust Rating: <strong className="text-slate-900 font-bold">{stats.avgTrustScore}% Verified</strong></span>
+              </div>
+              <div className="flex items-center gap-1.5 bg-white px-4 py-2 rounded-xl border border-slate-200 shadow-sm">
+                <CheckCircle2 className="w-4 h-4 text-sky-600" />
+                <span>Published Stories: <strong className="text-slate-900 font-bold">{stats.verifiedArticles} Verified</strong></span>
+              </div>
+              <div className="flex items-center gap-1.5 bg-white px-4 py-2 rounded-xl border border-slate-200 shadow-sm">
+                <Activity className="w-4 h-4 text-purple-600" />
+                <span>Fact Checking: <strong className="text-slate-900 font-bold">100% Active</strong></span>
+              </div>
+            </div>
           </div>
 
-          <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white font-heading leading-tight">
-            Fact-Checked AI News <br />
-            <span className="bg-gradient-to-r from-brand-400 via-purple-400 to-emerald-400 bg-clip-text text-transparent">
-              Simple, Honest & Automated
-            </span>
-          </h1>
-
-          <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-            We collect trending artificial intelligence news from top research labs and tech websites, check the facts across multiple independent sources, and publish clean, reliable articles every day.
-          </p>
-
-          {/* Quick Metrics Bar */}
-          <div className="pt-2 flex flex-wrap justify-center items-center gap-6 text-xs text-slate-400">
-            <div className="flex items-center gap-1.5 bg-[#131b2e] px-3.5 py-1.5 rounded-xl border border-slate-800">
-              <ShieldCheck className="w-4 h-4 text-emerald-400" />
-              <span>Trust Rating: <strong className="text-white font-bold">{stats.avgTrustScore}% Verified</strong></span>
+          {/* Lead Featured Story */}
+          {featuredArticle && (
+            <div>
+              <ArticleCard article={featuredArticle} featured />
             </div>
-            <div className="flex items-center gap-1.5 bg-[#131b2e] px-3.5 py-1.5 rounded-xl border border-slate-800">
-              <CheckCircle2 className="w-4 h-4 text-brand-400" />
-              <span>Published Stories: <strong className="text-white font-bold">{stats.verifiedArticles} Verified</strong></span>
-            </div>
-            <div className="flex items-center gap-1.5 bg-[#131b2e] px-3.5 py-1.5 rounded-xl border border-slate-800">
-              <Activity className="w-4 h-4 text-purple-400" />
-              <span>Fact Checking: <strong className="text-white font-bold">100% Active</strong></span>
-            </div>
-          </div>
+          )}
         </div>
-
-        {/* Lead Featured Story */}
-        {featuredArticle && (
-          <div className="mb-12">
-            <ArticleCard article={featuredArticle} featured />
-          </div>
-        )}
       </section>
 
-      {/* Topics & Categories Filter Bar */}
+      {/* Category Quick Filter Cards */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-[#131b2e] border border-slate-800 rounded-2xl p-5 sm:p-6 space-y-4">
+        <div className="bg-white border border-slate-200 rounded-2xl p-5 sm:p-6 space-y-4 shadow-sm">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <Cpu className="w-5 h-5 text-brand-400" />
-              <h2 className="text-base font-extrabold text-white uppercase tracking-wider font-heading">Popular AI Topics & Categories</h2>
+              <Cpu className="w-5 h-5 text-sky-600" />
+              <h2 className="text-base font-extrabold text-slate-900 uppercase tracking-wider font-heading">Popular AI Categories</h2>
             </div>
-            <span className="text-xs text-slate-400">Browse by Interest</span>
+            <span className="text-xs text-slate-500 font-medium">Explore Topics</span>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
@@ -80,17 +82,17 @@ export default function HomePage() {
               <Link
                 key={t.id}
                 href={`/topics/${t.slug}`}
-                className="bg-[#0b0f19] hover:bg-brand-950/40 p-4 rounded-xl border border-slate-800 hover:border-brand-500/40 transition-all group"
+                className="bg-slate-50 hover:bg-sky-50 p-4 rounded-xl border border-slate-200 hover:border-sky-300 transition-all group shadow-2xs"
               >
                 <div className="flex items-center justify-between mb-1.5">
-                  <span className="text-xs font-bold text-white group-hover:text-brand-300 transition-colors line-clamp-1 font-heading">{t.name}</span>
-                  <span className="text-[10px] bg-brand-500/20 text-brand-300 font-bold px-1.5 py-0.2 rounded-full font-mono">
+                  <span className="text-xs font-bold text-slate-900 group-hover:text-sky-600 transition-colors line-clamp-1 font-heading">{t.name}</span>
+                  <span className="text-[10px] pill-sky font-bold px-2 py-0.5 rounded-full font-mono">
                     {t.articleCount}
                   </span>
                 </div>
-                <div className="flex items-center justify-between text-[11px] text-slate-400">
+                <div className="flex items-center justify-between text-[11px] text-slate-500">
                   <span>{t.searchDemand}</span>
-                  <ArrowRight className="w-3 h-3 text-slate-400 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-3 h-3 text-slate-400 group-hover:translate-x-1 transition-transform text-sky-600" />
                 </div>
               </Link>
             ))}
@@ -98,17 +100,17 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Main Articles Feed & Sidebar */}
+      {/* Main News Feed & Sidebar */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Main Feed (8 Cols) */}
           <div className="lg:col-span-8 space-y-6">
-            <div className="flex items-center justify-between border-b border-slate-800 pb-3.5">
-              <h3 className="text-lg font-extrabold text-white font-heading flex items-center gap-2">
-                <ShieldCheck className="w-5 h-5 text-emerald-400" />
+            <div className="flex items-center justify-between border-b border-slate-200 pb-3.5">
+              <h3 className="text-lg font-extrabold text-slate-900 font-heading flex items-center gap-2">
+                <ShieldCheck className="w-5 h-5 text-emerald-600" />
                 <span>Latest Verified AI News</span>
               </h3>
-              <span className="text-xs text-slate-400">Updated Daily</span>
+              <span className="text-xs text-slate-500 font-medium">Updated Daily</span>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -120,26 +122,26 @@ export default function HomePage() {
 
           {/* Sidebar (4 Cols) */}
           <div className="lg:col-span-4 space-y-6">
-            {/* Simple Fact-Checking Guarantee */}
-            <div className="bg-gradient-to-br from-[#131b2e] via-[#131b2e] to-brand-950/30 border border-slate-800 rounded-2xl p-6 space-y-4">
-              <div className="flex items-center gap-2 text-emerald-400 font-bold text-sm font-heading">
+            {/* Fact-Checking Standard Box */}
+            <div className="bg-gradient-to-br from-white via-white to-sky-50/50 border border-slate-200 rounded-2xl p-6 space-y-4 shadow-sm">
+              <div className="flex items-center gap-2 text-emerald-600 font-bold text-sm font-heading">
                 <ShieldCheck className="w-5 h-5" />
-                <span>100% Fact Checked</span>
+                <span>100% Fact Checked Guarantee</span>
               </div>
-              <p className="text-xs text-slate-300 leading-relaxed font-sans">
-                Every story is cross-checked across at least two independent sources. If a story cannot be verified with 80%+ accuracy, it will not be published.
+              <p className="text-xs text-slate-600 leading-relaxed font-sans">
+                Every story is cross-checked across at least two independent sources. If a story cannot be verified with 80%+ accuracy, it is held in our review queue and will not be published.
               </p>
-              <div className="pt-2 border-t border-slate-800 flex justify-between items-center text-xs">
-                <span className="text-slate-400">Verification Requirement:</span>
-                <span className="text-emerald-400 font-bold">80% Minimum Score</span>
+              <div className="pt-2 border-t border-slate-100 flex justify-between items-center text-xs">
+                <span className="text-slate-500">Verification Requirement:</span>
+                <span className="text-emerald-600 font-bold">80% Minimum Score</span>
               </div>
             </div>
 
-            {/* High Search Demand Topics */}
-            <div className="bg-[#131b2e] border border-slate-800 rounded-2xl p-6 space-y-4">
-              <div className="flex items-center justify-between border-b border-slate-800 pb-3">
-                <h4 className="text-sm font-bold text-white uppercase tracking-wider font-heading flex items-center gap-2">
-                  <TrendingUp className="w-4 h-4 text-purple-400" />
+            {/* Trending High-Demand Topics */}
+            <div className="bg-white border border-slate-200 rounded-2xl p-6 space-y-4 shadow-sm">
+              <div className="flex items-center justify-between border-b border-slate-100 pb-3">
+                <h4 className="text-sm font-bold text-slate-900 uppercase tracking-wider font-heading flex items-center gap-2">
+                  <TrendingUp className="w-4 h-4 text-purple-600" />
                   <span>Trending AI Topics Today</span>
                 </h4>
               </div>
@@ -152,12 +154,12 @@ export default function HomePage() {
                   { tag: 'Groq Llama 3.3 Model', demand: 'Trending Now', trend: '+74% 24h' },
                   { tag: 'Google Discover AI News', demand: 'Trending Now', trend: '+60% 24h' }
                 ].map((item, idx) => (
-                  <div key={idx} className="flex items-center justify-between bg-[#0b0f19] p-3 rounded-xl border border-slate-800 text-xs">
+                  <div key={idx} className="flex items-center justify-between bg-slate-50 p-3 rounded-xl border border-slate-100 text-xs">
                     <div>
-                      <span className="font-bold text-slate-200 block font-heading">{item.tag}</span>
-                      <span className="text-[10px] text-slate-400">{item.demand}</span>
+                      <span className="font-bold text-slate-900 block font-heading">{item.tag}</span>
+                      <span className="text-[10px] text-slate-500">{item.demand}</span>
                     </div>
-                    <span className="text-[10px] font-bold text-emerald-400 bg-emerald-950/60 px-2 py-0.5 rounded-full border border-emerald-800/40">
+                    <span className="text-[10px] font-bold pill-emerald px-2 py-0.5 rounded-full">
                       {item.trend}
                     </span>
                   </div>
@@ -166,13 +168,13 @@ export default function HomePage() {
             </div>
 
             {/* Quality Commitment */}
-            <div className="bg-[#131b2e] border border-slate-800 rounded-2xl p-6 space-y-3">
-              <div className="flex items-center gap-2 text-purple-400 font-bold text-sm font-heading">
+            <div className="bg-white border border-slate-200 rounded-2xl p-6 space-y-3 shadow-sm">
+              <div className="flex items-center gap-2 text-purple-600 font-bold text-sm font-heading">
                 <Award className="w-4 h-4" />
                 <span>Original & High Quality</span>
               </div>
-              <p className="text-xs text-slate-300 leading-relaxed font-sans">
-                Our articles are original, structured with clear titles, key summaries, and verified expert author bios.
+              <p className="text-xs text-slate-600 leading-relaxed font-sans">
+                Our articles are original, structured with clear titles, key summaries, and verified expert author profiles.
               </p>
             </div>
           </div>
