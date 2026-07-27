@@ -1,6 +1,6 @@
 import React from 'react';
 import { db } from '@/lib/db';
-import { ShieldCheck, CheckCircle2, AlertTriangle, ExternalLink } from 'lucide-react';
+import { ShieldCheck, CheckCircle2, AlertTriangle, ExternalLink, FileSearch } from 'lucide-react';
 
 export const dynamic = 'force-dynamic';
 
@@ -8,51 +8,58 @@ export default function VerificationLogsPage() {
   const logs = db.getVerificationLogs();
 
   return (
-    <div className="space-y-6">
-      <div className="border-b border-slate-800 pb-5">
-        <h1 className="text-2xl sm:text-3xl font-extrabold text-white font-display">
+    <div className="space-y-6 text-slate-900 font-sans">
+      {/* Top Header Card */}
+      <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-xs">
+        <div className="flex items-center gap-2 text-xs font-bold text-sky-700 uppercase tracking-wider mb-1 font-heading">
+          <FileSearch className="w-4 h-4 text-sky-600" />
+          <span>Multi-Source Claim Audit Trail</span>
+        </div>
+        <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 font-heading">
           Fact-Verification Audit & Hallucination Logs
         </h1>
-        <p className="text-xs text-slate-400 mt-1">
-          Detailed log of every factual claim evaluated across academic databases and multi-source RSS feeds.
+        <p className="text-xs text-slate-500 mt-1">
+          Detailed log of every factual claim evaluated across academic databases, lab announcements, and multi-source RSS feeds.
         </p>
       </div>
 
+      {/* Log Entries List */}
       <div className="space-y-4">
         {logs.map((log) => (
-          <div key={log.id} className="bg-slate-900/80 border border-slate-800 p-5 rounded-2xl space-y-3">
-            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
-              <div className="flex items-center gap-2.5">
-                <div className={`w-8 h-8 rounded-lg flex items-center justify-center font-bold text-xs ${
-                  log.status === 'VERIFIED' ? 'bg-emerald-950 text-emerald-400 border border-emerald-800' : 'bg-amber-950 text-amber-400'
+          <div key={log.id} className="bg-white border border-slate-200 p-6 rounded-2xl space-y-4 shadow-xs hover:border-sky-200 transition-all">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 border-b border-slate-100 pb-3">
+              <div className="flex items-center gap-3">
+                <div className={`w-9 h-9 rounded-xl flex items-center justify-center font-bold text-xs ${
+                  log.status === 'VERIFIED' ? 'bg-emerald-50 text-emerald-700 border border-emerald-200' : 'bg-amber-50 text-amber-700 border border-amber-200'
                 }`}>
-                  <ShieldCheck className="w-4 h-4" />
+                  <ShieldCheck className="w-5 h-5 text-emerald-600" />
                 </div>
                 <div>
-                  <span className="font-bold text-sm text-white">Trust Index Score: {log.score}%</span>
-                  <span className="text-[10px] text-slate-400 block">Logged at: {new Date(log.checkedAt).toLocaleString()}</span>
+                  <span className="font-extrabold text-sm text-slate-900 font-heading">Trust Index Score: {log.score}%</span>
+                  <span className="text-[11px] text-slate-500 font-mono block">Logged at: {new Date(log.checkedAt).toLocaleString()}</span>
                 </div>
               </div>
 
-              <div className="flex items-center gap-2 text-xs">
-                <span className="bg-slate-950 text-slate-300 px-3 py-1 rounded-lg border border-slate-800">
+              <div className="flex items-center gap-2 text-xs font-mono">
+                <span className="bg-slate-100 text-slate-700 px-3 py-1 rounded-xl border border-slate-200 font-bold">
                   Sources Checked: {log.matchingSources}/{log.sourcesChecked}
                 </span>
-                <span className={`px-3 py-1 rounded-lg border font-bold ${
-                  log.hallucinationRisk === 'LOW' ? 'bg-emerald-950 text-emerald-400 border-emerald-800' : 'bg-amber-950 text-amber-400 border-amber-800'
+                <span className={`px-3 py-1 rounded-xl border font-bold ${
+                  log.hallucinationRisk === 'LOW' ? 'bg-emerald-50 text-emerald-800 border-emerald-200' : 'bg-amber-50 text-amber-800 border-amber-200'
                 }`}>
                   Hallucination Risk: {log.hallucinationRisk}
                 </span>
               </div>
             </div>
 
-            <div className="bg-slate-950 p-3 rounded-xl border border-slate-800/80 text-xs">
-              <span className="text-slate-400 font-semibold block mb-1">Evaluated Claim:</span>
-              <p className="text-slate-200">{log.claim}</p>
+            <div className="bg-slate-50 p-4 rounded-xl border border-slate-200/80 text-xs space-y-1">
+              <span className="text-slate-500 font-extrabold uppercase tracking-wider block font-heading text-[10px]">Evaluated Claim:</span>
+              <p className="text-slate-800 font-sans leading-relaxed text-xs">{log.claim}</p>
             </div>
 
-            <p className="text-xs text-slate-400 italic">
-              Audit Note: {log.notes}
+            <p className="text-xs text-slate-500 italic font-sans flex items-center gap-1.5">
+              <span>Audit Note:</span>
+              <span className="text-slate-700 font-normal">{log.notes}</span>
             </p>
           </div>
         ))}
@@ -60,3 +67,4 @@ export default function VerificationLogsPage() {
     </div>
   );
 }
+
