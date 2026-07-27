@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { db } from '@/lib/db';
 import { ArticleCard } from '@/components/ArticleCard';
 import { NewsTicker } from '@/components/NewsTicker';
-import { Clock, ArrowRight, BookOpen, ChevronRight } from 'lucide-react';
+import { Clock, BookOpen, ChevronRight } from 'lucide-react';
 
 export const dynamic = 'force-dynamic';
 
@@ -14,6 +14,9 @@ export default function HomePage() {
   const leadStory = articles.find(a => a.isFeatured) || articles[0];
   const secondaryStories = articles.filter(a => a.id !== leadStory?.id).slice(0, 3);
   const remainingArticles = articles.filter(a => a.id !== leadStory?.id && !secondaryStories.some(s => s.id === a.id));
+
+  // Fallback to all articles if list is small so news is ALWAYS visible!
+  const gridArticles = remainingArticles.length > 0 ? remainingArticles : articles;
 
   return (
     <div className="bg-white min-h-screen pb-20 font-sans">
@@ -27,7 +30,7 @@ export default function HomePage() {
           {leadStory && (
             <div className="lg:col-span-8 lg:pr-6 lg:border-r border-slate-200 space-y-5 group">
               <div className="flex items-center gap-2 text-xs font-bold text-sky-700 uppercase tracking-widest font-heading">
-                <span>Top Story</span>
+                <span>Spotlight Story</span>
                 <span className="text-slate-300">•</span>
                 <span>{leadStory.category}</span>
               </div>
@@ -66,7 +69,7 @@ export default function HomePage() {
           <div className="lg:col-span-4 space-y-6">
             <div className="border-b border-slate-900 pb-2">
               <h3 className="font-heading font-extrabold text-sm text-slate-900 uppercase tracking-wider">
-                Trending Headlines
+                Trending Coverage
               </h3>
             </div>
 
@@ -100,7 +103,7 @@ export default function HomePage() {
             {/* Quick Topic Directory */}
             <div className="bg-slate-50 p-5 rounded-xl border border-slate-200 space-y-3">
               <h4 className="font-heading text-xs font-bold text-slate-900 uppercase tracking-wider">
-                Browse Topics
+                Desks Directory
               </h4>
               <div className="flex flex-wrap gap-1.5">
                 {topics.map((t) => (
@@ -109,7 +112,7 @@ export default function HomePage() {
                     href={`/topics/${t.slug}`}
                     className="bg-white hover:bg-sky-50 text-slate-700 hover:text-sky-700 text-xs px-2.5 py-1 rounded-md border border-slate-200 transition-colors font-medium"
                   >
-                    {t.name} ({t.articleCount})
+                    {t.name}
                   </Link>
                 ))}
               </div>
@@ -131,7 +134,7 @@ export default function HomePage() {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-              {remainingArticles.map((article) => (
+              {gridArticles.map((article) => (
                 <ArticleCard key={article.id} article={article} />
               ))}
             </div>

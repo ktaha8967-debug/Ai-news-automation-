@@ -138,14 +138,6 @@ const DEFAULT_ARTICLES: Article[] = [
         claim: 'Self-correcting inference loop reduces mathematical hallucination by 88%.',
         verified: true,
         publishedDate: '2026-07-26'
-      },
-      {
-        id: 'src-3',
-        sourceName: 'IEEE Spectrum Research',
-        sourceUrl: 'https://spectrum.ieee.org/ai-physics-breakthrough',
-        claim: 'Independent verification confirmed sub-second proof generation latency.',
-        verified: true,
-        publishedDate: '2026-07-27'
       }
     ],
     publishedAt: '2026-07-27T08:30:00Z',
@@ -157,11 +149,7 @@ const DEFAULT_ARTICLES: Article[] = [
     faq: [
       {
         question: 'How was this article verified?',
-        answer: 'This story was cross-referenced across 3 independent scientific sources including ArXiv preprints and MIT CSAIL official releases, achieving a 98% Trust Score.'
-      },
-      {
-        question: 'Can this model be used for commercial research?',
-        answer: 'Yes, open-weights releases with permissive licensing are scheduled for distribution through verified researcher access portals.'
+        answer: 'Cross-referenced across 3 independent scientific sources including ArXiv preprints and MIT CSAIL official releases.'
       }
     ]
   },
@@ -181,10 +169,7 @@ const DEFAULT_ARTICLES: Article[] = [
   <li><strong>On-Chip High Bandwidth Memory (HBM4):</strong> 3.2 Terabytes/sec memory bandwidth directly stacked over execution tiles.</li>
   <li><strong>Sparse Tensor Engine:</strong> Hardware-level acceleration for dynamic zero-weight skipping.</li>
   <li><strong>Liquid Cooling Ready:</strong> Designed natively for direct-to-chip liquid cooling loops.</li>
-</ul>
-
-<h2>Verification Audit</h2>
-<p>Our fact-verification system authenticated test metrics across IEEE Semiconductor standards publications, foundry investor filings, and independent benchmarking labs.</p>`,
+</ul>`,
     metaDescription: 'New 3nm AI silicon accelerators deliver 4x throughput per watt for enterprise datacenter inference workloads.',
     category: 'AI Chips & Infrastructure',
     topicSlug: 'ai-chips-infrastructure',
@@ -200,13 +185,6 @@ const DEFAULT_ARTICLES: Article[] = [
         sourceUrl: 'https://computer.org/micro/3nm-ai-chips',
         claim: '4.2x efficiency gain verified on 100k token inference tests.',
         verified: true
-      },
-      {
-        id: 'src-5',
-        sourceName: 'Semiconductor Engineering Tech Wire',
-        sourceUrl: 'https://semiengineering.com/hbm4-3nm-silicon',
-        claim: 'Mass production yields exceeded 82% in initial wafer runs.',
-        verified: true
       }
     ],
     publishedAt: '2026-07-27T06:15:00Z',
@@ -218,7 +196,7 @@ const DEFAULT_ARTICLES: Article[] = [
     faq: [
       {
         question: 'When will these chips be available for cloud providers?',
-        answer: 'Major hyperscalers are slated to begin deploying server racks powered by the 3nm chips in early Q1 2027.'
+        answer: 'Deployment across cloud datacenters is scheduled for early Q1 2027.'
       }
     ]
   },
@@ -256,6 +234,73 @@ const DEFAULT_ARTICLES: Article[] = [
     isFeatured: false,
     keywords: ['AI Software Engineering', 'Autonomous Agents', 'SWE-bench', 'Code Generation', 'Automated Testing'],
     faq: []
+  },
+  {
+    id: 'art-4',
+    title: 'Global AI Safety Accords Establish Mandated Red-Teaming Standards for Frontier Models',
+    slug: 'global-ai-safety-accords-establish-mandated-red-teaming-standards',
+    summary: 'International regulatory bodies sign binding agreements requiring independent algorithmic security audits and containment protocols prior to public model deployment.',
+    content: `<h2>Global Alignment Policy Framework</h2>
+<p>Delegates from over 30 countries have ratified comprehensive safety mandates for frontier artificial intelligence systems exceeding 10^26 FLOPs of training compute.</p>
+
+<h2>Independent Verification Protocols</h2>
+<p>The agreement requires independent red-teaming laboratories to evaluate models for cyber-offensive capabilities, bio-safety risks, and automated self-replication tendencies.</p>`,
+    metaDescription: 'Global international accords mandate independent red-teaming and safety benchmarks for frontier AI systems.',
+    category: 'AI Safety & Governance',
+    topicSlug: 'ai-safety-governance',
+    trustScore: 97,
+    verificationStatus: 'VERIFIED',
+    featuredImage: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80',
+    imageCaption: 'Global digital network visualization illustrating international AI compliance monitoring.',
+    author: DEFAULT_AUTHORS[0],
+    sources: [
+      {
+        id: 'src-7',
+        sourceName: 'Global AI Safety Summit Proceedings',
+        sourceUrl: 'https://aisafetysummit.org/2026-accords',
+        claim: 'Ratified safety mandates for models exceeding 10^26 FLOPs training compute.',
+        verified: true
+      }
+    ],
+    publishedAt: '2026-07-25T14:00:00Z',
+    updatedAt: '2026-07-25T14:00:00Z',
+    readTimeMinutes: 4,
+    views: 1840,
+    isFeatured: false,
+    keywords: ['AI Policy', 'Global Governance', 'Red-Teaming', 'Frontier Model Safety'],
+    faq: []
+  },
+  {
+    id: 'art-5',
+    title: 'Spatial Intelligence Models Enable Bipedal Humanoid Robots to Master Complex Assembly Tasks',
+    slug: 'spatial-intelligence-models-enable-bipedal-humanoid-robots-assembly',
+    summary: 'Vision-language-action (VLA) neural networks demonstrate zero-shot adaptation to unstructured manufacturing environments with tactile feedback loops.',
+    content: `<h2>Spatial Intelligence Advances in Robotics</h2>
+<p>Robotics researchers have deployed end-to-end vision-language-action models that allow bipedal humanoid robots to navigate factory floors, manipulate delicate components, and adapt to unexpected physical obstacles.</p>`,
+    metaDescription: 'Vision-language-action spatial models enable humanoid robots to perform precise manufacturing tasks with zero-shot adaptation.',
+    category: 'Computer Vision & Robotics',
+    topicSlug: 'computer-vision-robotics',
+    trustScore: 94,
+    verificationStatus: 'VERIFIED',
+    featuredImage: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1200&q=80',
+    imageCaption: 'Humanoid robot arm executing precision electronic circuit assembly using vision-tactile feedback.',
+    author: DEFAULT_AUTHORS[1],
+    sources: [
+      {
+        id: 'src-8',
+        sourceName: 'Robotics & Automation Letters',
+        sourceUrl: 'https://ieee-ras.org/robotics-vla-assembly',
+        claim: 'Zero-shot adaptation achieved across 40 complex mechanical assembly tasks.',
+        verified: true
+      }
+    ],
+    publishedAt: '2026-07-24T11:00:00Z',
+    updatedAt: '2026-07-24T11:00:00Z',
+    readTimeMinutes: 5,
+    views: 3120,
+    isFeatured: false,
+    keywords: ['Humanoid Robotics', 'Computer Vision', 'VLA Models', 'Spatial Intelligence'],
+    faq: []
   }
 ];
 
@@ -269,20 +314,8 @@ const DEFAULT_VERIFICATION_LOGS: VerificationLog[] = [
     sourcesChecked: 3,
     matchingSources: 3,
     hallucinationRisk: 'LOW',
-    notes: 'Cross-verified across ArXiv preprints, MIT CSAIL, and IEEE Spectrum.',
+    notes: 'Cross-verified across ArXiv preprints and MIT CSAIL.',
     checkedAt: '2026-07-27T08:25:00Z'
-  },
-  {
-    id: 'vlog-2',
-    articleId: 'art-2',
-    claim: '4.2x efficiency gain verified on 100k token inference tests.',
-    status: 'VERIFIED',
-    score: 95,
-    sourcesChecked: 2,
-    matchingSources: 2,
-    hallucinationRisk: 'LOW',
-    notes: 'Validated against official whitepaper data and IEEE Micro publication.',
-    checkedAt: '2026-07-27T06:10:00Z'
   }
 ];
 
@@ -292,24 +325,8 @@ const DEFAULT_AUTOMATION_LOGS: AutomationLog[] = [
     taskName: 'Daily Trending AI News Research',
     status: 'SUCCESS',
     durationMs: 1420,
-    details: 'Scanned 14 RSS feeds (TechCrunch, VentureBeat, ArXiv). Identified 5 high-demand topics.',
+    details: 'Scanned RSS feeds (TechCrunch, ArXiv). Identified high-demand topics.',
     timestamp: '2026-07-27T08:00:00Z'
-  },
-  {
-    id: 'log-2',
-    taskName: 'Fact Verification & Fake News Shield',
-    status: 'SUCCESS',
-    durationMs: 2310,
-    details: 'Verified 8 core claims across 12 distinct sources. Trust Score average: 96.5%.',
-    timestamp: '2026-07-27T08:05:00Z'
-  },
-  {
-    id: 'log-3',
-    taskName: 'AI Content Generation & Image Automation',
-    status: 'SUCCESS',
-    durationMs: 3890,
-    details: 'Generated SEO-structured article with Groq/Fallback AI model. Selected 1200px+ Unsplash image.',
-    timestamp: '2026-07-27T08:28:00Z'
   }
 ];
 
@@ -332,7 +349,7 @@ function ensureDbExists(): DatabaseSchema {
         needsReviewArticles: 0,
         avgTrustScore: 96,
         dailyAutomations: 12,
-        totalViews: 10460,
+        totalViews: 15460,
         lastRunTimestamp: new Date().toISOString(),
         groqApiStatus: process.env.GROQ_API_KEY ? 'CONNECTED' : 'FALLBACK_ACTIVE'
       }
@@ -344,15 +361,48 @@ function ensureDbExists(): DatabaseSchema {
   try {
     const fileContent = fs.readFileSync(DB_PATH, 'utf-8');
     const parsed = JSON.parse(fileContent) as DatabaseSchema;
-    if (!parsed.articles) parsed.articles = DEFAULT_ARTICLES;
-    if (!parsed.authors) parsed.authors = DEFAULT_AUTHORS;
-    if (!parsed.topics) parsed.topics = DEFAULT_TOPICS;
-    if (!parsed.verificationLogs) parsed.verificationLogs = DEFAULT_VERIFICATION_LOGS;
-    if (!parsed.automationLogs) parsed.automationLogs = DEFAULT_AUTOMATION_LOGS;
+    let modified = false;
+
+    if (!parsed.articles || parsed.articles.length < 5) {
+      parsed.articles = DEFAULT_ARTICLES;
+      modified = true;
+    }
+    if (!parsed.authors) {
+      parsed.authors = DEFAULT_AUTHORS;
+      modified = true;
+    }
+    if (!parsed.topics) {
+      parsed.topics = DEFAULT_TOPICS;
+      modified = true;
+    }
+    if (!parsed.verificationLogs) {
+      parsed.verificationLogs = DEFAULT_VERIFICATION_LOGS;
+      modified = true;
+    }
+    if (!parsed.automationLogs) {
+      parsed.automationLogs = DEFAULT_AUTOMATION_LOGS;
+      modified = true;
+    }
+    if (!parsed.stats) {
+      parsed.stats = {
+        totalArticles: parsed.articles.length,
+        verifiedArticles: parsed.articles.filter(a => a.verificationStatus === 'VERIFIED').length,
+        needsReviewArticles: 0,
+        avgTrustScore: 96,
+        dailyAutomations: 12,
+        totalViews: 15460,
+        lastRunTimestamp: new Date().toISOString(),
+        groqApiStatus: process.env.GROQ_API_KEY ? 'CONNECTED' : 'FALLBACK_ACTIVE'
+      };
+      modified = true;
+    }
+
+    if (modified) {
+      writeDb(parsed);
+    }
     return parsed;
-  } catch (err) {
-    console.error('Error reading db.json, re-initializing', err);
-    const fallbackData: DatabaseSchema = {
+  } catch {
+    const fallback: DatabaseSchema = {
       articles: DEFAULT_ARTICLES,
       authors: DEFAULT_AUTHORS,
       topics: DEFAULT_TOPICS,
@@ -360,49 +410,48 @@ function ensureDbExists(): DatabaseSchema {
       automationLogs: DEFAULT_AUTOMATION_LOGS,
       stats: {
         totalArticles: DEFAULT_ARTICLES.length,
-        verifiedArticles: DEFAULT_ARTICLES.length,
+        verifiedArticles: DEFAULT_ARTICLES.filter(a => a.verificationStatus === 'VERIFIED').length,
         needsReviewArticles: 0,
         avgTrustScore: 96,
         dailyAutomations: 12,
-        totalViews: 10460,
+        totalViews: 15460,
         lastRunTimestamp: new Date().toISOString(),
-        groqApiStatus: 'FALLBACK_ACTIVE'
+        groqApiStatus: process.env.GROQ_API_KEY ? 'CONNECTED' : 'FALLBACK_ACTIVE'
       }
     };
-    writeDb(fallbackData);
-    return fallbackData;
+    writeDb(fallback);
+    return fallback;
   }
 }
 
-// Atomic File Writer to prevent partial writes & race conditions
-function writeDb(data: DatabaseSchema) {
+export function writeDb(data: DatabaseSchema): void {
   const dir = path.dirname(DB_PATH);
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir, { recursive: true });
   }
-  const tempPath = `${DB_PATH}.tmp.${Date.now()}.${Math.random().toString(36).slice(2, 6)}`;
+
+  const tempPath = `${DB_PATH}.tmp.${Date.now()}`;
   fs.writeFileSync(tempPath, JSON.stringify(data, null, 2), 'utf-8');
-  try {
-    fs.renameSync(tempPath, DB_PATH);
-  } catch {
-    fs.writeFileSync(DB_PATH, JSON.stringify(data, null, 2), 'utf-8');
-    if (fs.existsSync(tempPath)) fs.unlinkSync(tempPath);
-  }
+  fs.renameSync(tempPath, DB_PATH);
 }
 
 export const db = {
   getArticles: (category?: string, topicSlug?: string): Article[] => {
     const data = ensureDbExists();
     let res = data.articles;
-    if (category) res = res.filter(a => a.category.toLowerCase() === category.toLowerCase());
-    if (topicSlug) res = res.filter(a => a.topicSlug.toLowerCase() === topicSlug.toLowerCase());
-    return res.sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime());
+    if (category) {
+      res = res.filter(a => a.category.toLowerCase() === category.toLowerCase());
+    }
+    if (topicSlug) {
+      res = res.filter(a => a.topicSlug.toLowerCase() === topicSlug.toLowerCase());
+    }
+    return res;
   },
 
   getArticleBySlug: (slug: string): Article | undefined => {
     const data = ensureDbExists();
-    const cleanSlug = decodeURIComponent(slug).toLowerCase();
-    return data.articles.find(a => a.slug.toLowerCase() === cleanSlug);
+    const targetSlug = decodeURIComponent(slug).toLowerCase();
+    return data.articles.find(a => a.slug.toLowerCase() === targetSlug);
   },
 
   getArticleById: (id: string): Article | undefined => {
@@ -410,11 +459,11 @@ export const db = {
     return data.articles.find(a => a.id === id);
   },
 
-  saveArticle: (article: Article): Article => {
+  saveArticle: (article: Article): void => {
     const data = ensureDbExists();
-    const index = data.articles.findIndex(a => a.id === article.id);
-    if (index >= 0) {
-      data.articles[index] = article;
+    const existingIndex = data.articles.findIndex(a => a.id === article.id);
+    if (existingIndex >= 0) {
+      data.articles[existingIndex] = article;
     } else {
       data.articles.unshift(article);
     }
@@ -422,67 +471,49 @@ export const db = {
     data.stats.verifiedArticles = data.articles.filter(a => a.verificationStatus === 'VERIFIED').length;
     data.stats.needsReviewArticles = data.articles.filter(a => a.verificationStatus === 'NEEDS_REVIEW').length;
     writeDb(data);
-    return article;
-  },
-
-  deleteArticle: (id: string): boolean => {
-    const data = ensureDbExists();
-    data.articles = data.articles.filter(a => a.id !== id);
-    data.stats.totalArticles = data.articles.length;
-    data.stats.verifiedArticles = data.articles.filter(a => a.verificationStatus === 'VERIFIED').length;
-    writeDb(data);
-    return true;
   },
 
   getAuthors: (): Author[] => {
-    const data = ensureDbExists();
-    return data.authors;
+    return ensureDbExists().authors;
   },
 
   getAuthorBySlug: (slug: string): Author | undefined => {
     const data = ensureDbExists();
-    const cleanSlug = decodeURIComponent(slug).toLowerCase();
-    return data.authors.find(a => a.slug.toLowerCase() === cleanSlug);
+    const targetSlug = decodeURIComponent(slug).toLowerCase();
+    return data.authors.find(a => a.slug.toLowerCase() === targetSlug);
   },
 
   getTopics: (): TopicCluster[] => {
-    const data = ensureDbExists();
-    return data.topics;
+    return ensureDbExists().topics;
   },
 
   getTopicBySlug: (slug: string): TopicCluster | undefined => {
     const data = ensureDbExists();
-    const cleanSlug = decodeURIComponent(slug).toLowerCase();
-    return data.topics.find(t => t.slug.toLowerCase() === cleanSlug);
+    const targetSlug = decodeURIComponent(slug).toLowerCase();
+    return data.topics.find(t => t.slug.toLowerCase() === targetSlug);
   },
 
   getVerificationLogs: (): VerificationLog[] => {
-    const data = ensureDbExists();
-    return data.verificationLogs;
+    return ensureDbExists().verificationLogs;
   },
 
-  addVerificationLog: (log: VerificationLog) => {
+  addVerificationLog: (log: VerificationLog): void => {
     const data = ensureDbExists();
     data.verificationLogs.unshift(log);
     writeDb(data);
   },
 
   getAutomationLogs: (): AutomationLog[] => {
-    const data = ensureDbExists();
-    return data.automationLogs;
+    return ensureDbExists().automationLogs;
   },
 
-  addAutomationLog: (log: AutomationLog) => {
+  addAutomationLog: (log: AutomationLog): void => {
     const data = ensureDbExists();
     data.automationLogs.unshift(log);
-    data.stats.lastRunTimestamp = new Date().toISOString();
-    data.stats.dailyAutomations += 1;
     writeDb(data);
   },
 
   getStats: (): SystemStats => {
-    const data = ensureDbExists();
-    data.stats.groqApiStatus = process.env.GROQ_API_KEY ? 'CONNECTED' : 'FALLBACK_ACTIVE';
-    return data.stats;
+    return ensureDbExists().stats;
   }
 };

@@ -17,9 +17,9 @@
         "id": "auth-1",
         "name": "Dr. Elena Rostova",
         "slug": "elena-rostova",
-        "role": "Chief AI Research Analyst & Fact Verification Lead",
+        "role": "Chief AI Research Analyst & Verification Lead",
         "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80",
-        "bio": "Former DeepMind Fellow & Oxford AI Ethics researcher specializing in large language model verification and hallucination benchmarks.",
+        "bio": "Former DeepMind Fellow & Oxford AI Ethics researcher specializing in large language model verification, alignment, and hallucination benchmarks.",
         "credentials": [
           "Ph.D. Computer Science (Oxford)",
           "Member of IEEE AI Governance Board",
@@ -45,14 +45,6 @@
           "claim": "Self-correcting inference loop reduces mathematical hallucination by 88%.",
           "verified": true,
           "publishedDate": "2026-07-26"
-        },
-        {
-          "id": "src-3",
-          "sourceName": "IEEE Spectrum Research",
-          "sourceUrl": "https://spectrum.ieee.org/ai-physics-breakthrough",
-          "claim": "Independent verification confirmed sub-second proof generation latency.",
-          "verified": true,
-          "publishedDate": "2026-07-27"
         }
       ],
       "publishedAt": "2026-07-27T08:30:00Z",
@@ -70,11 +62,7 @@
       "faq": [
         {
           "question": "How was this article verified?",
-          "answer": "This story was cross-referenced across 3 independent scientific sources including ArXiv preprints and MIT CSAIL official releases, achieving a 98% Trust Score."
-        },
-        {
-          "question": "Can this model be used for commercial research?",
-          "answer": "Yes, open-weights releases with permissive licensing are scheduled for distribution through verified researcher access portals."
+          "answer": "Cross-referenced across 3 independent scientific sources including ArXiv preprints and MIT CSAIL official releases."
         }
       ]
     },
@@ -83,7 +71,7 @@
       "title": "Next-Gen 3nm AI Accelerators Promise 4x Performance Per Watt for Datacenter Inference",
       "slug": "next-gen-3nm-ai-accelerators-4x-performance-watt-datacenter",
       "summary": "Leading semiconductor foundries announce mass production of dedicated tensor processing units tailored specifically for long-context transformer architectures.",
-      "content": "<h2>Introduction</h2>\n<p>Data center energy consumption has emerged as the primary bottleneck for scaling frontier AI models. Today's announcement of next-generation 3-nanometer specialized silicon marks a pivotal shift toward ultra-efficient inference hardware.</p>\n\n<h2>Empirical Performance Claims Verified</h2>\n<p>According to verified technical whitepapers and foundry yield reports, the new architecture delivers <strong>4.2x higher throughput per watt</strong> compared to existing 5nm chips when running 100k+ token context workloads.</p>\n\n<h3>Key Architectural Improvements</h3>\n<ul>\n  <li><strong>On-Chip High Bandwidth Memory (HBM4):</strong> 3.2 Terabytes/sec memory bandwidth directly stacked over execution tiles.</li>\n  <li><strong>Sparse Tensor Engine:</strong> Hardware-level acceleration for dynamic zero-weight skipping.</li>\n  <li><strong>Liquid Cooling Ready:</strong> Designed natively for direct-to-chip liquid cooling loops.</li>\n</ul>\n\n<h2>Verification Audit</h2>\n<p>Our fact-verification system authenticated test metrics across IEEE Semiconductor standards publications, foundry investor filings, and independent benchmarking labs.</p>",
+      "content": "<h2>Introduction</h2>\n<p>Data center energy consumption has emerged as the primary bottleneck for scaling frontier AI models. Today's announcement of next-generation 3-nanometer specialized silicon marks a pivotal shift toward ultra-efficient inference hardware.</p>\n\n<h2>Empirical Performance Claims Verified</h2>\n<p>According to verified technical whitepapers and foundry yield reports, the new architecture delivers <strong>4.2x higher throughput per watt</strong> compared to existing 5nm chips when running 100k+ token context workloads.</p>\n\n<h3>Key Architectural Improvements</h3>\n<ul>\n  <li><strong>On-Chip High Bandwidth Memory (HBM4):</strong> 3.2 Terabytes/sec memory bandwidth directly stacked over execution tiles.</li>\n  <li><strong>Sparse Tensor Engine:</strong> Hardware-level acceleration for dynamic zero-weight skipping.</li>\n  <li><strong>Liquid Cooling Ready:</strong> Designed natively for direct-to-chip liquid cooling loops.</li>\n</ul>",
       "metaDescription": "New 3nm AI silicon accelerators deliver 4x throughput per watt for enterprise datacenter inference workloads.",
       "category": "AI Chips & Infrastructure",
       "topicSlug": "ai-chips-infrastructure",
@@ -114,13 +102,6 @@
           "sourceUrl": "https://computer.org/micro/3nm-ai-chips",
           "claim": "4.2x efficiency gain verified on 100k token inference tests.",
           "verified": true
-        },
-        {
-          "id": "src-5",
-          "sourceName": "Semiconductor Engineering Tech Wire",
-          "sourceUrl": "https://semiengineering.com/hbm4-3nm-silicon",
-          "claim": "Mass production yields exceeded 82% in initial wafer runs.",
-          "verified": true
         }
       ],
       "publishedAt": "2026-07-27T06:15:00Z",
@@ -138,7 +119,7 @@
       "faq": [
         {
           "question": "When will these chips be available for cloud providers?",
-          "answer": "Major hyperscalers are slated to begin deploying server racks powered by the 3nm chips in early Q1 2027."
+          "answer": "Deployment across cloud datacenters is scheduled for early Q1 2027."
         }
       ]
     },
@@ -159,9 +140,9 @@
         "id": "auth-1",
         "name": "Dr. Elena Rostova",
         "slug": "elena-rostova",
-        "role": "Chief AI Research Analyst & Fact Verification Lead",
+        "role": "Chief AI Research Analyst & Verification Lead",
         "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80",
-        "bio": "Former DeepMind Fellow & Oxford AI Ethics researcher specializing in large language model verification and hallucination benchmarks.",
+        "bio": "Former DeepMind Fellow & Oxford AI Ethics researcher specializing in large language model verification, alignment, and hallucination benchmarks.",
         "credentials": [
           "Ph.D. Computer Science (Oxford)",
           "Member of IEEE AI Governance Board",
@@ -193,6 +174,108 @@
         "Automated Testing"
       ],
       "faq": []
+    },
+    {
+      "id": "art-4",
+      "title": "Global AI Safety Accords Establish Mandated Red-Teaming Standards for Frontier Models",
+      "slug": "global-ai-safety-accords-establish-mandated-red-teaming-standards",
+      "summary": "International regulatory bodies sign binding agreements requiring independent algorithmic security audits and containment protocols prior to public model deployment.",
+      "content": "<h2>Global Alignment Policy Framework</h2>\n<p>Delegates from over 30 countries have ratified comprehensive safety mandates for frontier artificial intelligence systems exceeding 10^26 FLOPs of training compute.</p>\n\n<h2>Independent Verification Protocols</h2>\n<p>The agreement requires independent red-teaming laboratories to evaluate models for cyber-offensive capabilities, bio-safety risks, and automated self-replication tendencies.</p>",
+      "metaDescription": "Global international accords mandate independent red-teaming and safety benchmarks for frontier AI systems.",
+      "category": "AI Safety & Governance",
+      "topicSlug": "ai-safety-governance",
+      "trustScore": 97,
+      "verificationStatus": "VERIFIED",
+      "featuredImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
+      "imageCaption": "Global digital network visualization illustrating international AI compliance monitoring.",
+      "author": {
+        "id": "auth-1",
+        "name": "Dr. Elena Rostova",
+        "slug": "elena-rostova",
+        "role": "Chief AI Research Analyst & Verification Lead",
+        "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80",
+        "bio": "Former DeepMind Fellow & Oxford AI Ethics researcher specializing in large language model verification, alignment, and hallucination benchmarks.",
+        "credentials": [
+          "Ph.D. Computer Science (Oxford)",
+          "Member of IEEE AI Governance Board",
+          "10+ Years LLM Evaluation"
+        ],
+        "verifiedCount": 142,
+        "twitter": "https://twitter.com/elena_ai_news",
+        "linkedin": "https://linkedin.com/in/elena-rostova-ai"
+      },
+      "sources": [
+        {
+          "id": "src-7",
+          "sourceName": "Global AI Safety Summit Proceedings",
+          "sourceUrl": "https://aisafetysummit.org/2026-accords",
+          "claim": "Ratified safety mandates for models exceeding 10^26 FLOPs training compute.",
+          "verified": true
+        }
+      ],
+      "publishedAt": "2026-07-25T14:00:00Z",
+      "updatedAt": "2026-07-25T14:00:00Z",
+      "readTimeMinutes": 4,
+      "views": 1840,
+      "isFeatured": false,
+      "keywords": [
+        "AI Policy",
+        "Global Governance",
+        "Red-Teaming",
+        "Frontier Model Safety"
+      ],
+      "faq": []
+    },
+    {
+      "id": "art-5",
+      "title": "Spatial Intelligence Models Enable Bipedal Humanoid Robots to Master Complex Assembly Tasks",
+      "slug": "spatial-intelligence-models-enable-bipedal-humanoid-robots-assembly",
+      "summary": "Vision-language-action (VLA) neural networks demonstrate zero-shot adaptation to unstructured manufacturing environments with tactile feedback loops.",
+      "content": "<h2>Spatial Intelligence Advances in Robotics</h2>\n<p>Robotics researchers have deployed end-to-end vision-language-action models that allow bipedal humanoid robots to navigate factory floors, manipulate delicate components, and adapt to unexpected physical obstacles.</p>",
+      "metaDescription": "Vision-language-action spatial models enable humanoid robots to perform precise manufacturing tasks with zero-shot adaptation.",
+      "category": "Computer Vision & Robotics",
+      "topicSlug": "computer-vision-robotics",
+      "trustScore": 94,
+      "verificationStatus": "VERIFIED",
+      "featuredImage": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1200&q=80",
+      "imageCaption": "Humanoid robot arm executing precision electronic circuit assembly using vision-tactile feedback.",
+      "author": {
+        "id": "auth-2",
+        "name": "Marcus Vance",
+        "slug": "marcus-vance",
+        "role": "Senior Technology Correspondent",
+        "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80",
+        "bio": "Tech journalist covering silicon architectures, GPU clusters, enterprise AI infrastructure, and autonomous agent systems.",
+        "credentials": [
+          "B.S. Electrical Engineering (MIT)",
+          "Former TechCrunch Senior Writer",
+          "Author of \"The Compute Frontier\""
+        ],
+        "verifiedCount": 98,
+        "twitter": "https://twitter.com/mvance_tech",
+        "linkedin": "https://linkedin.com/in/marcus-vance"
+      },
+      "sources": [
+        {
+          "id": "src-8",
+          "sourceName": "Robotics & Automation Letters",
+          "sourceUrl": "https://ieee-ras.org/robotics-vla-assembly",
+          "claim": "Zero-shot adaptation achieved across 40 complex mechanical assembly tasks.",
+          "verified": true
+        }
+      ],
+      "publishedAt": "2026-07-24T11:00:00Z",
+      "updatedAt": "2026-07-24T11:00:00Z",
+      "readTimeMinutes": 5,
+      "views": 3120,
+      "isFeatured": false,
+      "keywords": [
+        "Humanoid Robotics",
+        "Computer Vision",
+        "VLA Models",
+        "Spatial Intelligence"
+      ],
+      "faq": []
     }
   ],
   "authors": [
@@ -200,9 +283,9 @@
       "id": "auth-1",
       "name": "Dr. Elena Rostova",
       "slug": "elena-rostova",
-      "role": "Chief AI Research Analyst & Fact Verification Lead",
+      "role": "Chief AI Research Analyst & Verification Lead",
       "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80",
-      "bio": "Former DeepMind Fellow & Oxford AI Ethics researcher specializing in large language model verification and hallucination benchmarks.",
+      "bio": "Former DeepMind Fellow & Oxford AI Ethics researcher specializing in large language model verification, alignment, and hallucination benchmarks.",
       "credentials": [
         "Ph.D. Computer Science (Oxford)",
         "Member of IEEE AI Governance Board",
@@ -286,20 +369,8 @@
       "sourcesChecked": 3,
       "matchingSources": 3,
       "hallucinationRisk": "LOW",
-      "notes": "Cross-verified across ArXiv preprints, MIT CSAIL, and IEEE Spectrum.",
+      "notes": "Cross-verified across ArXiv preprints and MIT CSAIL.",
       "checkedAt": "2026-07-27T08:25:00Z"
-    },
-    {
-      "id": "vlog-2",
-      "articleId": "art-2",
-      "claim": "4.2x efficiency gain verified on 100k token inference tests.",
-      "status": "VERIFIED",
-      "score": 95,
-      "sourcesChecked": 2,
-      "matchingSources": 2,
-      "hallucinationRisk": "LOW",
-      "notes": "Validated against official whitepaper data and IEEE Micro publication.",
-      "checkedAt": "2026-07-27T06:10:00Z"
     }
   ],
   "automationLogs": [
@@ -308,34 +379,18 @@
       "taskName": "Daily Trending AI News Research",
       "status": "SUCCESS",
       "durationMs": 1420,
-      "details": "Scanned 14 RSS feeds (TechCrunch, VentureBeat, ArXiv). Identified 5 high-demand topics.",
+      "details": "Scanned RSS feeds (TechCrunch, ArXiv). Identified high-demand topics.",
       "timestamp": "2026-07-27T08:00:00Z"
-    },
-    {
-      "id": "log-2",
-      "taskName": "Fact Verification & Fake News Shield",
-      "status": "SUCCESS",
-      "durationMs": 2310,
-      "details": "Verified 8 core claims across 12 distinct sources. Trust Score average: 96.5%.",
-      "timestamp": "2026-07-27T08:05:00Z"
-    },
-    {
-      "id": "log-3",
-      "taskName": "AI Content Generation & Image Automation",
-      "status": "SUCCESS",
-      "durationMs": 3890,
-      "details": "Generated SEO-structured article with Groq/Fallback AI model. Selected 1200px+ Unsplash image.",
-      "timestamp": "2026-07-27T08:28:00Z"
     }
   ],
   "stats": {
-    "totalArticles": 3,
-    "verifiedArticles": 3,
+    "totalArticles": 5,
+    "verifiedArticles": 5,
     "needsReviewArticles": 0,
     "avgTrustScore": 96,
     "dailyAutomations": 12,
-    "totalViews": 10460,
-    "lastRunTimestamp": "2026-07-27T06:23:10.889Z",
+    "totalViews": 15460,
+    "lastRunTimestamp": "2026-07-27T07:38:51.094Z",
     "groqApiStatus": "FALLBACK_ACTIVE"
   }
 }
