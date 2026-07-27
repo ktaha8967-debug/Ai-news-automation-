@@ -9,28 +9,23 @@
   --font-heading: 'Plus Jakarta Sans', sans-serif;
 }
 
-body {
+/* 100% Soft Light Theme Baseline */
+html, body {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
   font-family: var(--font-sans);
-  background-color: #f8fafc;
-  color: #0f172a;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
+  color: #0f172a;
 }
 
-/* Light Mode Header & Card Design Tokens */
-.light-header {
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid #e2e8f0;
-}
-
+/* Light Card & Pill Utilities */
 .light-card {
-  background: #ffffff;
+  background-color: #ffffff;
   border: 1px solid #e2e8f0;
   border-radius: 1rem;
   box-shadow: 0 4px 20px -4px rgba(15, 23, 42, 0.05);
@@ -40,28 +35,28 @@ h1, h2, h3, h4, h5, h6 {
 .light-card:hover {
   transform: translateY(-2px);
   border-color: #cbd5e1;
-  box-shadow: 0 16px 36px -8px rgba(14, 165, 233, 0.14);
+  box-shadow: 0 16px 32px -6px rgba(14, 165, 233, 0.12);
 }
 
 .pill-sky {
-  background: #f0f9ff;
+  background-color: #f0f9ff;
   border: 1px solid #bae6fd;
   color: #0284c7;
 }
 
 .pill-emerald {
-  background: #ecfdf5;
+  background-color: #ecfdf5;
   border: 1px solid #a7f3d0;
   color: #059669;
 }
 
 .pill-purple {
-  background: #f5f3ff;
+  background-color: #f5f3ff;
   border: 1px solid #ddd6fe;
   color: #7c3aed;
 }
 
-/* Light Mode Reader Article Typography */
+/* Light Mode Article Typography */
 .prose-light h2 {
   font-family: var(--font-heading);
   font-size: 1.5rem;
@@ -116,7 +111,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .prose-light blockquote {
   border-left: 4px solid #0284c7;
-  background: #f0f9ff;
+  background-color: #f0f9ff;
   padding: 1.25rem 1.5rem;
   border-radius: 0 0.75rem 0.75rem 0;
   margin: 1.75rem 0;

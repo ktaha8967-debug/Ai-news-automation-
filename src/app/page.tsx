@@ -16,15 +16,15 @@ export default function HomePage() {
   const remainingArticles = articles.filter(a => a.id !== featuredArticle?.id);
 
   return (
-    <div className="space-y-10 pb-16">
+    <div className="space-y-10 pb-16 bg-slate-50 min-h-screen">
       {/* Live Breaking News Ticker */}
       <NewsTicker articles={articles} />
 
       {/* STUNNING Light Theme Hero Header Section */}
-      <section className="bg-gradient-to-b from-sky-50/70 via-indigo-50/30 to-slate-50/50 py-12 border-b border-slate-200/80">
+      <section className="bg-gradient-to-b from-sky-100/60 via-indigo-50/40 to-slate-50 py-12 border-b border-slate-200/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto space-y-4 mb-10">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full pill-sky text-xs font-bold shadow-sm">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full pill-sky text-xs font-bold shadow-xs">
               <Sparkles className="w-4 h-4 text-sky-600" />
               <span>Reliable & Fact-Checked Artificial Intelligence News</span>
             </div>
@@ -36,21 +36,21 @@ export default function HomePage() {
               </span>
             </h1>
 
-            <p className="text-slate-600 text-sm sm:text-base leading-relaxed font-sans">
+            <p className="text-slate-600 text-sm sm:text-base leading-relaxed font-sans max-w-2xl mx-auto">
               We collect trending artificial intelligence news from top research labs and tech websites, verify the facts across independent sources, and publish clean, reliable articles every day.
             </p>
 
             {/* Quick Metrics Bar */}
-            <div className="pt-2 flex flex-wrap justify-center items-center gap-4 text-xs text-slate-600">
-              <div className="flex items-center gap-1.5 bg-white px-4 py-2 rounded-xl border border-slate-200 shadow-sm">
+            <div className="pt-2 flex flex-wrap justify-center items-center gap-4 text-xs text-slate-700">
+              <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-xl border border-slate-200 shadow-sm">
                 <ShieldCheck className="w-4 h-4 text-emerald-600" />
                 <span>Trust Rating: <strong className="text-slate-900 font-bold">{stats.avgTrustScore}% Verified</strong></span>
               </div>
-              <div className="flex items-center gap-1.5 bg-white px-4 py-2 rounded-xl border border-slate-200 shadow-sm">
+              <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-xl border border-slate-200 shadow-sm">
                 <CheckCircle2 className="w-4 h-4 text-sky-600" />
                 <span>Published Stories: <strong className="text-slate-900 font-bold">{stats.verifiedArticles} Verified</strong></span>
               </div>
-              <div className="flex items-center gap-1.5 bg-white px-4 py-2 rounded-xl border border-slate-200 shadow-sm">
+              <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-xl border border-slate-200 shadow-sm">
                 <Activity className="w-4 h-4 text-purple-600" />
                 <span>Fact Checking: <strong className="text-slate-900 font-bold">100% Active</strong></span>
               </div>
@@ -82,7 +82,7 @@ export default function HomePage() {
               <Link
                 key={t.id}
                 href={`/topics/${t.slug}`}
-                className="bg-slate-50 hover:bg-sky-50 p-4 rounded-xl border border-slate-200 hover:border-sky-300 transition-all group shadow-2xs"
+                className="bg-slate-50 hover:bg-sky-50 p-4 rounded-xl border border-slate-200 hover:border-sky-300 transition-all group"
               >
                 <div className="flex items-center justify-between mb-1.5">
                   <span className="text-xs font-bold text-slate-900 group-hover:text-sky-600 transition-colors line-clamp-1 font-heading">{t.name}</span>
@@ -122,10 +122,10 @@ export default function HomePage() {
 
           {/* Sidebar (4 Cols) */}
           <div className="lg:col-span-4 space-y-6">
-            {/* Fact-Checking Standard Box */}
-            <div className="bg-gradient-to-br from-white via-white to-sky-50/50 border border-slate-200 rounded-2xl p-6 space-y-4 shadow-sm">
-              <div className="flex items-center gap-2 text-emerald-600 font-bold text-sm font-heading">
-                <ShieldCheck className="w-5 h-5" />
+            {/* Fact-Checking Guarantee Box */}
+            <div className="bg-gradient-to-br from-white via-white to-sky-50 border border-slate-200 rounded-2xl p-6 space-y-4 shadow-sm">
+              <div className="flex items-center gap-2 text-emerald-700 font-bold text-sm font-heading">
+                <ShieldCheck className="w-5 h-5 text-emerald-600" />
                 <span>100% Fact Checked Guarantee</span>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed font-sans">
@@ -137,7 +137,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Trending High-Demand Topics */}
+            {/* Trending Topics Today */}
             <div className="bg-white border border-slate-200 rounded-2xl p-6 space-y-4 shadow-sm">
               <div className="flex items-center justify-between border-b border-slate-100 pb-3">
                 <h4 className="text-sm font-bold text-slate-900 uppercase tracking-wider font-heading flex items-center gap-2">
