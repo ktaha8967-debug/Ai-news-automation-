@@ -1,6 +1,6 @@
 import React from 'react';
 import { cookies } from 'next/headers';
-import { AdminHeader } from '@/components/AdminHeader';
+import { AdminSidebar } from '@/components/AdminSidebar';
 
 export default function AdminLayout({
   children,
@@ -14,9 +14,9 @@ export default function AdminLayout({
   return (
     <div className="min-h-screen bg-[#f8fafc] text-slate-900 font-sans">
       {isAuthenticated ? (
-        <div className="min-h-screen flex flex-col">
-          <AdminHeader />
-          <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="min-h-screen flex">
+          <AdminSidebar />
+          <main className="flex-1 p-6 lg:p-10 overflow-y-auto bg-[#f8fafc]">
             {children}
           </main>
         </div>
