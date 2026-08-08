@@ -5,25 +5,49 @@ import { db } from '@/lib/db';
 import { ArticleCard } from '@/components/ArticleCard';
 import { ArrowLeft, BookOpen } from 'lucide-react';
 
+import { Metadata } from 'next';
+
 export const dynamic = 'force-dynamic';
 
 interface TopicPageProps {
   params: {
     slug: string;
   };
+  searchParams?: {
+    page?: string;
+  };
 }
 
-export default function TopicPage({ params }: TopicPageProps) {
+export async function generateMetadata({ params }: TopicPageProps): Promise<Metadata> {
+  const topic = db.getTopicBySlug(params.slug);
+  if (!topic) return {};
+  return {
+    title: `${topic.name} | World Bulletin Editorial Desk`,
+    description: topic.description,
+    alternates: {
+      canonical: `https://worldbulletin.world/topics/${topic.slug}`
+    }
+  };
+}
+
+export default function TopicPage({ params, searchParams }: TopicPageProps) {
+  const currentPage = Math.max(1, parseInt(searchParams?.page || '1', 10));
   const topic = db.getTopicBySlug(params.slug);
 
   if (!topic) {
     notFound();
   }
 
-  const articles = db.getArticles(undefined, topic.slug);
+  const allArticles = db.getArticles(undefined, topic.slug, true);
+  const itemsPerPage = 12;
+  const totalArticlesCount = allArticles.length;
+  const totalPages = Math.ceil(totalArticlesCount / itemsPerPage);
+
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const articles = allArticles.slice(startIndex, startIndex + itemsPerPage);
 
   return (
-    <div className="bg-white min-h-screen pb-20 font-sans">
+    <div className="bg-[#fafafa] min-h-screen pb-20 font-sans">
       {/* Top Breadcrumb */}
       <div className="border-b border-slate-100 py-3 bg-slate-50 text-xs text-slate-500">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -66,10 +90,37 @@ export default function TopicPage({ params }: TopicPageProps) {
           </div>
 
           {articles.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              {articles.map((article) => (
-                <ArticleCard key={article.id} article={article} />
-              ))}
+            <div className="space-y-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                {articles.map((article) => (
+                  <ArticleCard key={article.id} article={article} />
+                ))}
+              </div>
+
+              {/* Pagination Controls */}
+              {totalPages > 1 && (
+                <div className="pt-8 border-t border-slate-100 flex items-center justify-between gap-4 font-mono text-xs">
+                  <Link
+                    href={`/topics/${topic.slug}?page=${currentPage - 1}`}
+                    className={`px-4 py-2 rounded-xl border border-slate-200 bg-white font-bold transition-all ${
+                      currentPage <= 1 ? 'pointer-events-none opacity-40' : 'hover:border-sky-400 hover:text-sky-700'
+                    }`}
+                  >
+                    ← Previous Page
+                  </Link>
+                  <span className="text-slate-500 font-semibold">
+                    Page {currentPage} of {totalPages}
+                  </span>
+                  <Link
+                    href={`/topics/${topic.slug}?page=${currentPage + 1}`}
+                    className={`px-4 py-2 rounded-xl border border-slate-200 bg-white font-bold transition-all ${
+                      currentPage >= totalPages ? 'pointer-events-none opacity-40' : 'hover:border-sky-400 hover:text-sky-700'
+                    }`}
+                  >
+                    Next Page →
+                  </Link>
+                </div>
+              )}
             </div>
           ) : (
             <div className="bg-slate-50 border border-slate-200 rounded-xl p-12 text-center text-slate-500 text-sm">

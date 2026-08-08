@@ -1,0 +1,1117 @@
+Freelancer logo
+
+Browse
+
+
+Manage
+
+
+Groups
+
+
+
+21
+
+Quote
+Post a Project
+
+User Avatar
+@zuaibahmedd
+
+$0.00 USD
+
+
+Search
+Chats
+Requests
+J
+8 m
+Jx
+
+@JXDigital
+
+2 hours
+
+Ok bro
+
+User Avatar
+26 m
+Muhammad
+
+@raheel2k29
+
+Sun
+
+You: hello
+
+User Avatar
+Ishita
+
+@IshitaDev15
+
+Sun
+
+You: hello
+
+User Avatar
+Carmen
+
+@FLCarmen
+
+Jul 31
+
+I understand your concern, but this matter is outside my scope as I handle payment deposit issues. Please contact Freelancer Support for assistance with project-related concerns. You can reach them through this link: https://www.freelancer.com/support/employer/. Scroll down, click "Contact Us," select the issue category, and choose "I need further assistance." They will guide you on resolving this matter.
+
+User Avatar
+Winona
+
+@FLWinona
+
+Jul 30
+
+Just checking in to see if you had any further questions about managing your projects or if you're interested in membership options that could help enhance your freelancing experience. I’m here to assist!
+
+User Avatar
+Samara
+
+@FLSamara
+
+Jul 28
+
+Got it, Zohaib! If you need any help with becoming a Verified Freelancer and unlocking access to higher-paying projects and other benefits, feel free to let me know. You can also explore more about it here: https://www.freelancer.com/verified. Good luck with your current project!
+
+J
+8 m
+Jx
+
+@JXDigital
+
+Jul 26
+
+Kam chahiye frist project apko de diya
+
+J
+8 m
+Jx
+
+@JXDigital
+
+Jul 26
+
+You: hello
+
+No file chosen
+Jul 26, 2026
+
+Milestone requested by @zuaibahmedd
+Upfront payment
+—
+₹1000.00 INR
+ye hamara pehla milestone hoga baki ki payment project hone k baad
+ap ye payment process kr den apko 2 din mn project mil jaye ga
+Bhaisahab project setup hogaya kha
+J
+Kya
+yes
+Kam kitna dur tak hua screenshot do mujhe
+J
+Ya live preview
+Prototyper Board
+Sketch ideas, share notes, and collaborate in real time. You've been invited to a Prototyper board by @JXDigital.
+
+Join Prototyper
+is mn main ne apko bta diya ha k hum kese kese project setup krenge
+mere bnde ne kaha ha k wo work kr rha ha apke project pr 2-3 din mn apko prject mil jaye ga
+Bhaisahab project apko de diya
+Aap mujhe kuch screenshot dijiye
+J
+Ya live previous
+okay mn bhej rha hoon
+J
+Ji sir
+abhi backend bn rha ha to live nhi dikha skte na
+jb frontned bn jaye ga to apko puri video bna kr bhejen ge
+J
+Ok
+
+image.pngimage.png
+11:11 PM
+
+ye dekhen kaam jari ha
+mn ne milestone request kr diya ha usko ap dekh len or wo process kr den
+J
+Bro, ₹1000 first milestone accept kar raha hun. Bas confirm kar do ye payment release kab hogi—complete working demo/testing ke baad ya abhi upfront release karni hai? Main fund kar sakta hun, lekin release working progress verify karne ke baad karunga.
+Jul 27, 2026
+
+okay
+okay aaj mn apko progress dikha dunga
+http://194.164.95.174/
+ye url ha current website jo hmne abhi tk build kr li ha
+baki is mn automation wagera lgani ha bs
+uske baad hum testing krenge or apko project de denge
+http://194.164.95.174/
+ye url ha
+ap abhi upfront release kr den
+Website design is good, but please make sure the news is 100% real and based on current verified sources. Do not publish AI-generated or fictional news as real news.
+
+Please fix these points:
+
+1. Every article must use real, current sources with source links.
+2. Verify important claims from at least 2–3 reliable sources before publishing.
+3. Remove unsupported labels like “100% Peer-Checked”, “96% Trust”, or “Google News Verified Feed” unless they are actually verified.
+4. Do not use fictional authors as real journalists. Use genuine author details or clearly disclose AI-assisted content.
+5. No fake statistics, fake research papers, fake quotes, or fabricated breaking news.
+6. Articles should be original, SEO-friendly, and suitable for Google News/Discover.
+7. Add proper source citations inside every article.
+8. The automation should scan real trending AI news, verify it, then publish only verified stories.
+
+Please prioritize credibility and factual accuracy before we launch the website.
+I checked the full website. The UI and structure are good, but the current news content appears to be demo/generated content.
+
+Please do NOT launch the website with fabricated or unverified news.
+
+I need the production system to work like this:
+
+1. Fetch CURRENT and REAL AI news from reliable sources.
+2. Verify each important claim using at least 2–3 credible sources or an authoritative primary source.
+3. Generate an original article only from verified facts — never invent statistics, studies, companies, quotes, benchmarks, regulations, or announcements.
+4. Every published article must show its real sources/citations.
+5. If a story cannot be verified, DO NOT publish it.
+6. Remove fake/unsupported “93% Trust”, “95% Trust”, “96% Trust” scores.
+7. Remove “100% Peer-Checked” unless there is a genuine peer-checking process behind it.
+8. Remove “Google News Verified Feed” unless the website has actually received/qualified for the claimed status.
+9. Dr. Elena Rostova and Marcus Vance should not be presented as real journalists if they are fictional/generated identities. Use genuine author information or clearly disclose AI-assisted authorship.
+10. Breaking News must contain genuinely recent stories, not demo headlines.
+11. Avoid duplicate headlines in the Breaking News ticker.
+12. Keep the current professional homepage design, categories and layout — the main issue is the NEWS DATA and VERIFICATION SYSTEM.
+
+Most important requirement:
+
+REAL SOURCE → FACT VERIFICATION → ORIGINAL ARTICLE → SOURCE CITATIONS → PUBLISH.
+
+No verified source = no publication.
+
+Please replace all demo news before final delivery and show me 3–5 live articles with their original sources so I can verify the automation is working correctly.
+Can i call you
+Missed call
+Sir check it now the url for ui
+And i am working on news i will respond you as soon as possible
+This was just to show you that we are working on it
+So you can release first milestone payment
+currently we have build the structure and we are implementing step by step
+at the end we will give you 100% quality and also we will test the website
+J
+Call karta hun
+okay
+Missed call
+Missed call
+ab call kren ap
+Missed call
+J
+Puchnaa tha project website per rahega ye vpn per
+website pr
+J
+Ok
+apne first milestone ki payment release nhi ki
+Missed call
+Aapko complete payment dunga
+J
+Befikar kam kijiye
+nhi apne kaha tha k milestone wise hogi
+J
+Ji bilkul
+to ap kr den pehla milestone ye ha isko upfront payment hi smjhe
+J
+Kal morning bank open hote apko apka payment miljayega
+okay thanks
+J
+Milestone per
+yes
+J
+Aap mujhe update dete rahiye ok
+okay
+hmen iske baad isko adsense se bhi to connect krna pde ga
+J
+Mera puarana wala project per kam chal raha hai dono shat me published karega so aramaan se kam kijiye
+okay Sir
+J
+Sob kuch apko karna padega apne to contract per lekha hai
+ji ji
+ap mujhe adsense ka account de dijiye ga baki hum dekh lenge ya apko jesa lge
+J
+1 ghante ki me respond karna hun apko ok
+lekin is website ko banane ke baad iski seo bhi krni hogi jo k is project mn shamil nhi ha
+@JXDigital
+
+1 ghante ki me respond karna hun apko ok
+okay Sir
+J
+@zuaibahmedd
+
+lekin is website ko banane ke baad iski seo bhi krni hogi jo k is project mn shamil nhi ha
+Everything mention hai details ke shat proper day1 se organic traffic chahiye
+hn organic traffic to aye gi lekin seo ka web development se koi lena dena nhi ha
+Ji
+J
+AdSense connect karne ka bd kitna din me earning start hoga
+to organic traffic aye gi lekin agr ap kahen k mujhe lakho mn organic traffic chahiye sirf web development krne se possible hi nhi ha
+Kya karna padega
+J
+Organic traffic ke liye
+uske baad hum seo krenge apki website ki
+seo krni pde gi
+J
+Ji
+lekin seo ka different project hoga wo isi budget mn nhi hogi
+ye budget sirf AI news automation website ka ha
+uski seo ka nhi
+or seo mn bht saari mehnat lgti ha
+can I call you
+J
+Apne shayad project details dhyan se dekha nehi please check kijiye seo including hai
+Seo itne mn hoti nhi ha ab apka goal ha k 1 million monthly traffic ho
+to 1 million ka goal asani se achieve nhi hota
+Bor website me Worldwide AI News section add karna hai. Mera main goal Google organic traffic aur earning hai.
+
+Please confirm:
+
+1. AI news automatically kahan se fetch hogi?
+2. Article 100% original generate hoga, direct copy/rewrite nahi hoga?
+3. Duplicate content aur copyright issue avoid karne ka system kya hoga?
+4. Facts multiple reliable/official sources se verify honge?
+5. SEO title, meta description, H1-H2, keywords aur clean URL automatically generate honge?
+6. NewsArticle Schema aur structured data add hoga?
+7. Google News Sitemap aur normal XML Sitemap automatic update hoga?
+8. Google Search Console aur Google Analytics setup hoga?
+9. Related articles aur relevant tools ki automatic internal linking hogi?
+10. Featured image copyright-safe/original hogi?
+11. Author, published date, updated date aur sources show honge?
+12. Mobile speed aur Core Web Vitals optimize honge?
+13. Worldwide English audience ko target karne ka SEO setup hoga?
+14. AdSense approval aur ads placement ke liye site structure ready hoga?
+15. Daily kitni news automatically publish hogi aur admin publish se pehle review/edit kar sakta hai?
+16. Is automation me kaunsi paid API/service lagegi aur monthly running cost kitni hogi?
+
+Please ye bhi batao ki complete setup ke baad mujhe monthly kaun-kaun sa recurring charge dena padega. Check kijiye
+J
+Check kijiye
+. SEO title, meta description, H1-H2, keywords aur clean URL automatically generate honge?
+ye to honge mgr research to manually hogi na
+ye automatically ka matlab ha k apko kuch nhi krna pde ga
+ab koi aisa ai nhi ha jo high end pr keyword research krega
+J
+Website per traffic nehi ayega to revenue generated kise hoge sir
+to hmen isko manually krni hogi
+@JXDigital
+
+Website per traffic nehi ayega to revenue generated kise hoge sir
+traffic to aye ga
+@zuaibahmedd
+
+traffic to aye ga
+Ji but kom ayega
+J
+Right
+mgr ziyada se ziyada traffic le kr ane k liy seo krni pde gi na
+ab dekhen 1 million monthly traffic ka goal sirf kehne se achieve nhi ho jata peeche se bht hardwork krna pdta ha
+ab jese jese trafic bdhe ga weese wese apka earning bdhe ga
+Ji but call karta hun apko
+Missed call
+call nhi ayi apki
+Call Ended
+J
+Network nehi Aya
+meri awaz nhi a rhi thi kiya ?
+J
+Nehi
+Call Ended
+Ok
+J
+Mera voice apko mila
+nhi
+shayd apka internet issu hoga
+Maybe
+J
+Okey
+baki mn keh rha tha k
+J
+Boliye
+seo ka alag se project hoga
+Boss
+J
+Aisa nehi hai project per seo to chahiye boss
+@JXDigital
+
+Boss
+ye kesi baat kr rhe hain boss to ap hain hamare
+J
+Bina seo ki kise hoga
+@JXDigital
+
+Bina seo ki kise hoga
+wohi to mn samjha rha hoon apko
+Bhaisahab
+J
+Apko pata hai already market itna bada hai bina seo ki google per rank nehi hoga
+Q k agr ap seo pr kharch krenge to jitna ap kharch krenge us se kahi ziyada apko rturn mn mile ga
+Apko already bola tha mene google ka 1st page per rank hona chahiye bola tha ki nehi boliye aal
+J
+Aap
+@JXDigital
+
+Apko pata hai already market itna bada hai bina seo ki google per rank nehi hoga
+hn mere pass proper team ha
+Ha aap bola tha
+J
+Kam start hogaya
+@JXDigital
+
+Apko already bola tha mene google ka 1st page per rank hona chahiye bola tha ki nehi boliye aal
+first rank sirf website banane se nhi a jati
+@JXDigital
+
+Kam start hogaya
+seo pr to nhi hua lekin website apki bn rhi ha
+seo wagera backlinks krni pdti hain to is mn na sara manual kaam hota ha
+koi AI se nhi hota
+or hm seo wale bnde ko bht ziyada pay krte hain baki logon se
+J
+Ok
+to kiya khayal ha apka
+seo bhi hmse krwayenge
+Sir mera frist project hai apse
+J
+Pls kuch kijiye ki google per 1page per rank ho
+to mn aik new proposal dunga apko ye project done hone k baad ap usko dekh skte hain
+Q k agr apko first rank krna ha or earning krni ha to apko seo to lazmi krwani hogi ya hmse ya kisi or se
+hn usse pehle hm aik chiz kr k de skte hain k jo apki website ka name hoga na us pr apko rank mn top pr kra skte hain
+Acha
+J
+Google per rank hone ke liye seo zoruri hoti hai sobko pata hai to apko extra project kyn dena boliye
+Q k seo is different then web development ab jis seo ati hogi usko web development nhi ati hogi
+J
+Apke pass team hai
+or jisko web development ati hogi usko seo nhi ati hogi
+@JXDigital
+
+Apke pass team hai
+yes
+J
+Team member ko bolo
+mgr ap mera point samajh nhi rhe
+Thoda explain kijiye call kiya tha but network issue aya
+J
+Aap mujhe clear explain kijiye a2z ok
+okay mn explain krta hoon apko
+J
+Ji
+ab seo or web development do alag alag fields hain
+Sir main aapki baat bilkul samajh raha hoon. SEO is project ka part hai aur jo technical SEO requirements project mein mention hain, woh sab implement hongi. Jaise:
+
+* SEO titles aur meta descriptions
+* H1-H3 structure
+* Clean URLs
+* Schema markup
+* XML Sitemap & Google News Sitemap
+* Internal linking
+* Core Web Vitals optimization
+* Mobile optimization
+* Google Search Console & Analytics setup
+* E-E-A-T implementation
+* Google Discover optimization
+
+Ye sab development ke andar hi complete hoga.
+
+Lekin ek cheez clear karna chahta hoon. **Technical SEO** aur **Off-Page SEO** dono alag cheezen hain.
+
+Jo main is project mein kar raha hoon us se website Google ke best practices ke mutabiq ready hogi aur indexing ke liye optimize hogi. Lekin agar target **1 million monthly traffic**, competitive keywords par **Google first page ranking**, ya bahut high organic growth hai, to uske liye continuously SEO campaign chalani padti hai.
+
+Usme kaam hota hai:
+
+* High-level keyword research
+* Competitor analysis
+* Backlinks banana
+* Guest posting
+* Authority building
+* Content strategy
+* Performance monitoring
+* Regular SEO optimization
+
+Ye monthly process hota hai, sirf website develop karne se permanently first page ranking guarantee nahi di ja sakti.
+
+Main is project mein website ko maximum SEO-ready banaunga aur jitni technical implementation required hai woh sab karunga. Uske baad agar aap long-term organic growth aur high traffic target karna chahenge to uske liye SEO campaign alag se plan kar sakte hain.
+
+Mera goal bhi yehi hai ke aapki website future mein achi ranking aur earning kare, isliye main koi aisi guarantee nahi dena chahta jo practical na ho.
+ap ye dekh len sb kuch cover kiya ha is k ander mn ne
+J
+Okey
+I hope k apko samajh a gyi hogi ab
+Apne bola tha seo ka extra project purchase karna hoga
+J
+Clear hai bhaishab
+ji agr ap kisi or k pass bhi jayen ge na to wo kahen ge k seo ka alag se project hota ha
+web development mn sb kuch cover nhi hota
+J
+Last question tha
+G pochen boss
+J
+Google Discovery se traffic ayega ki nehi website per
+ji ata hota ha mgr bht time lgta ha or google discovery bhi tb kaam krega na jb targeted keywords use honge website mn us keyword ki searching ziyda hogi
+Ok
+Okey kam kijiye project per acha hona chahiye or traffic bhi ana chahiye apka seo team member ko seo karne ko boliye traffic dheere dhere thoda joldi aye organic traffic
+J
+Morning payment karta hun
+or seo k project k liye
+kitna budget hoga apka
+J
+Abhi to nehi hoga Magar inshallah jodi seo karega apka team se
+thk ha baki mn apko website ka name rank krwa dunga baki ap bhi dekh lijiye ga k mera seo wala bnda kitni jldi seo se rank krwa skta ha website
+baki ap subah pehle milestone ki payment kra dijiye ga
+Ji ji
+J
+Project or kitna din lagega
+bs mn ne final touch dena ha
+Domain suggest kijiye
+J
+Kuch idea hai to share kijiye
+wo name decide krne k baad hm dekhen ge
+is pr mujhe thoda dimaag pr zor dalna pde ga
+Domain se trank karna hai website 😊
+J
+Domain se rank karna hai website 😊
+G g bht saari cheezen hoti hain jese ab branding wagera
+J
+Correct
+jese ap wikipedia ka name sunte hain to apko pta chl jata ha k wiki pedia kiya ha
+J
+Yes
+usi tarah hm isko thoda aisa name decide krenge k jis ko dimaag mn sochte hi pta lg jaye k ye kiya ha
+J
+Correct
+proper branding hoti ha seo mn
+Right
+Okey project per jisa bataaya same to same kam kijiye complete morning payment milestone karta hun koi compromise nehi hona chahiye project per competitor ko dekhana hoga hum bhi kisise kom nehi ok
+J
+Ratings bhi dunga apko
+hn wo to ha
+baki yaad rkhiye k seo bhi krni hogi lazmi agr ziyada paisa kmana ha to
+kuch invest to krna pde ga na
+ye baat to apko bhi pta hogi
+J
+Apne to seo karenge hona abhi ke liye earning se dubara apke seo karunga
+adsense pr aisa website approve nhi ho jati
+kuch criteria hota ha inka
+J
+Apko jo project diya AdSense per approve hoga ki nehi
+ji approve to hoga na
+J
+See ager nehi hoga to abhi boldo
+q nhi hoga zaroor hoga
+Jul 28, 2026
+
+J
+Ji
+hm pehle kuch dino is ko direct nhi kr denge kuch din is pr traffic le kr ane ki koshish krenge
+phr uske baad aprroval k liye submit krenge
+J
+Apko karna padega
+g wo to hum hi krenge na
+J
+Ji
+lekin seo hum nhi krenge
+ye baat apko pehle se clear kr di ha
+k seo krwani hogi to uska alag se project hoga na
+Seo me karunga
+Okey
+J
+Apko jitna bola wo kijiye bas
+okay
+J
+Project per jo bataya wohi kijiye koi compromise nehi kijiye baki me dekhlunga
+ok
+Upcoming project ane wala hai
+Abhi to sirf 2 project hai
+J
+Ane wala time inshallah
+okay apko ye wala project bhi 100% denge inshAllah
+Ji
+J
+Ok morning milte hai
+ok bye
+hello Sir apne abhi tk upfront payment process nhi ki
+?
+Jul 29, 2026
+
+hello
+hello Sir apki website ready ha
+kindly ap milestone k paise pay kr den
+Jul 30, 2026
+
+hello
+ap galat kr rhe hain
+Missed call
+ap galat kr rhe hain
+Mene kya galat kya bhaishab
+Mera project complete hogaya
+J
+2 din se hospital per
+yes ho gya na
+Hun
+J
+Kya galat kya mene
+sorry mn thoda galat samjh gya tha
+J
+Link do
+wohi pehle wali link ha
+Dobara do
+J
+Mujhe massage delete kardiya
+ap milestone ki payment to kr den
+Link do mujhe aap
+J
+Check karta hun
+ok
+J
+Hogaya to hosting le lu
+hn le len
+aaj sham tk publish bhi kr denge phr
+J
+Link do mujhe
+http://194.164.95.174/
+ye len is mn ab automatic new bhi hoti ha
+Ok
+J
+Ruko line per
+okay ap pehle milestone ki payment to kr den ab
+Ha kar raha hun abhi bhaishab
+Itna wait kya apne
+J
+Or Thoda wait kijiye
+ok
+Check kijiye
+J
+Oh bhaishab
+mn dekhta hoon
+Hogaya ki nehi
+J
+Payment
+abhi tk to nhi hua
+
+image.pngimage.png
+2:31 PM
+
+ye dekhen
+nhi hua
+Milestone created by @JXDigital
+Upfront payment
+—
+₹1000.00 INR
+
+IMG_20260730_150243.jpgIMG_20260730_150243.jpg
+2:34 PM
+
+check
+J
+Hogaya
+ab ho gye hain inko realease bhi kr den
+Q k ye as upfront payment thi
+jo ap abhi de rhe hain
+Bhaishab me apko project diya or mujhe roz update de raha hai but amount bhi bank per pada hua tha kismat medical jana pada
+J
+Ok next kya hai release request dijiye release karta hun
+Milestone release requested by @zuaibahmedd
+Upfront payment
+—
+₹1000.00 INR
+Milestone released by @JXDigital
+Upfront payment
+—
+₹1000.00 INR
+J
+Ok
+thank you
+J
+Dil se kam karna hai
+ab ap befikar ho jayen
+Apko already bola ye mera frist project hai apse le raha hun
+Alhamdulillah
+@zuaibahmedd
+
+ab ap befikar ho jayen
+Thank
+U
+J
+Abhi next kya hai
+abhi test krna ha or deploy
+Ok
+J
+Hosting kob lena hai bolna
+vps buy kr len
+wo sasta pr jata ha hostin se
+Kitna
+J
+Vps
+contabo se vps buy kr len ap
+J
+Konsa company
+contabo
+J
+Check karta hun me
+g 4 dollar mn a jata ha
+starting price itni hi ha
+baki uske baad name cheap se sasti domain buy kr lenge
+wo bhi configure kr den ge apko website k sath
+J
+Inshallah earning start hoga to apko bonus dunga kuch amount seo bhi kar dena project ka
+ok
+Hmm
+Check karta hun
+J
+4 dollar sirf
+https://contabo.com/en/pricing/?utm_source=google&utm_medium=cpc&utm_campaign=brand-row-en-usd&utm_term=&utm_content=contabo&gad_source=1&gad_campaignid=23979322029&gbraid=0AAAAAD_Qy-fGHOQNavZ3Hmo2uR_YTk7Z9&gclid=CjwKCAjw7KvTBhA6EiwAWnutYW-Qd_zjZfQ74iN3Kia--uGNh3fgEheUWHE2IO-r5tDCKZmAcRouDhoCUXYQAvD_BwE
+ye link ha
+Costly abhi nehi job traffic ayega to switch karega vps per
+J
+
+IMG_20260730_151532.jpgIMG_20260730_151532.jpg
+2:47 PM
+
+4
+40
+€
+/ month
+€5.50
+itne mn ata ha
+ye costly to nhi ha
+Hostinger premium hosting le lunga
+J
+Multiple website use karega kisa hoga
+is pr bhi multiple ho jati hain
+km se km 10-15
+J
+Aap check karna 1 times
+
+image.pngimage.png
+2:50 PM
+
+ye dekhen
+J
+Kitna project post kar sakta hai
+10-17
+or iska setup bhi easy hota ha
+J
+Earning easy hoga
+yes
+Bohot mehnat ka paisa hai bhaishab
+J
+Mujhe koi idea nehi hai vps ka bare me mujhe website web hosting pata hai
+mn samajh rha hoon
+J
+Completely new hun me vps per jo aap bol raha hai vps ke bare me
+abhi jo apko link diya hua ha ye bhi humne vps pr hi lgaya hua ha
+J
+Ol
+ap buy kr len
+ok
+J
+@JXDigital
+
+Ol
+ok
+jb buy kr len to btaiye ga
+J
+Konsa best hai
+8gb wala le len
+jo sb se sasta ha
+J
+Ok
+yes
+Reference discount hai
+Wala kuch hai
+J
+Apki project website per published hoga ki nehi
+@JXDigital
+
+Reference discount hai
+n
+no
+Milestone requested by @zuaibahmedd
+Project Completion fee
+—
+₹2000.00 INR
+Milestone request rejected by @JXDigital
+Project Completion fee
+—
+₹2000.00 INR
+ye apne reject q kr diya
+ye apko tb krna tha jb hum deploy kr k de dete apko website
+Complete project complete ke bad link dena
+Payment hojayega
+J
+Ok
+okay
+mn abhi testng kr rha hoon
+Complete kijiye
+J
+Once ready payment karduga
+okay no problem
+Hmm
+J
+Complete hogaya Kya
+Gg bs ho gya ha
+kiya apne vps buy kr liya ha
+
+Bug check kijiye test kijiye
+J
+Nehi yar
+to publish kese kren ge
+J
+Bohot mahenga padta hai
+hosting se bht ziyada sasta ha
+J
+Website per lunch karega
+@JXDigital
+
+Website per lunch karega
+mn smjha nhi
+J
+Website per published karega
+yes krega is liye to hum vps ka use kr rhe hain
+J
+Vps mahenga
+to ap btayen kese publish krni ha
+ap hosting provide kr den
+
+Screenshot_2026-07-30-23-18-24-813_com.android.chrome.jpg
+10:48 PM
+
+J
+Isme published hoga ki nehi
+wohi to mn apko keh rha hoon
+us mn 3 website ho skti hain
+Ji
+J
+Ji
+mgr vps mn 10-14 kr skte hain
+website publish
+J
+Filhal 3 kafi hai
+cheln thk ha
+ap buy kr len hum kr dete hain live
+J
+Earning generated hoga to pura hum website per alag alaga kam karega
+thk hai janab
+J
+Buy karta hun app domain ka name soch lena
+thk ha mn name bta deta hoon apko
+J
+Ok boliye
+tractual.com
+Empiric.com
+in dono mn se koi dekh len
+mera opinion Empiric hi ha
+Ok
+J
+Tractual.com thik hai
+ok
+J
+Hmm
+buy kr len
+Ok
+Kal bolta hun
+J
+Dono project same time deployed hoga
+okay agr ap bura na mane to aik 1k ka milestone abhi de do
+Kal bro
+Already pressure high hai do project 1 time
+J
+Tomorrow inshallah
+okay
+J
+Aap mujhe clear boliye apko jo screenshot diya usme project kam karega ya nehi clear boliye
+krega
+hm ke denge apko
+Kuch problem hai to boliye abhi buy kar diya to bad me problem nehi hona chahiye isliye bola
+J
+Abhi project kitna dur hai
+nhi nhi bs ap pr len purchase jesa apko behtar lge
+bs name lgana ha
+J
+Name logo email
+is mn email nhi hoti
+J
+Ok bro vps final
+okay
+2 dollar
+
+Screenshot_2026-07-30-23-56-10-492_com.android.chrome.jpg
+11:26 PM
+
+J
+Kisa hoga bro
+4$ wala buy krlo
+
+Screenshot_2026-07-31-00-01-18-404_com.android.chrome.jpg
+11:31 PM
+
+J
+Konsa option select karna hai
+ubuntu
+Jul 31, 2026
+
+buy kr liya apne
+J
+Nehi budget nehi mil raha hai
+Chlen ap dekh len phr
+Jb ho jaye to btaiye ga kr den ge apko publish
+Vps bohot magenga hota hai but organic traffic ayega ki nehi bohot sare confused hai demag me ager kuch bug aya news website per support milega
+J
+@zuaibahmedd
+
+Jb ho jaye to btaiye ga kr den ge apko publish
+Hmm
+@JXDigital
+
+Vps bohot magenga hota hai but organic traffic ayega ki nehi bohot sare confused hai demag me ager kuch bug aya news website per… more
+Yes
+30.days full support hoga or bug handling bhi lgai ha website mn agr bug aye ga to website koi or tarika dhoonde gi or chalo rhe gi
+30.days full support hoga or bug handling bhi lgai ha website mn agr bug aye ga to website koi or tarika dhoonde gi or chalo rhe gi
+👍
+👍
+J
+Ok
+Aug 01, 2026
+
+Project complete hogaya kya
+Testing
+J
+Bhaisahab
+G ho gya ha
+Ap bs vps buy kr den
+Aug 02, 2026
+
+final details do
+J
+link
+Abhi publish ni ki
+J
+link do
+Website pr Jo changes kiye hain wo abhi live ni kiye
+J
+ok
+Apne vps buy kr liya
+?
+J
+2 projet 1 time publish karega waiting kar raha hun final projet
+Ap buy kr len publish Kisi bhi waqt kr skte hain
+vps per extra domain lena padta hai
+J
+kya
+G
+Domain to buy krna hi pdta ha
+J
+ai tools website per domain free milta hai 1 years
+@JXDigital
+
+ai tools website per domain free milta hai 1 years
+Ap dekh len phr
+Jo apko Best lgr
+ok
+tractual.com is not available.
+empiric.com is already taken.
+J
+Domain nehi hai
+Koi or dekhte hain phr
+J
+umm ok
+Baki vps buy kr liya ?
+Ya hosting buy ki ha
+dekho thoda NVMe 2
+
+Personal sites, light apps, and dev sandboxes
+
+₹198/mo
+
+Save 55%
+
+For 24 month term, Due Today: ₹4,752
+Renews at ₹444/mo
+
+1 vCPU Core
+2 GB DDR5 RAM
+50GB NVMe Storage
+Unmetered Bandwidth
+J
+check kijiye
+4 core Wala len 8gb ram
+K sath
+Age acche results chahte hain to
+Age guzara krna ha to ye le len
+J
+apne seo kardiya na project ka
+@JXDigital
+
+apne seo kardiya na project ka
+G
+Jintna apko btaya tha
+J
+aap domain suggest kijiye buy karta hun
+Inkline.com
+Moto ye hoga where ink meets the headlines
+inkline.com is already taken. We found a great alternative just for you!
+J
+check kijiye
+Koi or dekh len
+J
+Ok
+.com k ilwa koi or domain nhi ha
+J
+News website so think deeply kya hona chahiye
+mn samjha ni
+EchoLoom.com
+ye dekhen
+J
+professional AI news platform thoda acha sa domain chahiye
+ap dekh leen
+jo apko best lge
+Aug 03, 2026
+
+hello
+koi domain buy kiya ya nhi
+Idea nehi mila yar
+J
+Purana project ka freelancer bol raha hai vps lo aap bol raha hai koi bhi website lo
+mn ne bhi vps lene ka to kaha tha na
+J
+Ji ji
+TheDailyScope.com
+ye ha
+WorldBulletin.world
+ye bhi ha
+in dono mn se koi bhi dekh len ye dono avaialbe hain
+J
+thedailyscope.com is already taken. We found a great alternative just for you!
+
+image.pngimage.png
+3:08 PM
+
+J
+Google accept karega ye wala domain
+yes
+Ol
+J
+Ok
+ap vps or domain buy kr len
+Or jb ho jaye to bta dijiye ga
+Aug 04, 2026
+
+kiya bna phr
+J
+Nehi bro
+ok
+Aug 07, 2026
+
+Hello Sir kese hain
+Umeed ha k abhi tk ap ne vps or domain buy kr li hogi
+J
+Bro mera mujhe everything yad hai or mera project ane do dono shat me published karega
+Okay
+Ji
+Don't worry
+Project kaha han bri
+Bro
+Complete hogaya kya
+J
+Link do check karta hun desktop per
+@JXDigital
+
+Complete hogaya kya
+G bs deployment krni ha
+@JXDigital
+
+Link do check karta hun desktop per
+Aaj to ni Mera dev kl live kr Dega Jo changes kiye hain hmne
+Q k aaj office se off ha na
+J
+@zuaibahmedd
+
+G bs deployment krni ha
+Abhi deployment possible hai
+@JXDigital
+
+Abhi deployment possible hai
+Kl tk ho jaye gi
+DNS configuration wagera Hoti ha to usmen time lgta ha
+J
+Ok morning me Anydesk number shere kar dunga ok
+Ok kl hm 2pm ko kr len
+J
+Morning kitna baje
+Q k mn study krta hoon na to morning mn nhi ho paye ga
+2 ya 2:30 kr lete hain
+J
+Ok project se earning hoga na inshallah
+@JXDigital
+
+Ok project se earning hoga na inshallah
+Inshallah
+User password kya hai bro
+J
+
+Screenshot_2026-08-07-23-07-28-341_com.android.chrome.jpg
+10:38 PM
+
+Ye apke wala ni ha
+Acha
+J
+Mera wala link nehi hai
+@JXDigital
+
+Mera wala link nehi hai
+Ye hamara koi or project chl rha ha
+To is link pr hmne apko dikhane k Liye live kiya th
+J
+Ok
+Baki apke vps pr mn kl Mera dev deploy kr dega
+Phr ap dekh lijiye ga Jo changes krne honge wo kr lenge
+Vps to nehi web hosting per bro
+J
+Change na
+Okay
+J
+Koi problem to nehi hona na clear boliye mehanta ka paisa hai bro
+@JXDigital
+
+Koi problem to nehi hona na clear boliye mehanta ka paisa hai bro
+Nhi nhi ye hamara Roz ka kaam ha
+Bar bar puch raha hun apse ye wale hosting mera plain hai
+J
+
+Screenshot_2026-08-07-23-15-38-803_com.android.chrome-edit.jpg
+10:48 PM
+
+Ho jaye ga
+Ok bro
+Today
+
+Bor email dijiye apka
+J
+Bro
+mrtaha.co@gmail.com
+J
+Ok bro
+Type a message
+
+J
+Jx @JXDigital
+Active 8 minutes ago
+
+Technical Proposal – AI News Automation System
+Posted 13 days ago
+
+Create quote
+Request Milestone
+Media & files
+
+Chat options
+

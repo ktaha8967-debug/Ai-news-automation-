@@ -77,7 +77,7 @@ export const Navbar = () => {
             <Link href="/" className="group">
               <div className="flex items-center gap-2">
                 <h1 className="font-headline text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight text-slate-900 group-hover:text-sky-700 transition-colors uppercase">
-                  Worldwide AI News
+                  World Bulletin
                 </h1>
                 <span className="bg-sky-100 text-sky-800 text-[10px] font-extrabold px-2 py-0.5 rounded-md font-mono uppercase tracking-wider hidden sm:inline">
                   Verified Edition
@@ -120,22 +120,22 @@ export const Navbar = () => {
         </div>
 
         {/* Primary Sticky Category Navigation Pill Bar */}
-        <div className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-2xs">
+        <div className="sticky top-0 z-40 bg-slate-950/95 backdrop-blur-md border-b border-slate-800 shadow-md">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <nav className="flex items-center justify-start lg:justify-center gap-2 py-2 overflow-x-auto no-scrollbar font-sans">
+            <nav className="flex items-center justify-start lg:justify-center gap-2 py-3 overflow-x-auto no-scrollbar font-sans">
               {navLinks.map((link) => {
                 const Icon = link.icon;
                 return (
                   <Link
                     key={link.name}
                     href={link.href}
-                    className={`flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-bold transition-all whitespace-nowrap ${
+                    className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold transition-all whitespace-nowrap ${
                       link.match
-                        ? 'bg-slate-900 text-white shadow-xs font-heading'
-                        : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100/80 font-heading'
+                        ? 'bg-sky-500 text-slate-950 shadow-md shadow-sky-500/20 font-heading'
+                        : 'text-slate-300 hover:text-white hover:bg-white/5 font-heading'
                     }`}
                   >
-                    <Icon className={`w-3.5 h-3.5 ${link.match ? 'text-sky-400' : 'text-slate-400'}`} />
+                    <Icon className={`w-3.5 h-3.5 ${link.match ? 'text-slate-950' : 'text-slate-400'}`} />
                     <span>{link.name}</span>
                   </Link>
                 );

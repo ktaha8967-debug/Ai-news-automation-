@@ -1,6 +1,6 @@
 import { Article } from '@/types';
 
-export function generateNewsArticleSchema(article: Article, baseUrl: string = 'https://ainews-automation.org') {
+export function generateNewsArticleSchema(article: Article, baseUrl: string = 'https://worldbulletin.world') {
   const articleUrl = `${baseUrl}/news/${article.slug}`;
   
   return {
@@ -23,7 +23,7 @@ export function generateNewsArticleSchema(article: Article, baseUrl: string = 'h
     },
     'publisher': {
       '@type': 'Organization',
-      'name': 'Worldwide AI News Network',
+      'name': 'World Bulletin World',
       'logo': {
         '@type': 'ImageObject',
         'url': `${baseUrl}/logo.png`

@@ -5,7 +5,7 @@ export const dynamic = 'force-dynamic';
 
 export async function GET() {
   const articles = db.getArticles().filter(a => a.verificationStatus === 'VERIFIED');
-  const baseUrl = 'https://ainews-automation.org';
+  const baseUrl = 'https://worldbulletin.world';
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
@@ -15,7 +15,7 @@ export async function GET() {
     <loc>${baseUrl}/news/${a.slug}</loc>
     <news:news>
       <news:publication>
-        <news:name>Worldwide AI News</news:name>
+        <news:name>World Bulletin</news:name>
         <news:language>en</news:language>
       </news:publication>
       <news:publication_date>${new Date(a.publishedAt).toISOString()}</news:publication_date>

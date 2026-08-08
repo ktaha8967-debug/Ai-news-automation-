@@ -2,8 +2,8 @@ import { MetadataRoute } from 'next';
 import { db } from '@/lib/db';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://ainews-automation.org';
-  const articles = db.getArticles();
+  const baseUrl = 'https://worldbulletin.world';
+  const articles = db.getArticles(undefined, undefined, true);
   const topics = db.getTopics();
 
   const routes: MetadataRoute.Sitemap = [

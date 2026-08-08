@@ -9,6 +9,27 @@ interface NewsTickerProps {
 export const NewsTicker: React.FC<NewsTickerProps> = ({ articles }) => {
   if (!articles || articles.length === 0) return null;
 
+  // Filter out any duplicates by slug to ensure absolute uniqueness
+  const uniqueArticles: Article[] = [];
+  const seenSlugs = new Set<string>();
+  
+  for (const art of articles) {
+    if (!seenSlugs.has(art.slug)) {
+      seenSlugs.add(art.slug);
+      uniqueArticles.push(art);
+    }
+  }
+
+  // Slice to top 8 breaking news items to keep ticker fresh
+  const displayArticles = uniqueArticles.slice(0, 8);
+
+  if (displayArticles.length === 0) return null;
+
+  // For infinite scrolling animation, repeat the list only if we have more than 2 items
+  const tickerItems = displayArticles.length > 2 
+    ? [...displayArticles, ...displayArticles] 
+    : displayArticles;
+
   return (
     <div className="bg-slate-50 border-b border-slate-200 py-2 px-4 text-xs font-sans">
       <div className="max-w-7xl mx-auto flex items-center gap-4">
@@ -19,7 +40,7 @@ export const NewsTicker: React.FC<NewsTickerProps> = ({ articles }) => {
 
         <div className="overflow-hidden relative w-full">
           <div className="flex items-center gap-8 whitespace-nowrap animate-ticker">
-            {articles.concat(articles).map((art, idx) => (
+            {tickerItems.map((art, idx) => (
               <Link 
                 key={`${art.id}-${idx}`} 
                 href={`/news/${art.slug}`}

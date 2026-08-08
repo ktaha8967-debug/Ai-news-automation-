@@ -3,15 +3,18 @@ import './globals.css';
 import { PublicShell } from '@/components/PublicShell';
 
 export const metadata: Metadata = {
-  title: 'Worldwide AI News | Fact-Checked Automated AI Journalism',
+  title: 'World Bulletin | Fact-Checked Automated AI Journalism',
   description: 'Automated worldwide artificial intelligence news platform. Multi-source fact verification, automated claim extraction, and verified editorial standards.',
   keywords: ['AI News', 'Artificial Intelligence', 'Machine Learning', 'Fact Checked AI', 'Llama 3.3', 'Groq AI'],
-  authors: [{ name: 'Worldwide AI News Team' }],
+  authors: [{ name: 'World Bulletin Team' }],
+  alternates: {
+    canonical: 'https://worldbulletin.world'
+  },
   openGraph: {
-    title: 'Worldwide AI News | Fact-Checked Automated AI Journalism',
+    title: 'World Bulletin | Fact-Checked Automated AI Journalism',
     description: 'Automated worldwide artificial intelligence news platform.',
     type: 'website',
-    url: 'https://ainews-automation.org',
+    url: 'https://worldbulletin.world',
   },
 };
 

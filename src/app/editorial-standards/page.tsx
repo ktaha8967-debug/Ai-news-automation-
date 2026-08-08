@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { ShieldCheck, CheckCircle2, AlertTriangle, Cpu, FileText, ArrowLeft, BookOpen, Award, ExternalLink, Lock } from 'lucide-react';
 
 export const metadata = {
-  title: 'Editorial Standards & Fact Verification Policy | Worldwide AI News',
+  title: 'Editorial Standards & Fact Verification Policy | World Bulletin',
   description: 'Our journalistic code of ethics, multi-source claim verification standards, and automated fact-checking protocols.',
 };
 
@@ -28,7 +28,7 @@ export default function EditorialStandardsPage() {
           </h1>
 
           <p className="text-slate-600 text-base sm:text-lg leading-relaxed font-sans">
-            Worldwide AI News operates under a strict, multi-source verification protocol. Every story published across our desks is verified against peer-reviewed preprints, official lab announcements, and technical repositories before release.
+            World Bulletin operates under a strict, multi-source verification protocol. Every story published across our desks is verified against peer-reviewed preprints, official lab announcements, and technical repositories before release.
           </p>
         </div>
       </section>
@@ -37,7 +37,7 @@ export default function EditorialStandardsPage() {
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 space-y-10">
         {/* Core Pillars Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <div className="bg-white border border-slate-200 p-6 rounded-2xl space-y-3 shadow-xs">
+          <div className="bg-white border border-slate-200 p-6 rounded-2xl space-y-3 shadow-xs glow-card-subtle">
             <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-700 border border-emerald-200 flex items-center justify-center font-bold">
               <CheckCircle2 className="w-5 h-5" />
             </div>
@@ -49,7 +49,7 @@ export default function EditorialStandardsPage() {
             </p>
           </div>
 
-          <div className="bg-white border border-slate-200 p-6 rounded-2xl space-y-3 shadow-xs">
+          <div className="bg-white border border-slate-200 p-6 rounded-2xl space-y-3 shadow-xs glow-card-subtle">
             <div className="w-10 h-10 rounded-xl bg-amber-50 text-amber-700 border border-amber-200 flex items-center justify-center font-bold">
               <AlertTriangle className="w-5 h-5" />
             </div>
@@ -61,7 +61,7 @@ export default function EditorialStandardsPage() {
             </p>
           </div>
 
-          <div className="bg-white border border-slate-200 p-6 rounded-2xl space-y-3 shadow-xs">
+          <div className="bg-white border border-slate-200 p-6 rounded-2xl space-y-3 shadow-xs glow-card-subtle">
             <div className="w-10 h-10 rounded-xl bg-sky-50 text-sky-700 border border-sky-200 flex items-center justify-center font-bold">
               <Cpu className="w-5 h-5" />
             </div>
@@ -73,7 +73,7 @@ export default function EditorialStandardsPage() {
             </p>
           </div>
 
-          <div className="bg-white border border-slate-200 p-6 rounded-2xl space-y-3 shadow-xs">
+          <div className="bg-white border border-slate-200 p-6 rounded-2xl space-y-3 shadow-xs glow-card-subtle">
             <div className="w-10 h-10 rounded-xl bg-purple-50 text-purple-700 border border-purple-200 flex items-center justify-center font-bold">
               <FileText className="w-5 h-5" />
             </div>

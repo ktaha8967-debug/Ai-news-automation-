@@ -63,7 +63,7 @@ export const HeroCarousel: React.FC<HeroCarouselProps> = ({ articles }) => {
             </span>
             <span className="bg-emerald-500/90 text-white font-extrabold text-[10px] px-2.5 py-1 rounded-full uppercase tracking-wider font-mono flex items-center gap-1">
               <ShieldCheck className="w-3 h-3 text-white" />
-              {currentStory.trustScore}% Verified
+              Verified Source
             </span>
           </div>
 

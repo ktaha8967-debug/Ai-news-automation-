@@ -143,7 +143,7 @@ export const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => 
                     </span>
                     <span className="text-slate-400">•</span>
                     <span className="text-emerald-700 font-bold flex items-center gap-0.5">
-                      <ShieldCheck className="w-3 h-3 text-emerald-600" /> {art.trustScore}% Score
+                      <ShieldCheck className="w-3 h-3 text-emerald-600" /> Verified
                     </span>
                   </div>
 

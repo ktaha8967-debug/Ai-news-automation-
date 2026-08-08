@@ -29,7 +29,7 @@ export const VerificationBadge: React.FC<VerificationBadgeProps> = ({ score, sta
               Reporting Sources & Fact Check Reference
             </h4>
             <p className="text-slate-600 text-xs mt-0.5">
-              Verified against {sources.length} independent technical sources ({score}% confidence match)
+              Verified against {sources.length} independent technical sources (Factual Integrity Audited)
             </p>
           </div>
         </div>

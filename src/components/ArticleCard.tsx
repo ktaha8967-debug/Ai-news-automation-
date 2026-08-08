@@ -65,7 +65,7 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({ article, featured = fa
   }
 
   return (
-    <div className="news-card flex flex-col justify-between group bg-white p-5 rounded-3xl border border-slate-200 hover:border-sky-300 hover:shadow-md transition-all">
+    <div className="news-card flex flex-col justify-between group bg-white p-5 rounded-3xl border border-slate-200 glow-card-subtle">
       <div className="space-y-3">
         <div className="relative h-48 w-full overflow-hidden rounded-2xl bg-slate-100 shadow-2xs">
           <Image

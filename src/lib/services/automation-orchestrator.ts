@@ -41,7 +41,7 @@ export async function runFullAutomationCycle(): Promise<{
 
     for (const item of targetItems) {
       // Step 2: Fact Verification
-      const verification = verifyFactClaims(item);
+      const verification = await verifyFactClaims(item);
       
       db.addAutomationLog({
         id: `log-ver-${Date.now()}`,

@@ -10,7 +10,7 @@ export const Footer = () => {
           {/* Masthead Col */}
           <div className="space-y-3 md:col-span-2">
             <h3 className="font-headline text-xl font-black text-white uppercase tracking-tight">
-              Worldwide AI News
+              World Bulletin
             </h3>
             <p className="text-slate-400 text-xs leading-relaxed max-w-md">
               An independent technical news platform providing peer-verified reporting on artificial intelligence research, foundation models, silicon hardware, and global safety standards.
@@ -38,14 +38,14 @@ export const Footer = () => {
             <h4 className="font-heading text-xs font-bold text-white uppercase tracking-wider">Editorial Standards</h4>
             <ul className="space-y-2 text-slate-400">
               <li><Link href="/editorial-standards" className="hover:text-white transition-colors">Fact-Checking Code & Policy</Link></li>
-              <li><Link href="/authors/elena-rostova" className="hover:text-white transition-colors">Dr. Elena Rostova (Verification Lead)</Link></li>
-              <li><Link href="/authors/marcus-vance" className="hover:text-white transition-colors">Marcus Vance (Silicon Editor)</Link></li>
+              <li><Link href="/authors/elena-rostova" className="hover:text-white transition-colors">Elena Rostova (AI Editorial Bot)</Link></li>
+              <li><Link href="/authors/marcus-vance" className="hover:text-white transition-colors">Marcus Vance (AI Tech Bot)</Link></li>
             </ul>
           </div>
         </div>
 
         <div className="pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-500">
-          <p>© {new Date().getFullYear()} Worldwide AI News Network. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} World Bulletin Network. All rights reserved.</p>
           <div className="flex items-center gap-4">
             <Link href="/editorial-standards" className="hover:text-slate-300">Journalism Ethics</Link>
           </div>

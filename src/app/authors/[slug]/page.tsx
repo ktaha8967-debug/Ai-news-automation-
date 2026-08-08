@@ -6,11 +6,25 @@ import { db } from '@/lib/db';
 import { ArticleCard } from '@/components/ArticleCard';
 import { ArrowLeft, Award, Twitter, Linkedin } from 'lucide-react';
 
+import { Metadata } from 'next';
+
 export const dynamic = 'force-dynamic';
 
 interface AuthorPageProps {
   params: {
     slug: string;
+  };
+}
+
+export async function generateMetadata({ params }: AuthorPageProps): Promise<Metadata> {
+  const author = db.getAuthorBySlug(params.slug);
+  if (!author) return {};
+  return {
+    title: `${author.name} | World Bulletin Journalist`,
+    description: author.bio,
+    alternates: {
+      canonical: `https://worldbulletin.world/authors/${author.slug}`
+    }
   };
 }
 
@@ -21,10 +35,10 @@ export default function AuthorPage({ params }: AuthorPageProps) {
     notFound();
   }
 
-  const articles = db.getArticles().filter(a => a.author.slug === author.slug);
+  const articles = db.getArticles(undefined, undefined, true).filter(a => a.author.slug === author.slug);
 
   return (
-    <div className="bg-white min-h-screen pb-20 font-sans">
+    <div className="bg-[#fafafa] min-h-screen pb-20 font-sans">
       {/* Top Breadcrumb */}
       <div className="border-b border-slate-100 py-3 bg-slate-50 text-xs text-slate-500">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">

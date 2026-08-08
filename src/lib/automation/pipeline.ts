@@ -1,5 +1,9 @@
 import { db } from '@/lib/db';
 import { Article, VerificationLog, AutomationLog } from '@/types';
+import { discoverTrendingAINews } from '@/lib/services/news-researcher';
+import { verifyFactClaims } from '@/lib/services/fact-verifier';
+import { generateAIArticle } from '@/lib/services/ai-generator';
+import { fetchFeaturedImage } from '@/lib/services/image-automation';
 
 // High-definition copyright-safe tech photography library
 const HIGH_RES_TECH_IMAGES = [
@@ -97,10 +101,9 @@ export async function runScheduledNewsAutomationPipeline(maxArticlesToProcess = 
   const authors = db.getAuthors();
   const stats = db.getStats();
 
-  const lastRunTimestamp = stats.lastCronRunTimestamp ? new Date(stats.lastCronRunTimestamp).getTime() : 0;
-
   // 1. Scan configured AI news sources
-  const feedItems = await fetchLiveRssFeeds();
+  const research = await discoverTrendingAINews();
+  const feedItems = research.items;
 
   let processedCount = 0;
   let newPublishedCount = 0;
@@ -121,87 +124,70 @@ export async function runScheduledNewsAutomationPipeline(maxArticlesToProcess = 
       continue;
     }
 
-    // 3. Fact verification & Trust Score calculation
-    const trustScore = Math.floor(Math.random() * 15) + 85; // 85% to 99% score
-    const verificationStatus = trustScore >= 80 ? 'VERIFIED' : 'NEEDS_REVIEW';
+    // 3. Fact verification (Scrapes the real source URL and runs Groq/Keyword analysis)
+    const verification = await verifyFactClaims(item);
+    const trustScore = verification.trustScore;
+    const verificationStatus = verification.status;
 
-    const selectedImage = HIGH_RES_TECH_IMAGES[processedCount % HIGH_RES_TECH_IMAGES.length];
-    const author = authors[processedCount % authors.length] || authors[0];
-    const pubDate = new Date().toISOString();
-
-    const newArticle: Article = {
-      id: `art-auto-${Date.now()}-${processedCount}`,
-      title: item.title,
-      slug: slug,
-      summary: item.summary,
-      content: `<h2>Automated Research & Editorial Summary</h2>
-<p>${item.summary}</p>
-<p>Our automated research engine cross-referenced claims across empirical whitepapers, research repositories, and official benchmark releases. The findings confirm that recent architectural improvements significantly enhance computational efficiency while maintaining rigorous accuracy standards.</p>
-<h2>Empirical Fact Verification</h2>
-<p>All core quantitative claims in this report were cross-checked against external sources with an assigned <strong>${trustScore}% Verification Score</strong>.</p>`,
-      metaDescription: item.summary,
-      category: item.category,
-      topicSlug: item.topicSlug,
-      trustScore: trustScore,
-      verificationStatus: verificationStatus,
-      featuredImage: selectedImage,
-      imageCaption: `Empirical technical visualization for: ${item.title}`,
-      author: author,
-      sources: [
-        {
-          id: `src-auto-${Date.now()}`,
-          sourceName: 'Verified Research Feed',
-          sourceUrl: item.link,
-          claim: item.summary,
-          verified: true,
-          publishedDate: pubDate
-        }
-      ],
-      publishedAt: pubDate,
-      updatedAt: pubDate,
-      readTimeMinutes: 4,
-      views: 120,
-      isFeatured: false,
-      keywords: ['AI News', 'Machine Learning', 'Fact Checked', item.category],
-      faq: []
-    };
-
-    // 4. Save to Database atomically
-    db.saveArticle(newArticle);
-
-    // 5. Add Verification Log
-    const vLog: VerificationLog = {
-      id: `vlog-${Date.now()}-${processedCount}`,
-      articleId: newArticle.id,
-      claim: item.summary,
-      status: verificationStatus,
-      score: trustScore,
-      sourcesChecked: 3,
-      matchingSources: 3,
-      hallucinationRisk: trustScore >= 90 ? 'LOW' : 'MEDIUM',
-      notes: `Automated scheduled cron verification against source ${item.link}`,
-      checkedAt: pubDate
-    };
-    db.addVerificationLog(vLog);
-
-    if (verificationStatus === 'VERIFIED') {
-      newPublishedCount++;
-    } else {
+    // If a story cannot be verified, DO NOT publish it. Skip completely!
+    // "No verified source = no publication."
+    if (verificationStatus !== 'VERIFIED') {
       heldInReviewCount++;
+      continue; 
     }
 
+    // 4. Generate AI Article purely from verified facts
+    const generated = await generateAIArticle(item, verification);
+
+    const imageInfo = fetchFeaturedImage(item.category);
+    const author = authors[processedCount % authors.length] || authors[0];
+    const pubDate = new Date().toISOString();
+    const topicObj = db.getTopics().find(t => t.name.toLowerCase() === item.category.toLowerCase()) || db.getTopics()[0];
+
+    const newArticle: Article = {
+      id: `art-auto-${Date.now()}-${processedCount}-${Math.random().toString(36).substring(2, 5)}`,
+      title: generated.title,
+      slug: generated.slug,
+      summary: generated.summary,
+      content: generated.content,
+      metaDescription: generated.metaDescription,
+      category: generated.category,
+      topicSlug: topicObj.slug,
+      trustScore: trustScore,
+      verificationStatus: verificationStatus,
+      featuredImage: imageInfo.imageUrl,
+      imageCaption: imageInfo.caption,
+      author: author,
+      sources: verification.sources,
+      publishedAt: pubDate,
+      updatedAt: pubDate,
+      readTimeMinutes: generated.readTimeMinutes,
+      views: 1,
+      isFeatured: false,
+      keywords: generated.keywords,
+      faq: generated.faq
+    };
+
+    // 5. Save to Database atomically
+    db.saveArticle(newArticle);
+
+    // 6. Add Verification Log
+    verification.log.articleId = newArticle.id;
+    db.addVerificationLog(verification.log);
+
+    newPublishedCount++;
     processedCount++;
   }
 
   const durationMs = Date.now() - startTime;
   db.updateCronRunTimestamp();
 
-  // 6. Record in Automation Logs
-  const logMessage = `Scheduled Cron Run (3x Daily): Processed ${processedCount} new articles (${newPublishedCount} Auto-Published, ${heldInReviewCount} Held in Review, ${skippedDuplicatesCount} Duplicates Skipped). Sitemaps updated.`;
+  // 7. Record in Automation Logs
+  const logMessage = `Scheduled Cron Run: Processed ${processedCount} new articles (${newPublishedCount} Auto-Published, ${heldInReviewCount} Rejected/Held, ${skippedDuplicatesCount} Duplicates Skipped). Sitemaps updated.`;
 
   const autoLog: AutomationLog = {
     id: `log-cron-${Date.now()}`,
-    taskName: 'Automated 3x Daily Scheduled News Pipeline',
+    taskName: 'Automated Scheduled News Pipeline',
     status: 'SUCCESS',
     durationMs: durationMs,
     details: logMessage,
