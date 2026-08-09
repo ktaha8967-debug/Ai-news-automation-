@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { PublicShell } from '@/components/PublicShell';
+import Script from 'next/script';
 
 export const metadata: Metadata = {
   title: 'World Bulletin | Fact-Checked Automated AI Journalism',
@@ -26,6 +27,19 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full">
       <body className="h-full bg-[#fafafa] antialiased">
+        {/* Google Analytics (GTag) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-NMM93CJ1ZQ"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-NMM93CJ1ZQ');
+          `}
+        </Script>
         <PublicShell>{children}</PublicShell>
       </body>
     </html>
