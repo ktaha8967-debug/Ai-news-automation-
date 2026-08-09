@@ -26,8 +26,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="h-full">
-      <body className="h-full bg-[#fafafa] antialiased">
-        {/* Google Analytics (GTag) */}
+      <head>
+        {/* Google Analytics (GTag) - Injected in Head to detect immediately */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-NMM93CJ1ZQ"
           strategy="afterInteractive"
@@ -40,6 +40,8 @@ export default function RootLayout({
             gtag('config', 'G-NMM93CJ1ZQ');
           `}
         </Script>
+      </head>
+      <body className="h-full bg-[#fafafa] antialiased">
         <PublicShell>{children}</PublicShell>
       </body>
     </html>
