@@ -27,19 +27,16 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full">
       <head>
-        {/* Google Analytics (GTag) - Injected in Head to detect immediately */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-NMM93CJ1ZQ"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
+        {/* Google Analytics (GTag) - Standard HTML script for instant bot verification */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-NMM93CJ1ZQ"></script>
+        <script dangerouslySetInnerHTML={{
+          __html: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-NMM93CJ1ZQ');
-          `}
-        </Script>
+          `
+        }} />
       </head>
       <body className="h-full bg-[#fafafa] antialiased">
         <PublicShell>{children}</PublicShell>
