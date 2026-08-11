@@ -17,6 +17,9 @@ export const metadata: Metadata = {
     'Llama 3.3',
     'Groq AI'
   ],
+  icons: {
+    icon: '/favicon.ico',
+  },
   authors: [{ name: 'World Bulletin Team' }],
   alternates: {
     canonical: 'https://worldbulletin.world'
