@@ -5,15 +5,25 @@ import Script from 'next/script';
 
 export const metadata: Metadata = {
   title: 'World Bulletin | Fact-Checked Automated AI Journalism',
-  description: 'Automated worldwide artificial intelligence news platform. Multi-source fact verification, automated claim extraction, and verified editorial standards.',
-  keywords: ['AI News', 'Artificial Intelligence', 'Machine Learning', 'Fact Checked AI', 'Llama 3.3', 'Groq AI'],
+  description: 'World Bulletin (worldbulletin.world) is an automated worldwide artificial intelligence news platform. Multi-source fact verification, automated claim extraction, and verified editorial standards.',
+  keywords: [
+    'World Bulletin',
+    'worldbulletin.world',
+    'World Bulletin News',
+    'AI News',
+    'Artificial Intelligence',
+    'Machine Learning',
+    'Fact Checked AI',
+    'Llama 3.3',
+    'Groq AI'
+  ],
   authors: [{ name: 'World Bulletin Team' }],
   alternates: {
     canonical: 'https://worldbulletin.world'
   },
   openGraph: {
     title: 'World Bulletin | Fact-Checked Automated AI Journalism',
-    description: 'Automated worldwide artificial intelligence news platform.',
+    description: 'World Bulletin is an automated worldwide artificial intelligence news platform.',
     type: 'website',
     url: 'https://worldbulletin.world',
   },
