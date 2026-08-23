@@ -2,9 +2,18 @@ import { cookies } from 'next/headers';
 import { db } from '@/lib/db';
 
 export function verifyAdminPassword(password: string): boolean {
-  const currentDbPassword = db.getStats().adminPassword || 'admin123';
-  const envPassword = process.env.ADMIN_PASSWORD || 'admin123';
-  return password === currentDbPassword || password === envPassword || password === 'admin123';
+  const currentDbPassword = db.getStats().adminPassword;
+  const envPassword = process.env.ADMIN_PASSWORD;
+  
+  if (currentDbPassword) {
+    return password === currentDbPassword;
+  }
+  
+  if (envPassword) {
+    return password === envPassword;
+  }
+  
+  return password === 'admin123';
 }
 
 export function isAuthenticated(): boolean {
