@@ -2,7 +2,12 @@ import { Article } from '@/types';
 
 export function generateNewsArticleSchema(article: Article, baseUrl: string = 'https://worldbulletin.world') {
   const articleUrl = `${baseUrl}/news/${article.slug}`;
-  
+  const authorName = article.author?.name || 'World Bulletin Editorial Desk';
+  const authorRole = article.author?.role || 'Staff Journalist';
+  const authorSlug = article.author?.slug || 'editorial-desk';
+  const keywordsList = Array.isArray(article.keywords) ? article.keywords.join(', ') : (article.keywords || 'AI News');
+  const citationList = Array.isArray(article.sources) ? article.sources.map(s => s.sourceUrl).filter(Boolean) : [];
+
   return {
     '@context': 'https://schema.org',
     '@type': 'NewsArticle',
@@ -11,27 +16,27 @@ export function generateNewsArticleSchema(article: Article, baseUrl: string = 'h
       '@id': articleUrl
     },
     'headline': article.title,
-    'description': article.metaDescription,
-    'image': [article.featuredImage],
+    'description': article.metaDescription || article.summary || '',
+    'image': [article.featuredImage || `${baseUrl}/logo.png`],
     'datePublished': article.publishedAt,
-    'dateModified': article.updatedAt,
+    'dateModified': article.updatedAt || article.publishedAt,
     'author': {
       '@type': 'Person',
-      'name': article.author.name,
-      'jobTitle': article.author.role,
-      'url': `${baseUrl}/authors/${article.author.slug}`
+      'name': authorName,
+      'jobTitle': authorRole,
+      'url': `${baseUrl}/authors/${authorSlug}`
     },
     'publisher': {
       '@type': 'Organization',
-      'name': 'World Bulletin World',
+      'name': 'World Bulletin',
       'logo': {
         '@type': 'ImageObject',
         'url': `${baseUrl}/logo.png`
       }
     },
-    'keywords': article.keywords.join(', '),
-    'articleSection': article.category,
-    'citation': article.sources.map(s => s.sourceUrl)
+    'keywords': keywordsList,
+    'articleSection': article.category || 'Artificial Intelligence',
+    'citation': citationList
   };
 }
 

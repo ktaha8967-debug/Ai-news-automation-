@@ -11,10 +11,11 @@ interface VerificationBadgeProps {
   compact?: boolean;
 }
 
-export const VerificationBadge: React.FC<VerificationBadgeProps> = ({ score, status, sources, compact = false }) => {
+export const VerificationBadge: React.FC<VerificationBadgeProps> = ({ score, status, sources = [], compact = false }) => {
   const [showDetails, setShowDetails] = useState(false);
+  const safeSources = Array.isArray(sources) ? sources : [];
 
-  if (compact) return null;
+  if (compact || safeSources.length === 0) return null;
 
   return (
     <div className="bg-slate-50 border border-slate-200 rounded-xl p-5 my-8 text-xs font-sans">
@@ -29,7 +30,7 @@ export const VerificationBadge: React.FC<VerificationBadgeProps> = ({ score, sta
               Reporting Sources & Fact Check Reference
             </h4>
             <p className="text-slate-600 text-xs mt-0.5">
-              Verified against {sources.length} independent technical sources (Factual Integrity Audited)
+              Verified against {safeSources.length} independent technical sources (Factual Integrity Audited)
             </p>
           </div>
         </div>
