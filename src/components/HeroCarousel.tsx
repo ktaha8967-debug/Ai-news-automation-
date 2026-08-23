@@ -51,6 +51,7 @@ export const HeroCarousel: React.FC<HeroCarouselProps> = ({ articles }) => {
             src={currentStory.featuredImage}
             alt={currentStory.title}
             fill
+            sizes="(max-width: 1024px) 100vw, 60vw"
             className="object-cover transition-all duration-700 ease-out group-hover:scale-102"
             priority
           />

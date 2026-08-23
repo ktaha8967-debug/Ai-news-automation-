@@ -72,6 +72,7 @@ export default function HomePage({ searchParams }: { searchParams: { page?: stri
                         src={story.featuredImage}
                         alt={story.title}
                         fill
+                        sizes="(max-width: 640px) 100vw, 50vw"
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                       <div className="absolute top-3 left-3 bg-slate-900/90 text-white font-extrabold text-[9px] px-2.5 py-0.5 rounded-full uppercase tracking-wider font-heading border border-white/10 backdrop-blur-md">
@@ -197,6 +198,7 @@ export default function HomePage({ searchParams }: { searchParams: { page?: stri
                       src={report.featuredImage}
                       alt={report.title}
                       fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute top-3 left-3 bg-slate-900/90 text-white font-extrabold text-[10px] px-2.5 py-0.5 rounded-full uppercase tracking-wider font-heading">

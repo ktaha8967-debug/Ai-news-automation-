@@ -143,6 +143,7 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                 src={article.featuredImage}
                 alt={article.title}
                 fill
+                sizes="(max-width: 1024px) 100vw, 800px"
                 className="object-cover"
                 priority
               />
