@@ -39,6 +39,26 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="h-full" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.addEventListener('error', function(e) {
+                if (e.message && (e.message.indexOf('Loading chunk') !== -1 || e.message.indexOf('ChunkLoadError') !== -1)) {
+                  var sessionKey = 'chunk_reload_retry';
+                  if (!sessionStorage.getItem(sessionKey)) {
+                    sessionStorage.setItem(sessionKey, '1');
+                    window.location.reload(true);
+                  }
+                }
+              });
+              window.addEventListener('load', function() {
+                sessionStorage.removeItem('chunk_reload_retry');
+              });
+            `
+          }}
+        />
+      </head>
       <body className="h-full bg-[#fafafa] antialiased" suppressHydrationWarning>
         {/* Google Analytics (GTag) - Non-blocking optimized loading */}
         <Script
