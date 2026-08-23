@@ -38,8 +38,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="h-full">
-      <body className="h-full bg-[#fafafa] antialiased">
+    <html lang="en" className="h-full" suppressHydrationWarning>
+      <body className="h-full bg-[#fafafa] antialiased" suppressHydrationWarning>
         {/* Google Analytics (GTag) - Non-blocking optimized loading */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-NMM93CJ1ZQ"
