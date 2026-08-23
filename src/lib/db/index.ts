@@ -282,7 +282,15 @@ export const db = {
   },
 
   getTopics: (): TopicCluster[] => {
-    return ensureDbExists().topics;
+    const data = ensureDbExists();
+    const articles = data.articles.filter(a => a.verificationStatus === 'VERIFIED');
+    return data.topics.map(t => {
+      const count = articles.filter(a => a.topicSlug.toLowerCase() === t.slug.toLowerCase()).length;
+      return {
+        ...t,
+        articleCount: count
+      };
+    });
   },
 
   getTopicBySlug: (slug: string): TopicCluster | undefined => {

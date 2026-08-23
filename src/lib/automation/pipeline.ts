@@ -113,10 +113,16 @@ export async function runScheduledNewsAutomationPipeline(maxArticlesToProcess = 
   for (const item of feedItems) {
     if (processedCount >= maxArticlesToProcess) break;
 
-    // 2. Skip duplicates (matching title or slug)
-    const slug = item.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-    const isDuplicate = existingArticles.some(a => 
-      a.slug === slug || a.title.toLowerCase() === item.title.toLowerCase()
+    // Fetch fresh database records to ensure zero race conditions or duplicates
+    const currentArticles = db.getArticles();
+    const cleanItemSlug = item.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+    const cleanItemTitle = item.title.toLowerCase().trim();
+
+    // 2. Skip duplicates (matching title, slug, or source URL link)
+    const isDuplicate = currentArticles.some(a => 
+      a.slug.toLowerCase() === cleanItemSlug ||
+      a.title.toLowerCase().trim() === cleanItemTitle ||
+      (a.sources && a.sources.some(s => s.sourceUrl === item.link))
     );
 
     if (isDuplicate) {

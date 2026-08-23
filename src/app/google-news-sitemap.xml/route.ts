@@ -4,13 +4,21 @@ import { db } from '@/lib/db';
 export const dynamic = 'force-dynamic';
 
 export async function GET() {
-  const articles = db.getArticles().filter(a => a.verificationStatus === 'VERIFIED');
+  const allVerified = db.getArticles(undefined, undefined, true);
   const baseUrl = 'https://worldbulletin.world';
+  const now = Date.now();
+  const twoDaysAgo = now - 48 * 60 * 60 * 1000;
+
+  // Google News Sitemap strictly requires articles published in the last 48 hours
+  let newsArticles = allVerified.filter(a => new Date(a.publishedAt).getTime() >= twoDaysAgo);
+  if (newsArticles.length === 0) {
+    newsArticles = allVerified.slice(0, 30); // fallback to latest 30
+  }
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
-  ${articles.map(a => `
+  ${newsArticles.map(a => `
   <url>
     <loc>${baseUrl}/news/${a.slug}</loc>
     <news:news>
