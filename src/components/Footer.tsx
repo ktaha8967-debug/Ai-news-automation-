@@ -46,7 +46,16 @@ export const Footer = () => {
 
         <div className="pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-500">
           <p>© {new Date().getFullYear()} World Bulletin Network. All rights reserved.</p>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 text-[11px]">
+            <a
+              href="https://easypropdf.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sky-400 hover:text-sky-300 transition-colors font-medium"
+            >
+              EasyProPDF — Free Online PDF Tools
+            </a>
+            <span className="text-slate-700">|</span>
             <Link href="/editorial-standards" className="hover:text-slate-300">Journalism Ethics</Link>
           </div>
         </div>

@@ -1,3 +1,4 @@
+import React from 'react';
 import type { Metadata } from 'next';
 import './globals.css';
 import { PublicShell } from '@/components/PublicShell';
@@ -40,6 +41,18 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full" suppressHydrationWarning>
       <head>
+        {/* Google AdSense Universal Verification Script */}
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1941031216214407"
+          crossOrigin="anonymous"
+        />
+        {/* Auto ads for AMP */}
+        <script
+          async
+          custom-element="amp-auto-ads"
+          src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -60,6 +73,11 @@ export default function RootLayout({
         />
       </head>
       <body className="h-full bg-[#fafafa] antialiased" suppressHydrationWarning>
+        {/* Google AdSense AMP Auto Ads */}
+        {React.createElement('amp-auto-ads', {
+          type: 'adsense',
+          'data-ad-client': 'ca-pub-1941031216214407'
+        })}
         {/* Google Analytics (GTag) - Non-blocking optimized loading */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-NMM93CJ1ZQ"

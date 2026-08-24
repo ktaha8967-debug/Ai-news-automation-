@@ -1,10 +1,12 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import { Zap, Play, CheckCircle2, AlertCircle, RefreshCw, Cpu, Database, Rss, ArrowLeft, Clock, ShieldCheck } from 'lucide-react';
 import Link from 'next/link';
 
 export default function AutomationPipelinePage() {
+  const router = useRouter();
   const [isRunning, setIsRunning] = useState(false);
   const [logs, setLogs] = useState<string[]>([]);
   const [status, setStatus] = useState<'idle' | 'running' | 'success' | 'error'>('idle');

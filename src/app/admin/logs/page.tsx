@@ -1,10 +1,16 @@
 import React from 'react';
+import { redirect } from 'next/navigation';
 import { db } from '@/lib/db';
+import { isAuthenticated } from '@/lib/auth';
 import { Activity, CheckCircle2, Clock, ListOrdered } from 'lucide-react';
 
 export const dynamic = 'force-dynamic';
 
 export default function AutomationLogsPage() {
+  if (!isAuthenticated()) {
+    redirect('/admin/login');
+  }
+
   const logs = db.getAutomationLogs();
 
   return (

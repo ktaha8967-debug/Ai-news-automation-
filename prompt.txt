@@ -1,478 +1,399 @@
-Traffic nehi aya hai bro
-J
-Performance per dekha hun
-wo updatye ho jaye ga
-Ok bro
-J
-Admin password bro
-admin123
-Aug 10, 2026
+omplite kam right
+3:50 PM
 
-J
-Bro live hogaya but traffic nehi hai
-Dekhte hain Sir
-Aaj set ho jaye ga
-Oo
-J
-Ok
-koi project ni ha Sir mere liye
-Previous project complete kijiye bro
-Rank nehi hua hai bro
-J
-Kam complete nehi hua bro
-ok
-Aug 11, 2026
-
-Kya okey bro
-Aggrement per jisa bola tha same nehi hua kam bro
-Traffic nehi hai kuch nehi aap akbar read kar lena Aggrement
-Project pucha project diya review puchna review diya but kam same to same nehi hua
-J
-Aap dekho nehi to me mail dalega freelancer team ko
-Bro aisa nhi ha hm kaam kr rhe hain
-Sirf apka project nhi ha or bhi bht saare projects hain hamare pass
-To apka bhi kr rhe Hain
-J
-Bro, mujhe bas agreed work complete chahiye. ‘Baaki projects’ ka comparison relevant nahi hai. Please agreement ke deliverables ke according pending work complete karo, warna mujhe freelancer team ko contact karna padega.
-@JXDigital
-
-Bro, mujhe bas agreed work complete chahiye. ‘Baaki projects’ ka comparison relevant nahi hai. Please agreement ke deliverables ke… more
-Bro Seio kr k Dena developers ka kaam nhi hota unka kaam bna kr dena hota ha ye Freelancer ko bhi pta ha
-baki mn kaam kr rha hoon is pr
-ab ja kr redeploy kijiye
-website ko
-jese mn ne btaya tha
-@zuaibahmedd
-
-Bro Seio kr k Dena developers ka kaam nhi hota unka kaam bna kr dena hota ha ye Freelancer ko bhi pta ha
-Bro traffic nehi hai bilkul
-J
-Apko pata hai website per traffic nehi hota hai apko pata hai how do i feel
-@JXDigital
-
-Bro traffic nehi hai bilkul
-aisa ho hi nhi skta \
-barhaal baki ab mn ne bilkul hr chiz setup kr di ha ab dekhen
-redeploy wale button pr click kren
-Aug 12, 2026
-
-Kya bro
-J
-
-Screenshot_2026-08-12-10-31-50-504_com.android.chrome.jpg
-10:02 AM
-
-Isko update hone mn waqt lge ga
-Ok
-J
-Bro
-https://easypropdf.com/pricing
-Check kijiye bro
-J
-https://easypropdf.com/
-kiya hua
-kuch cheezen functional nhi hain
-mtlb k kuch tools
-<!DOCTYPE html> <html style="height:100%"> <head> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" /> <title> 503 Service Unavailable </title><style>@media (prefers-color-scheme:dark){body{background-color:#000!important}}</style></head> <body style="color: #444
-ye errors a rhe hain
-Aug 13, 2026
-
-J
-Name list do
-Bro ye Apne jinse bnwaya ha na unkonkahennye hamara project nhi ha
-Aug 15, 2026
-
-Ok
-J
-Bhai, payment release ho chuka hai. Ab WorldBulletin.world ke liye final SEO + indexing optimization properly complete karo.
-
-Maine Google Search Console ka latest data check kiya hai. Current situation:
-
-• Sitemap: 10,013 discovered URLs
-• Google News Sitemap: 10,006 discovered URLs
-• HTTPS: 1,164 pages
-• Breadcrumbs: 1,164 valid
-• Organic clicks: only 4
-• Search impressions aa rahe hain, so Google site ko discover kar raha hai.
-• GSC Page Indexing abhi processing mein hai.
-
-🔴 PRIORITY 1 — URL ARCHITECTURE
-
-GSC mein same/similar story ke multiple URLs appear ho rahe hain, for example:
-
-/news/global-ai-safety-treaty-draft-secures-frontier-foundation-models-against-138
-/news/global-ai-safety-treaty-draft-secures-frontier-foundation-models-against-498
-/news/global-ai-safety-treaty-draft-secures-frontier-foundation-models-against-348
-/news/global-ai-safety-treaty-draft-secures-frontier-foundation-models-against-18
-/news/global-ai-safety-treaty-draft-secures-frontier-foundation-models-against-198
-
-Please find the ROOT CAUSE in the CMS/database/slug-generation system.
-
-Do not just manually redirect these examples. Make sure the system cannot generate unnecessary duplicate/variant URLs again.
-
-🔴 PRIORITY 2 — CANONICAL
-
-Every article must have ONE permanent canonical URL.
-
-Check:
-
-• rel=canonical
-• self-referencing canonical
-• duplicate Google-selected canonical
-• HTTP → HTTPS
-• www/non-www consistency
-• trailing slash consistency
-• URL parameter handling
-• old/duplicate slugs
-
-Where appropriate, use 301 redirects to the correct permanent URL.
-
-🔴 PRIORITY 3 — SITEMAPS
-
-Audit both:
-
-/sitemap.xml
-/google-news-sitemap.xml
-
-Sitemaps should contain only URLs that are:
-
-• 200 status
-• canonical
-• indexable
-• not noindex
-• not redirected
-• not duplicate
-• genuinely useful
-
-Make sure Google News sitemap follows Google News eligibility requirements and does not contain old/duplicate/non-news URLs.
-
-🔴 PRIORITY 4 — INDEXING
-
-After GSC processing completes, check the exact reasons for non-indexing:
-
-• Crawled – currently not indexed
-• Discovered – currently not indexed
-• Duplicate without user-selected canonical
-• Google chose a different canonical
-• Soft 404
-• Redirect
-• Blocked by robots.txt
-• Excluded by noindex
-• Server errors
-• Duplicate/near-duplicate pages
-
-Do not try to force-index every URL.
-
-The goal is QUALITY INDEXING, not simply having 10,000 URLs indexed.
-
-🔴 PRIORITY 5 — CONTENT QUALITY
-
-Please audit the automated article pipeline.
-
-Check for:
-
-• repetitive article structures
-• duplicate/near-duplicate articles
-• automatically generated meaningless variations
-• weak/thin articles
-• incorrect facts
-• generic introductions
-• repeated paragraphs
-• fake-looking source claims
-• incorrect dates
-• incorrect authors
-• misleading headlines
-
-AI can assist with content production, but every published article must provide genuine value and factual/source integrity.
-
-🔴 PRIORITY 6 — INTERNAL LINKING
-
-Structure should be:
-
-Homepage → Category → Article
-
-Every important article should be reachable through internal links.
-
-Check:
-
-• category pages
-• related articles
-• breadcrumbs
-• pagination
-• orphan pages
-• anchor text
-• article-to-category links
-• category-to-article links
-
-Also fix the category pages showing incorrect “0 Stories” counts if this is still happening.
-
-🔴 PRIORITY 7 — TECHNICAL SEO
-
-Complete a full technical audit:
-
-• robots.txt
-• XML sitemap
-• canonical
-• meta robots
-• title tags
-• meta descriptions
-• H1/H2 structure
-• Open Graph
-• Twitter/X cards
-• Article/NewsArticle schema
-• BreadcrumbList schema
-• Organization schema
-• author information
-• publication date
-• modified date
-• image metadata
-• 404 pages
-• 301 redirects
-• redirect chains
-• broken internal links
-• server errors
-• mobile usability
-• Core Web Vitals
-• HTTPS
-• page speed
-• JavaScript-rendering issues
-
-Do not make unnecessary SEO changes that can damage existing URLs.
-
-🔴 PRIORITY 8 — GOOGLE SEARCH CONSOLE
-
-After fixes:
-
-1. Submit/update sitemap.
-2. Inspect representative URLs.
-3. Test live URL.
-4. Request indexing only for important corrected pages.
-5. Monitor Page Indexing.
-6. Monitor Performance.
-7. Monitor sitemap discovered/indexed counts.
-
-Do NOT mass-request indexing for thousands of URLs.
-
-🎯 FINAL OBJECTIVE
-
-I do NOT want 10,000 low-quality pages indexed.
-
-I want:
-
-REAL UNIQUE CONTENT
-+
-CLEAN URL STRUCTURE
-+
-ONE CANONICAL PER ARTICLE
-+
-CLEAN SITEMAPS
-+
-STRONG INTERNAL LINKING
-+
-CORRECT STRUCTURED DATA
-+
-GOOD TECHNICAL SEO
-+
-SUSTAINABLE GOOGLE ORGANIC TRAFFIC.
-
-Before considering the work finished, send me a final report with:
-
-1. Total article URLs
-2. Total unique URLs
-3. Total canonical URLs
-4. Total indexable URLs
-5. Total noindex URLs
-6. Total redirects
-7. Duplicate URLs found/fixed
-8. Sitemap URL count
-9. Google News sitemap URL count
-10. Current indexed pages
-11. Crawled – currently not indexed
-12. Discovered – currently not indexed
-13. Canonical issues
-14. 404/broken URLs
-15. Schema errors
-16. Core Web Vitals status
-17. Internal linking/orphan page status
-18. GSC screenshots before/after
-19. List of all major changes made
-20. Confirmation that the duplicate URL generation problem is permanently fixed at the source.
-
-Please don't just say “SEO completed.” I need the actual technical status and evidence from GSC.
-Ok
-Aug 16, 2026
-
-J
-Kya update han bro
-Sir wo to ap dekhen ge na apne dashboard se hamare pass to acces hi ni ha
-Aug 17, 2026
-
-J
-Duplicate, Google chose different canonical than user
-
-Alternate page with proper canonical tag
-
-Page with redirect bro
-J
-Kya bro seen karke ignore mardiya
-nhi aise baat ni ha
-mn ye bhi set kr dnga 30 days support ka kaha tha
-baki agr seo krwani ho to bataiye ga
-J
-Bro abhitak traffic nehi aya
-apko bola tha k seo krwana lazmi hoga \\chahe ap kisi or se kra len
-Aug 18, 2026
-
-J
-Bro without seo rank hona chahiye or traffic chahiye to seo karna padega
-to bhai seo hogi to traffic aye gi or traffic aye gi to goolge ko pta lge ga website k bare mn tb hi rank hogi na
-Aug 19, 2026
-
-
-IMG_20260819_082340.jpgIMG_20260819_082340.jpg
-7:55 AM
-
-J
-See the details
-ye to page inndexing issue ha na wo ho jaye ga solve
-J
-@zuaibahmedd
-
-ye to page inndexing issue ha na wo ho jaye ga solve
-Kob bro
-aaj raat tk ho jaye ga
-baki apko agr website pr traffic le kr ani ha to seo lazmi ha bgair seo k traffic ni aye gi
-J
-Anydesk shere kar raha hun website ka aadmi panel admin password se open nehi ho raha
-admin123
-ye password ha
-@zuaibahmedd
-
-baki apko agr website pr traffic le kr ani ha to seo lazmi ha bgair seo k traffic ni aye gi
-Ok
-J
-Anydesk de raha hun check kijiye kuch kam bhi tha
-abhi to time ni ha mn collage ja rha hoon
-Ok
-J
-2baje
-3 baje
-J
-Ok waiting
-mn free hounga
-J
-Ok
-Bro
-Can i shere anydesk
-Bro
-Missed call
-yes
-mor se wating
-J
-morning
 okay
-J
-anydesk open hai
-ok
-krna kiya ha
-J
-🔴 3,246 — Discovered, currently not indexed: Google knows these pages exist, but hasn't indexed them yet.
-🟠 1,058 — Duplicate, Google chose different canonical: Google thinks these pages are duplicates/similar and selected another URL as the main version.
-🟡 9 — Crawled, currently not indexed: Google visited these pages but decided not to index them yet.
-ye to mujhe website k code mn krna hoga na
-J
-why
-code mn issue hoga na is liye indexing ka issue a rha hoga
-J
-project apne banaya complite apko karna padega karke do simple
-okay
-J
-ager nehi karna toh bi boldo
-kr dunga
-baki seo krwani hogi apko
-J
-ok seo abhi nehi karega budget nehi hai
-okay no problem
-next month
-seo
-J
-abhi job problems hai fix useko karna padega
-okay
-J
-good
-or baki 14 din rehte hain 30 days support khatam hone ko
-uske baad hum kuch ni kr k denge
-J
-tum komse kom adsense ke like banado 1 month me baki next seo ayega
-aise ni hota phr bhi try krenge
-J
-ji
-okay
-J
-abhi kar do
-abhi ni hoga sunday ko
-J
-apke pass kya kya access hai mera website ka
-koi acces ni ha
-api
-J
-code
-hn code ha or api ke meri use ho rhi ha
-J
-Bro, SEO abhi nahi chahiye. Pehle website ke existing technical problems fix kijiye: duplicate URL generation ka root cause, canonical, sitemap, robots.txt, 404/redirect, schema, GSC indexing issue (3,246 + 1,058), article quality, internal linking aur GA4 verification.
+3:50 PM
 
-Ye existing project ka pending technical work hai. Please properly fix karke GSC/GA4 screenshots aur final status report de dena. Uske baad next month SEO karwa lenge
-okay
-J
-kob tak karogi
-sunday tk ho jaye ga
-baki or bhi projects hn hmare pass
-J
-apke pass hai but mera kam pehle kardo payment already de diya bro
-okay
-J
-@zuaibahmedd
-
-sunday tk ho jaye ga
-complite kam right
-okay
 Aug 20, 2026
 
 J
 Bro
+11:14 PM
+
 yes brother
+11:15 PM
+
 J
 Bro Sunday
+11:42 PM
+
 Aug 21, 2026
 
 sunday tk ho jaye ga
-Today
+12:39 AM
+
+Aug 23, 2026
 
 J
+Zuhaib
+
 @zuaibahmedd
 
 sunday tk ho jaye ga
 Bro aaj hojayega na
+7:26 AM
+
 Yes
+7:40 AM
+
 Ok
+7:49 AM
+
 J
 Update bro
+11:31 AM
+
 abhi work kr rha hoon bro
+11:43 AM
+
 1 ghnte se
+11:43 AM
+
 J
 Ok good bro
+11:43 AM
+
 3 ghnte or lgen ge
+11:43 AM
+
 Ok
+11:43 AM
+
 J
 Article edit karneka option nehi hai for you kind information
-okay apne kaha tha k sb kuch auotmated ho to mn ne ni lgaya
-Admin panels per View | Edit | SEO | Sources | Delete ager hoti hai to thoda
-Support
-@zuaibahmedd
+11:44 AM
 
 okay apne kaha tha k sb kuch auotmated ho to mn ne ni lgaya
+11:44 AM
+
+Admin panels per View | Edit | SEO | Sources | Delete ager hoti hai to thoda
+11:45 AM
+
+Support
+11:45 AM
+
+Zuhaib
+
+@zuaibahmedd
+
+okay apne kaha tha k sb kuch auotmated… more
 Ji
+11:46 AM
+
 J
 Ok ager hota hai to baki AdSense or pending kam karna hai AdSense code setup or bandme apply karunga
+11:47 AM
+
 okay phr ye sb jo admin panel mn apne bola ha usko krne mn 2 ghnte or chle jayen ge
+11:48 AM
+
 Ok aap apna marzi se kijiye abhi jitna kam hai wo kar dijiye baki AdSense se earning start hoga to apko complete seo karna padega advance type seo
+11:50 AM
+
+J
+Ok bro
+11:51 AM
+
+Jx
+
+@JXDigital
+
+Ok aap apna marzi se kijiye abhi jitna… more
+okay
+11:51 AM
+
+Ok
+11:52 AM
+
+AdSense code <head>
+3:23 PM
+
+J
+
+https://easypropdf.com website per ads jisa show kardo bro
+3:25 PM
+
+iske charges lgen ge
+3:29 PM
+
+Q k ye hmara project ni ha
+3:29 PM
+
+Mera project hai ye
+4:20 PM
+
+Admin ka password change karnese update to hota hai but dobara admin123 marnese open hota hai thik kijiye usko
+4:25 PM
+
+J
+Aadmi ka password change kardiya tha
+4:25 PM
+
+ok
+6:22 PM
+
+J
+Ji
+6:25 PM
+
+okay Sir
+6:44 PM
+
+Hogaya kya sir
+6:44 PM
+
+J
+Complete ya kuch pending hai
+6:44 PM
+
+Jx
+
+@JXDigital
+
+
+https://easyprop… more
+is ka kiya krna ha
+6:44 PM
+
+bs 20 minutes de den
+6:45 PM
+
+Zuhaib
+
+@zuaibahmedd
+
+is ka kiya krna ha
+Mera website hai bro bas promotion ki tarha add kor do kisi kone me
+6:46 PM
+
+J
+Password change nehi hota hai problem check kijiye ga
+6:47 PM
+
+okay
+6:47 PM
+
+J
+Ji
+6:48 PM
+
+bs ab sirf 5 minutes lge gain
+6:48 PM
+
+mn apki website ki thodi seo kr k de rha hooon speed optimization wagera
+6:48 PM
+
+jis se website -jldi load hoga or rank krne mn madad dega
+6:49 PM
+
+J
+Sukriya bro
+6:50 PM
+
+mn namaz prhne gya hua tha to bs abhi 5 minutes mn kr deta hoon
+7:13 PM
+
+J
+Ok
+7:14 PM
+
+all set ho gya ha indexing wala issue bhi
+9:20 PM
+
+ap redeploy pr click kr den mn ne code push kr diya ha
+9:22 PM
+
+J
+Anydesk on karu
+9:24 PM
+
+abhi mn bahir hoon \
+9:24 PM
+
+J
+Apke hat se suru hona chahiye I'm waiting
+9:26 PM
+
+baki saara kaam kr diya ha ho jaye ga ab
+9:26 PM
+
+or speed optimization bhi kr di ha
+9:26 PM
+
+J
+Sirf massage kar dena
+9:26 PM
+
+Jx
+
+@JXDigital
+
+Apke hat se suru hona chahiye I'm waiting
+mn smjha ni
+9:27 PM
+
+Aap kar dena bola job ghar ayega
+9:28 PM
+
+J
+Bola anudesk open karunga
+9:28 PM
+
+krna kiya ha ab
+9:29 PM
+
+J
+Password wala problem
+9:29 PM
+
+fix ho gya ha
+9:30 PM
+
+J
+Ok check karta hun
+9:30 PM
+
+pehle redeploy pr click kr den
+9:30 PM
+
+J
+AdSense code <head>
+9:33 PM
+
+adsense code apne diya hi ni
+9:35 PM
+
+Abhi deta hun
+9:36 PM
+
+J
+Free hokar anydesk per aye bro
+9:41 PM
+
+Today
+
+AdSense code <head>
+9:15 AM
+
+Add karna padega bro
+9:16 AM
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1941031216214407"
+crossorigin="anonymous"></script>
+9:34 AM
+
+
+Copy and paste the AdSense code in between the <head></head> tags of your site
+9:34 AM
+
+
+Ads
+Google account (jaganathray1994@gmail.com)
+Privacy
+Terms
+Warning
+To start earning from AdSense, you need to add your payment info and connect your site
+Auto ads for AMP
+
+Let Google place ads on your AMP sites
+Turn on Auto ads for AMP and Google will automatically show ads on all the AMP sites in your account. Just add 2 pieces of code to each AMP site that you want ads to appear. Learn more⁠‎
+
+Auto ads for AMP
+Ad formats
+In-page ads
+Ads that appear within the main body of content on your pages
+Anchor ads
+Ads that stick to the edge of the user's screen and are easily dismissible
+Place this code in the AMP version of your site
+Step 1: Copy and paste the script in between the <head></head> tags of your site
+Place this code once in between the head tags of your AMP site's HTML. This script loads the relevant amp-auto-ads libraries.
+
+<script async custom-element="amp-auto-ads"
+src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+</script>
+Step 2: Copy and paste the AMP Auto ad code right after the <body> tag on your pages
+Copy and paste this code immediately after the <body> tag of the pages you want ads to appear. The placement of the code doesn't reflect the position of the ad.
+
+<amp-auto-ads type="adsense"
+data-ad-client="ca-pub-1941031216214407">
+</amp-auto-ads>
+It can take up to an hour for ads to appear on the page. See How to set up Auto ads for AMP.
+9:40 AM
+
+admin panel ka security check kijiye koi bhi access kar raha hai
+10:03 AM
+
+J
+immeditly fix koro
+10:18 AM
+
+Okay
+10:19 AM
+
+https://worldbulletin.world/
+10:19 AM
+
+worldbulletin2026 mujhe invite kijiye github par
+10:24 AM
+
+J
+Bro, mujhe samajh nahi aa raha aap exactly kya fix kar rahe ho. Admin panel abhi bhi completely unsecured hai. Koi bhi person directly admin panel access kar raha hai aur password ki bhi zarurat nahi pad rahi.
+
+Ye normal bug nahi, critical security issue hai. Please immediately GitHub/source code check karke authentication aur authorization properly implement karo. Sirf admin button hide karna solution nahi hai.
+
+Without login/password, kisi bhi user ko admin panel ya admin API access nahi milna chahiye.
+
+Please isko immediately fix, deploy aur incognito/logged-out mode me test karke mujhe proof/video bhejo.
+10:34 AM
+
+Brother main AJ apko sare errors fix Karke sham tk inshaAllah report bheghta huin with video proof
+11:01 AM
+
+Please be patient
+11:02 AM
+
+Ji ji
+11:02 AM
+
+J
+Friends ko links diya tha
+11:03 AM
+
+Jx
+
+@JXDigital
+
+Friends ko links diya tha
+Main AJ sham tk sb fix kardeta ap tention free hojayein
+11:03 AM
+
+J
+Ok
+11:05 AM
+
+J
+Any update bro
+5:44 PM
+
+working on it
+5:44 PM
+
+J
+Any update bro
+5:45 PM
+
+shamm 9 bje tk ho jaye ga
+5:45 PM
+
+adsense code wagera or admin panel setup kr rhe hain
+5:45 PM
+
+uski security
+5:45 PM
+
+Ok aap check karlo
+5:45 PM
+
+J
+Any update bro
+7:54 P

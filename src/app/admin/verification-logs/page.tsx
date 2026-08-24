@@ -1,10 +1,16 @@
 import React from 'react';
+import { redirect } from 'next/navigation';
 import { db } from '@/lib/db';
+import { isAuthenticated } from '@/lib/auth';
 import { ShieldCheck, CheckCircle2, AlertTriangle, ExternalLink, FileSearch } from 'lucide-react';
 
 export const dynamic = 'force-dynamic';
 
 export default function VerificationLogsPage() {
+  if (!isAuthenticated()) {
+    redirect('/admin/login');
+  }
+
   const logs = db.getVerificationLogs();
 
   return (

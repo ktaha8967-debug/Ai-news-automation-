@@ -1,11 +1,17 @@
 import React from 'react';
 import Link from 'next/link';
+import { redirect } from 'next/navigation';
 import { db } from '@/lib/db';
+import { isAuthenticated } from '@/lib/auth';
 import { ShieldCheck, Zap, FileText, Activity, CheckCircle2, AlertTriangle, Eye, ArrowRight, Server, RefreshCw, Cpu, ExternalLink } from 'lucide-react';
 
 export const dynamic = 'force-dynamic';
 
 export default function AdminDashboardPage() {
+  if (!isAuthenticated()) {
+    redirect('/admin/login');
+  }
+
   const articles = db.getArticles();
   const verificationLogs = db.getVerificationLogs();
   const automationLogs = db.getAutomationLogs();
