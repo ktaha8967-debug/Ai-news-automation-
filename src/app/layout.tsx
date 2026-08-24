@@ -41,18 +41,38 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full" suppressHydrationWarning>
       <head>
+        {/* Google tag (gtag.js) - Official Setup */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-H9BK8MP506"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-H9BK8MP506');
+              gtag('config', 'G-NMM93CJ1ZQ');
+            `
+          }}
+        />
+
         {/* Google AdSense Universal Verification Script */}
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1941031216214407"
           crossOrigin="anonymous"
         />
+
         {/* Auto ads for AMP */}
         <script
           async
           custom-element="amp-auto-ads"
           src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"
         />
+
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -78,19 +98,6 @@ export default function RootLayout({
           type: 'adsense',
           'data-ad-client': 'ca-pub-1941031216214407'
         })}
-        {/* Google Analytics (GTag) - Non-blocking optimized loading */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-NMM93CJ1ZQ"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-NMM93CJ1ZQ', { 'send_page_view': true });
-          `}
-        </Script>
         <PublicShell>{children}</PublicShell>
       </body>
     </html>
