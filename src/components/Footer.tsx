@@ -35,28 +35,36 @@ export const Footer = () => {
 
           {/* Editorial & Verification */}
           <div className="space-y-2.5">
-            <h4 className="font-heading text-xs font-bold text-white uppercase tracking-wider">Editorial Standards</h4>
+            <h4 className="font-heading text-xs font-bold text-white uppercase tracking-wider">Transparency & Trust</h4>
             <ul className="space-y-2 text-slate-400">
-              <li><Link href="/editorial-standards" className="hover:text-white transition-colors">Fact-Checking Code & Policy</Link></li>
-              <li><Link href="/authors/elena-rostova" className="hover:text-white transition-colors">Elena Rostova (AI Editorial Bot)</Link></li>
-              <li><Link href="/authors/marcus-vance" className="hover:text-white transition-colors">Marcus Vance (AI Tech Bot)</Link></li>
+              <li><Link href="/about" className="hover:text-white transition-colors">About World Bulletin</Link></li>
+              <li><Link href="/editorial-standards" className="hover:text-white transition-colors">Editorial Standards & Policy</Link></li>
+              <li><Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy & Cookies</Link></li>
+              <li><Link href="/terms-of-service" className="hover:text-white transition-colors">Terms of Service</Link></li>
+              <li><Link href="/contact" className="hover:text-white transition-colors">Contact & Corrections</Link></li>
             </ul>
           </div>
         </div>
 
         <div className="pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-500">
           <p>© {new Date().getFullYear()} World Bulletin Network. All rights reserved.</p>
-          <div className="flex items-center gap-4 text-[11px]">
+          <div className="flex flex-wrap items-center gap-3 text-[11px]">
+            <Link href="/about" className="hover:text-slate-300">About Us</Link>
+            <span className="text-slate-700">•</span>
+            <Link href="/privacy-policy" className="hover:text-slate-300">Privacy Policy</Link>
+            <span className="text-slate-700">•</span>
+            <Link href="/terms-of-service" className="hover:text-slate-300">Terms</Link>
+            <span className="text-slate-700">•</span>
+            <Link href="/contact" className="hover:text-slate-300">Contact</Link>
+            <span className="text-slate-700">•</span>
             <a
               href="https://easypropdf.com"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sky-400 hover:text-sky-300 transition-colors font-medium"
             >
-              EasyProPDF — Free Online PDF Tools
+              EasyProPDF
             </a>
-            <span className="text-slate-700">|</span>
-            <Link href="/editorial-standards" className="hover:text-slate-300">Journalism Ethics</Link>
           </div>
         </div>
       </div>
