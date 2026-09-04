@@ -14,6 +14,14 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: 'Googlebot-News',
         allow: '/',
       },
+      {
+        userAgent: 'Mediapartners-Google',
+        allow: '/',
+      },
+      {
+        userAgent: 'AdsBot-Google',
+        allow: '/',
+      },
     ],
     sitemap: [
       `${baseUrl}/sitemap.xml`,
@@ -21,3 +29,4 @@ export default function robots(): MetadataRoute.Robots {
     ],
   };
 }
+
